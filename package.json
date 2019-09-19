@@ -1,0 +1,24 @@
+{
+  "name": "sl-ts-fetch-sdk",
+  "version": "0.1",
+  "description": "Unofficial Library for SalesLoft public API (Typescript + fetch)",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+  ],
+  "bugs": {
+    "url": "https://github.com/devproivansurzhenko/sl-ts-fetch-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:devproivansurzhenko/sl-ts-fetch-sdk.git"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+  },
+  "author": "Ivan Surzhenko",
+  "license": "Apache 2.0"
+}
