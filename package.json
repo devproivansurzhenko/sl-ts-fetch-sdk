@@ -1,5 +1,5 @@
 {
-  "name": "sl-ts-fetch-sdk",
+  "name": "@devproivansurzhenko/sl-ts-fetch-sdk",
   "version": "0.1",
   "description": "Unofficial Library for SalesLoft public API (Typescript + fetch)",
   "main": "index",
