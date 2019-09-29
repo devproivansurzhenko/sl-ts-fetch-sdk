@@ -2846,7 +2846,7 @@ export declare const AccountStagesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAnAccountStage(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List account stages
@@ -2860,7 +2860,7 @@ export declare const AccountStagesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listAccountStages(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * AccountStagesApi - functional programming interface
@@ -2874,7 +2874,7 @@ export declare const AccountStagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountStage>;
+    fetchAnAccountStage(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountStage>;
     /**
      * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List account stages
@@ -2888,7 +2888,7 @@ export declare const AccountStagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountStage[]>;
+    listAccountStages(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountStage[]>;
 };
 /**
  * AccountStagesApi - factory interface
@@ -2902,7 +2902,7 @@ export declare const AccountStagesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesIdJsonGet(id: string, options?: any): Promise<AccountStage>;
+    fetchAnAccountStage(id: string, options?: any): Promise<AccountStage>;
     /**
      * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List account stages
@@ -2916,7 +2916,7 @@ export declare const AccountStagesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountStagesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountStage[]>;
+    listAccountStages(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountStage[]>;
 };
 /**
  * AccountStagesApi - object-oriented interface
@@ -2933,7 +2933,7 @@ export declare class AccountStagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountStagesApi
      */
-    v2AccountStagesIdJsonGet(id: string, options?: any): Promise<AccountStage>;
+    fetchAnAccountStage(id: string, options?: any): Promise<AccountStage>;
     /**
      * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List account stages
@@ -2948,7 +2948,7 @@ export declare class AccountStagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountStagesApi
      */
-    v2AccountStagesJsonGet(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountStage[]>;
+    listAccountStages(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountStage[]>;
 }
 /**
  * AccountTiersApi - fetch parameter creator
@@ -2962,7 +2962,7 @@ export declare const AccountTiersApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAnAccountTier(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List Account Tiers
@@ -2976,7 +2976,7 @@ export declare const AccountTiersApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersJsonGet(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listAccountTiers(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * AccountTiersApi - functional programming interface
@@ -2990,7 +2990,7 @@ export declare const AccountTiersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountTier>;
+    fetchAnAccountTier(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountTier>;
     /**
      * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List Account Tiers
@@ -3004,7 +3004,7 @@ export declare const AccountTiersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersJsonGet(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountTier[]>;
+    listAccountTiers(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AccountTier[]>;
 };
 /**
  * AccountTiersApi - factory interface
@@ -3018,7 +3018,7 @@ export declare const AccountTiersApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersIdJsonGet(id: string, options?: any): Promise<AccountTier>;
+    fetchAnAccountTier(id: string, options?: any): Promise<AccountTier>;
     /**
      * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List Account Tiers
@@ -3032,7 +3032,7 @@ export declare const AccountTiersApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountTiersJsonGet(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountTier[]>;
+    listAccountTiers(ids?: number[], name?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountTier[]>;
 };
 /**
  * AccountTiersApi - object-oriented interface
@@ -3049,7 +3049,7 @@ export declare class AccountTiersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountTiersApi
      */
-    v2AccountTiersIdJsonGet(id: string, options?: any): Promise<AccountTier>;
+    fetchAnAccountTier(id: string, options?: any): Promise<AccountTier>;
     /**
      * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List Account Tiers
@@ -3064,7 +3064,7 @@ export declare class AccountTiersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountTiersApi
      */
-    v2AccountTiersJsonGet(ids?: Array<number>, name?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountTier[]>;
+    listAccountTiers(ids?: Array<number>, name?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<AccountTier[]>;
 }
 /**
  * AccountsApi - fetch parameter creator
@@ -3072,13 +3072,44 @@ export declare class AccountTiersApi extends BaseAPI {
  */
 export declare const AccountsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates an account.  \"domain\" must be unique on the current team.
+     * @summary Create an account
+     * @param {string} name Account Full Name
+     * @param {string} domain Website domain, not a fully qualified URI
+     * @param {string} [conversationalName] Conversational name of the Account
+     * @param {string} [description] Description
+     * @param {string} [phone] Phone number without formatting
+     * @param {string} [website] Website
+     * @param {string} [linkedinUrl] Full LinkedIn url
+     * @param {string} [twitterHandle] Twitter handle, with @
+     * @param {string} [street] Street name and number
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [postalCode] Postal code
+     * @param {string} [country] Country
+     * @param {string} [locale] Time locale
+     * @param {string} [industry] Industry
+     * @param {string} [companyType] Type of the Account&#39;s company
+     * @param {string} [founded] Date or year of founding
+     * @param {string} [revenueRange] Estimated revenue range
+     * @param {string} [size] Estimated number of people in employment
+     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {Array<string>} [tags] All tags applied to this Account
+     * @param {number} [ownerId] ID of the User that owns this Account
+     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnAccount(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): FetchArgs;
+    /**
      * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
      * @summary Delete an account
      * @param {string} id Account ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteAnAccount(id: string, options?: any): FetchArgs;
     /**
      * Fetches an account, by ID only.
      * @summary Fetch an account
@@ -3086,7 +3117,27 @@ export declare const AccountsApiFetchParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAnAccount(id: string, options?: any): FetchArgs;
+    /**
+     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List accounts
+     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listAccounts(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
      * Updates an account.  \"domain\" must be unique on the current team.
      * @summary Update an existing Account
@@ -3119,58 +3170,7 @@ export declare const AccountsApiFetchParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonPut(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): FetchArgs;
-    /**
-     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List accounts
-     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonGet(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
-    /**
-     * Creates an account.  \"domain\" must be unique on the current team.
-     * @summary Create an account
-     * @param {string} name Account Full Name
-     * @param {string} domain Website domain, not a fully qualified URI
-     * @param {string} [conversationalName] Conversational name of the Account
-     * @param {string} [description] Description
-     * @param {string} [phone] Phone number without formatting
-     * @param {string} [website] Website
-     * @param {string} [linkedinUrl] Full LinkedIn url
-     * @param {string} [twitterHandle] Twitter handle, with @
-     * @param {string} [street] Street name and number
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [postalCode] Postal code
-     * @param {string} [country] Country
-     * @param {string} [locale] Time locale
-     * @param {string} [industry] Industry
-     * @param {string} [companyType] Type of the Account&#39;s company
-     * @param {string} [founded] Date or year of founding
-     * @param {string} [revenueRange] Estimated revenue range
-     * @param {string} [size] Estimated number of people in employment
-     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {Array<string>} [tags] All tags applied to this Account
-     * @param {number} [ownerId] ID of the User that owns this Account
-     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonPost(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): FetchArgs;
+    updateAnExistingAccount(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): FetchArgs;
 };
 /**
  * AccountsApi - functional programming interface
@@ -3178,13 +3178,44 @@ export declare const AccountsApiFetchParamCreator: (configuration?: Configuratio
  */
 export declare const AccountsApiFp: (configuration?: Configuration) => {
     /**
+     * Creates an account.  \"domain\" must be unique on the current team.
+     * @summary Create an account
+     * @param {string} name Account Full Name
+     * @param {string} domain Website domain, not a fully qualified URI
+     * @param {string} [conversationalName] Conversational name of the Account
+     * @param {string} [description] Description
+     * @param {string} [phone] Phone number without formatting
+     * @param {string} [website] Website
+     * @param {string} [linkedinUrl] Full LinkedIn url
+     * @param {string} [twitterHandle] Twitter handle, with @
+     * @param {string} [street] Street name and number
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [postalCode] Postal code
+     * @param {string} [country] Country
+     * @param {string} [locale] Time locale
+     * @param {string} [industry] Industry
+     * @param {string} [companyType] Type of the Account&#39;s company
+     * @param {string} [founded] Date or year of founding
+     * @param {string} [revenueRange] Estimated revenue range
+     * @param {string} [size] Estimated number of people in employment
+     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {Array<string>} [tags] All tags applied to this Account
+     * @param {number} [ownerId] ID of the User that owns this Account
+     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnAccount(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
+    /**
      * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
      * @summary Delete an account
      * @param {string} id Account ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteAnAccount(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches an account, by ID only.
      * @summary Fetch an account
@@ -3192,7 +3223,27 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
+    fetchAnAccount(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
+    /**
+     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List accounts
+     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listAccounts(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account[]>;
     /**
      * Updates an account.  \"domain\" must be unique on the current team.
      * @summary Update an existing Account
@@ -3225,58 +3276,7 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonPut(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
-    /**
-     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List accounts
-     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonGet(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account[]>;
-    /**
-     * Creates an account.  \"domain\" must be unique on the current team.
-     * @summary Create an account
-     * @param {string} name Account Full Name
-     * @param {string} domain Website domain, not a fully qualified URI
-     * @param {string} [conversationalName] Conversational name of the Account
-     * @param {string} [description] Description
-     * @param {string} [phone] Phone number without formatting
-     * @param {string} [website] Website
-     * @param {string} [linkedinUrl] Full LinkedIn url
-     * @param {string} [twitterHandle] Twitter handle, with @
-     * @param {string} [street] Street name and number
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [postalCode] Postal code
-     * @param {string} [country] Country
-     * @param {string} [locale] Time locale
-     * @param {string} [industry] Industry
-     * @param {string} [companyType] Type of the Account&#39;s company
-     * @param {string} [founded] Date or year of founding
-     * @param {string} [revenueRange] Estimated revenue range
-     * @param {string} [size] Estimated number of people in employment
-     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {Array<string>} [tags] All tags applied to this Account
-     * @param {number} [ownerId] ID of the User that owns this Account
-     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonPost(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
+    updateAnExistingAccount(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Account>;
 };
 /**
  * AccountsApi - factory interface
@@ -3284,13 +3284,44 @@ export declare const AccountsApiFp: (configuration?: Configuration) => {
  */
 export declare const AccountsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates an account.  \"domain\" must be unique on the current team.
+     * @summary Create an account
+     * @param {string} name Account Full Name
+     * @param {string} domain Website domain, not a fully qualified URI
+     * @param {string} [conversationalName] Conversational name of the Account
+     * @param {string} [description] Description
+     * @param {string} [phone] Phone number without formatting
+     * @param {string} [website] Website
+     * @param {string} [linkedinUrl] Full LinkedIn url
+     * @param {string} [twitterHandle] Twitter handle, with @
+     * @param {string} [street] Street name and number
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [postalCode] Postal code
+     * @param {string} [country] Country
+     * @param {string} [locale] Time locale
+     * @param {string} [industry] Industry
+     * @param {string} [companyType] Type of the Account&#39;s company
+     * @param {string} [founded] Date or year of founding
+     * @param {string} [revenueRange] Estimated revenue range
+     * @param {string} [size] Estimated number of people in employment
+     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {Array<string>} [tags] All tags applied to this Account
+     * @param {number} [ownerId] ID of the User that owns this Account
+     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnAccount(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): Promise<Account>;
+    /**
      * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
      * @summary Delete an account
      * @param {string} id Account ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAnAccount(id: string, options?: any): Promise<Response>;
     /**
      * Fetches an account, by ID only.
      * @summary Fetch an account
@@ -3298,7 +3329,27 @@ export declare const AccountsApiFactory: (configuration?: Configuration, fetch?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonGet(id: string, options?: any): Promise<Account>;
+    fetchAnAccount(id: string, options?: any): Promise<Account>;
+    /**
+     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List accounts
+     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listAccounts(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Account[]>;
     /**
      * Updates an account.  \"domain\" must be unique on the current team.
      * @summary Update an existing Account
@@ -3331,58 +3382,7 @@ export declare const AccountsApiFactory: (configuration?: Configuration, fetch?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2AccountsIdJsonPut(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): Promise<Account>;
-    /**
-     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List accounts
-     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonGet(ids?: number[], crmId?: string[], tag?: string[], updatedAt?: string[], domain?: string, archived?: boolean, name?: string[], accountStageId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Account[]>;
-    /**
-     * Creates an account.  \"domain\" must be unique on the current team.
-     * @summary Create an account
-     * @param {string} name Account Full Name
-     * @param {string} domain Website domain, not a fully qualified URI
-     * @param {string} [conversationalName] Conversational name of the Account
-     * @param {string} [description] Description
-     * @param {string} [phone] Phone number without formatting
-     * @param {string} [website] Website
-     * @param {string} [linkedinUrl] Full LinkedIn url
-     * @param {string} [twitterHandle] Twitter handle, with @
-     * @param {string} [street] Street name and number
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [postalCode] Postal code
-     * @param {string} [country] Country
-     * @param {string} [locale] Time locale
-     * @param {string} [industry] Industry
-     * @param {string} [companyType] Type of the Account&#39;s company
-     * @param {string} [founded] Date or year of founding
-     * @param {string} [revenueRange] Estimated revenue range
-     * @param {string} [size] Estimated number of people in employment
-     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {Array<string>} [tags] All tags applied to this Account
-     * @param {number} [ownerId] ID of the User that owns this Account
-     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2AccountsJsonPost(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, options?: any): Promise<Account>;
+    updateAnExistingAccount(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: string[], tags?: string[], ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): Promise<Account>;
 };
 /**
  * AccountsApi - object-oriented interface
@@ -3392,6 +3392,38 @@ export declare const AccountsApiFactory: (configuration?: Configuration, fetch?:
  */
 export declare class AccountsApi extends BaseAPI {
     /**
+     * Creates an account.  \"domain\" must be unique on the current team.
+     * @summary Create an account
+     * @param {string} name Account Full Name
+     * @param {string} domain Website domain, not a fully qualified URI
+     * @param {string} [conversationalName] Conversational name of the Account
+     * @param {string} [description] Description
+     * @param {string} [phone] Phone number without formatting
+     * @param {string} [website] Website
+     * @param {string} [linkedinUrl] Full LinkedIn url
+     * @param {string} [twitterHandle] Twitter handle, with @
+     * @param {string} [street] Street name and number
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [postalCode] Postal code
+     * @param {string} [country] Country
+     * @param {string} [locale] Time locale
+     * @param {string} [industry] Industry
+     * @param {string} [companyType] Type of the Account&#39;s company
+     * @param {string} [founded] Date or year of founding
+     * @param {string} [revenueRange] Estimated revenue range
+     * @param {string} [size] Estimated number of people in employment
+     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {Array<string>} [tags] All tags applied to this Account
+     * @param {number} [ownerId] ID of the User that owns this Account
+     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsApi
+     */
+    createAnAccount(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: Array<string>, tags?: Array<string>, ownerId?: number, companyStageId?: number, options?: any): Promise<Account>;
+    /**
      * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
      * @summary Delete an account
      * @param {string} id Account ID
@@ -3399,7 +3431,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    v2AccountsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAnAccount(id: string, options?: any): Promise<Response>;
     /**
      * Fetches an account, by ID only.
      * @summary Fetch an account
@@ -3408,7 +3440,28 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    v2AccountsIdJsonGet(id: string, options?: any): Promise<Account>;
+    fetchAnAccount(id: string, options?: any): Promise<Account>;
+    /**
+     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List accounts
+     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsApi
+     */
+    listAccounts(ids?: Array<number>, crmId?: Array<string>, tag?: Array<string>, updatedAt?: Array<string>, domain?: string, archived?: boolean, name?: Array<string>, accountStageId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Account[]>;
     /**
      * Updates an account.  \"domain\" must be unique on the current team.
      * @summary Update an existing Account
@@ -3442,60 +3495,7 @@ export declare class AccountsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    v2AccountsIdJsonPut(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: Array<string>, tags?: Array<string>, ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): Promise<Account>;
-    /**
-     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List accounts
-     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountsApi
-     */
-    v2AccountsJsonGet(ids?: Array<number>, crmId?: Array<string>, tag?: Array<string>, updatedAt?: Array<string>, domain?: string, archived?: boolean, name?: Array<string>, accountStageId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Account[]>;
-    /**
-     * Creates an account.  \"domain\" must be unique on the current team.
-     * @summary Create an account
-     * @param {string} name Account Full Name
-     * @param {string} domain Website domain, not a fully qualified URI
-     * @param {string} [conversationalName] Conversational name of the Account
-     * @param {string} [description] Description
-     * @param {string} [phone] Phone number without formatting
-     * @param {string} [website] Website
-     * @param {string} [linkedinUrl] Full LinkedIn url
-     * @param {string} [twitterHandle] Twitter handle, with @
-     * @param {string} [street] Street name and number
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [postalCode] Postal code
-     * @param {string} [country] Country
-     * @param {string} [locale] Time locale
-     * @param {string} [industry] Industry
-     * @param {string} [companyType] Type of the Account&#39;s company
-     * @param {string} [founded] Date or year of founding
-     * @param {string} [revenueRange] Estimated revenue range
-     * @param {string} [size] Estimated number of people in employment
-     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {Array<string>} [tags] All tags applied to this Account
-     * @param {number} [ownerId] ID of the User that owns this Account
-     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountsApi
-     */
-    v2AccountsJsonPost(name: string, domain: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: Array<string>, tags?: Array<string>, ownerId?: number, companyStageId?: number, options?: any): Promise<Account>;
+    updateAnExistingAccount(name: string, domain: string, id: string, conversationalName?: string, description?: string, phone?: string, website?: string, linkedinUrl?: string, twitterHandle?: string, street?: string, city?: string, state?: string, postalCode?: string, country?: string, locale?: string, industry?: string, companyType?: string, founded?: string, revenueRange?: string, size?: string, doNotContact?: boolean, customFields?: Array<string>, tags?: Array<string>, ownerId?: number, companyStageId?: number, archived?: boolean, options?: any): Promise<Account>;
 }
 /**
  * ActionDetailsCallInstructionsApi - fetch parameter creator
@@ -3509,7 +3509,7 @@ export declare const ActionDetailsCallInstructionsApiFetchParamCreator: (configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchACallInstructions(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List call instructions
@@ -3522,7 +3522,7 @@ export declare const ActionDetailsCallInstructionsApiFetchParamCreator: (configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCallInstructions(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * ActionDetailsCallInstructionsApi - functional programming interface
@@ -3536,7 +3536,7 @@ export declare const ActionDetailsCallInstructionsApiFp: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallInstruction>;
+    fetchACallInstructions(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallInstruction>;
     /**
      * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List call instructions
@@ -3549,7 +3549,7 @@ export declare const ActionDetailsCallInstructionsApiFp: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallInstruction[]>;
+    listCallInstructions(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallInstruction[]>;
 };
 /**
  * ActionDetailsCallInstructionsApi - factory interface
@@ -3563,7 +3563,7 @@ export declare const ActionDetailsCallInstructionsApiFactory: (configuration?: C
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsIdJsonGet(id: string, options?: any): Promise<CallInstruction>;
+    fetchACallInstructions(id: string, options?: any): Promise<CallInstruction>;
     /**
      * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List call instructions
@@ -3576,7 +3576,7 @@ export declare const ActionDetailsCallInstructionsApiFactory: (configuration?: C
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionDetailsCallInstructionsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallInstruction[]>;
+    listCallInstructions(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallInstruction[]>;
 };
 /**
  * ActionDetailsCallInstructionsApi - object-oriented interface
@@ -3593,7 +3593,7 @@ export declare class ActionDetailsCallInstructionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ActionDetailsCallInstructionsApi
      */
-    v2ActionDetailsCallInstructionsIdJsonGet(id: string, options?: any): Promise<CallInstruction>;
+    fetchACallInstructions(id: string, options?: any): Promise<CallInstruction>;
     /**
      * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List call instructions
@@ -3607,7 +3607,7 @@ export declare class ActionDetailsCallInstructionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ActionDetailsCallInstructionsApi
      */
-    v2ActionDetailsCallInstructionsJsonGet(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallInstruction[]>;
+    listCallInstructions(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallInstruction[]>;
 }
 /**
  * ActionsApi - fetch parameter creator
@@ -3621,7 +3621,7 @@ export declare const ActionsApiFetchParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAnAction(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
      * @summary List actions
@@ -3639,7 +3639,7 @@ export declare const ActionsApiFetchParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsJsonGet(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listActions(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * ActionsApi - functional programming interface
@@ -3653,7 +3653,7 @@ export declare const ActionsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action>;
+    fetchAnAction(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action>;
     /**
      * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
      * @summary List actions
@@ -3671,7 +3671,7 @@ export declare const ActionsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsJsonGet(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action[]>;
+    listActions(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action[]>;
 };
 /**
  * ActionsApi - factory interface
@@ -3685,7 +3685,7 @@ export declare const ActionsApiFactory: (configuration?: Configuration, fetch?: 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsIdJsonGet(id: string, options?: any): Promise<Action>;
+    fetchAnAction(id: string, options?: any): Promise<Action>;
     /**
      * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
      * @summary List actions
@@ -3703,7 +3703,7 @@ export declare const ActionsApiFactory: (configuration?: Configuration, fetch?: 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActionsJsonGet(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Action[]>;
+    listActions(ids?: number[], stepId?: number, type?: string, dueOn?: string[], userGuid?: string[], personId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Action[]>;
 };
 /**
  * ActionsApi - object-oriented interface
@@ -3720,7 +3720,7 @@ export declare class ActionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ActionsApi
      */
-    v2ActionsIdJsonGet(id: string, options?: any): Promise<Action>;
+    fetchAnAction(id: string, options?: any): Promise<Action>;
     /**
      * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
      * @summary List actions
@@ -3739,7 +3739,7 @@ export declare class ActionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ActionsApi
      */
-    v2ActionsJsonGet(ids?: Array<number>, stepId?: number, type?: string, dueOn?: Array<string>, userGuid?: Array<string>, personId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Action[]>;
+    listActions(ids?: Array<number>, stepId?: number, type?: string, dueOn?: Array<string>, userGuid?: Array<string>, personId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Action[]>;
 }
 /**
  * ActivitiesApi - fetch parameter creator
@@ -3753,7 +3753,7 @@ export declare const ActivitiesApiFetchParamCreator: (configuration?: Configurat
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesJsonPost(actionId?: number, options?: any): FetchArgs;
+    createAnActivity(actionId?: number, options?: any): FetchArgs;
 };
 /**
  * ActivitiesApi - functional programming interface
@@ -3767,7 +3767,7 @@ export declare const ActivitiesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesJsonPost(actionId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Activity>;
+    createAnActivity(actionId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Activity>;
 };
 /**
  * ActivitiesApi - factory interface
@@ -3781,7 +3781,7 @@ export declare const ActivitiesApiFactory: (configuration?: Configuration, fetch
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesJsonPost(actionId?: number, options?: any): Promise<Activity>;
+    createAnActivity(actionId?: number, options?: any): Promise<Activity>;
 };
 /**
  * ActivitiesApi - object-oriented interface
@@ -3798,7 +3798,7 @@ export declare class ActivitiesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    v2ActivitiesJsonPost(actionId?: number, options?: any): Promise<Activity>;
+    createAnActivity(actionId?: number, options?: any): Promise<Activity>;
 }
 /**
  * CRMActivitiesApi - fetch parameter creator
@@ -3812,7 +3812,7 @@ export declare const CRMActivitiesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchACrmActivity(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List crm activities
@@ -3826,7 +3826,7 @@ export declare const CRMActivitiesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCrmActivities(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CRMActivitiesApi - functional programming interface
@@ -3840,7 +3840,7 @@ export declare const CRMActivitiesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivity>;
+    fetchACrmActivity(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivity>;
     /**
      * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List crm activities
@@ -3854,7 +3854,7 @@ export declare const CRMActivitiesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivity[]>;
+    listCrmActivities(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivity[]>;
 };
 /**
  * CRMActivitiesApi - factory interface
@@ -3868,7 +3868,7 @@ export declare const CRMActivitiesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesIdJsonGet(id: string, options?: any): Promise<CrmActivity>;
+    fetchACrmActivity(id: string, options?: any): Promise<CrmActivity>;
     /**
      * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List crm activities
@@ -3882,7 +3882,7 @@ export declare const CRMActivitiesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivitiesJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivity[]>;
+    listCrmActivities(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivity[]>;
 };
 /**
  * CRMActivitiesApi - object-oriented interface
@@ -3899,7 +3899,7 @@ export declare class CRMActivitiesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CRMActivitiesApi
      */
-    v2CrmActivitiesIdJsonGet(id: string, options?: any): Promise<CrmActivity>;
+    fetchACrmActivity(id: string, options?: any): Promise<CrmActivity>;
     /**
      * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List crm activities
@@ -3914,7 +3914,7 @@ export declare class CRMActivitiesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CRMActivitiesApi
      */
-    v2CrmActivitiesJsonGet(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivity[]>;
+    listCrmActivities(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivity[]>;
 }
 /**
  * CRMActivityFieldsApi - fetch parameter creator
@@ -3933,7 +3933,7 @@ export declare const CRMActivityFieldsApiFetchParamCreator: (configuration?: Con
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivityFieldsJsonGet(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCrmActivityFields(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CRMActivityFieldsApi - functional programming interface
@@ -3952,7 +3952,7 @@ export declare const CRMActivityFieldsApiFp: (configuration?: Configuration) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivityFieldsJsonGet(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivityField[]>;
+    listCrmActivityFields(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CrmActivityField[]>;
 };
 /**
  * CRMActivityFieldsApi - factory interface
@@ -3971,7 +3971,7 @@ export declare const CRMActivityFieldsApiFactory: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CrmActivityFieldsJsonGet(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivityField[]>;
+    listCrmActivityFields(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivityField[]>;
 };
 /**
  * CRMActivityFieldsApi - object-oriented interface
@@ -3993,7 +3993,7 @@ export declare class CRMActivityFieldsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CRMActivityFieldsApi
      */
-    v2CrmActivityFieldsJsonGet(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivityField[]>;
+    listCrmActivityFields(source?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CrmActivityField[]>;
 }
 /**
  * CadenceMembershipsApi - fetch parameter creator
@@ -4001,13 +4001,23 @@ export declare class CRMActivityFieldsApi extends BaseAPI {
  */
 export declare const CadenceMembershipsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+     * @summary Create a cadence membership
+     * @param {number} personId ID of the person to create a cadence membership for
+     * @param {number} cadenceId ID of the cadence to create a cadence membership for
+     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACadenceMembership(personId: number, cadenceId: number, userId?: number, options?: any): FetchArgs;
+    /**
      *
      * @summary Delete a cadence membership
      * @param {string} id CadenceMembership ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteACadenceMembership(id: string, options?: any): FetchArgs;
     /**
      * Fetches a cadence membership, by ID only.
      * @summary Fetch a cadence membership
@@ -4015,7 +4025,7 @@ export declare const CadenceMembershipsApiFetchParamCreator: (configuration?: Co
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchACadenceMembership(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
      * @summary List cadence memberships
@@ -4032,17 +4042,7 @@ export declare const CadenceMembershipsApiFetchParamCreator: (configuration?: Co
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsJsonGet(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
-    /**
-     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-     * @summary Create a cadence membership
-     * @param {number} personId ID of the person to create a cadence membership for
-     * @param {number} cadenceId ID of the cadence to create a cadence membership for
-     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CadenceMembershipsJsonPost(personId: number, cadenceId: number, userId?: number, options?: any): FetchArgs;
+    listCadenceMemberships(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CadenceMembershipsApi - functional programming interface
@@ -4050,13 +4050,23 @@ export declare const CadenceMembershipsApiFetchParamCreator: (configuration?: Co
  */
 export declare const CadenceMembershipsApiFp: (configuration?: Configuration) => {
     /**
+     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+     * @summary Create a cadence membership
+     * @param {number} personId ID of the person to create a cadence membership for
+     * @param {number} cadenceId ID of the cadence to create a cadence membership for
+     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACadenceMembership(personId: number, cadenceId: number, userId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership>;
+    /**
      *
      * @summary Delete a cadence membership
      * @param {string} id CadenceMembership ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteACadenceMembership(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a cadence membership, by ID only.
      * @summary Fetch a cadence membership
@@ -4064,7 +4074,7 @@ export declare const CadenceMembershipsApiFp: (configuration?: Configuration) =>
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership>;
+    fetchACadenceMembership(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership>;
     /**
      * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
      * @summary List cadence memberships
@@ -4081,17 +4091,7 @@ export declare const CadenceMembershipsApiFp: (configuration?: Configuration) =>
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsJsonGet(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership[]>;
-    /**
-     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-     * @summary Create a cadence membership
-     * @param {number} personId ID of the person to create a cadence membership for
-     * @param {number} cadenceId ID of the cadence to create a cadence membership for
-     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CadenceMembershipsJsonPost(personId: number, cadenceId: number, userId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership>;
+    listCadenceMemberships(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CadenceMembership[]>;
 };
 /**
  * CadenceMembershipsApi - factory interface
@@ -4099,13 +4099,23 @@ export declare const CadenceMembershipsApiFp: (configuration?: Configuration) =>
  */
 export declare const CadenceMembershipsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+     * @summary Create a cadence membership
+     * @param {number} personId ID of the person to create a cadence membership for
+     * @param {number} cadenceId ID of the cadence to create a cadence membership for
+     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACadenceMembership(personId: number, cadenceId: number, userId?: number, options?: any): Promise<CadenceMembership>;
+    /**
      *
      * @summary Delete a cadence membership
      * @param {string} id CadenceMembership ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteACadenceMembership(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a cadence membership, by ID only.
      * @summary Fetch a cadence membership
@@ -4113,7 +4123,7 @@ export declare const CadenceMembershipsApiFactory: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsIdJsonGet(id: string, options?: any): Promise<CadenceMembership>;
+    fetchACadenceMembership(id: string, options?: any): Promise<CadenceMembership>;
     /**
      * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
      * @summary List cadence memberships
@@ -4130,17 +4140,7 @@ export declare const CadenceMembershipsApiFactory: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadenceMembershipsJsonGet(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CadenceMembership[]>;
-    /**
-     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-     * @summary Create a cadence membership
-     * @param {number} personId ID of the person to create a cadence membership for
-     * @param {number} cadenceId ID of the cadence to create a cadence membership for
-     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CadenceMembershipsJsonPost(personId: number, cadenceId: number, userId?: number, options?: any): Promise<CadenceMembership>;
+    listCadenceMemberships(ids?: number[], personId?: number, cadenceId?: number, updatedAt?: string[], currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CadenceMembership[]>;
 };
 /**
  * CadenceMembershipsApi - object-oriented interface
@@ -4150,6 +4150,17 @@ export declare const CadenceMembershipsApiFactory: (configuration?: Configuratio
  */
 export declare class CadenceMembershipsApi extends BaseAPI {
     /**
+     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+     * @summary Create a cadence membership
+     * @param {number} personId ID of the person to create a cadence membership for
+     * @param {number} cadenceId ID of the cadence to create a cadence membership for
+     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CadenceMembershipsApi
+     */
+    createACadenceMembership(personId: number, cadenceId: number, userId?: number, options?: any): Promise<CadenceMembership>;
+    /**
      *
      * @summary Delete a cadence membership
      * @param {string} id CadenceMembership ID
@@ -4157,7 +4168,7 @@ export declare class CadenceMembershipsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    v2CadenceMembershipsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteACadenceMembership(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a cadence membership, by ID only.
      * @summary Fetch a cadence membership
@@ -4166,7 +4177,7 @@ export declare class CadenceMembershipsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    v2CadenceMembershipsIdJsonGet(id: string, options?: any): Promise<CadenceMembership>;
+    fetchACadenceMembership(id: string, options?: any): Promise<CadenceMembership>;
     /**
      * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
      * @summary List cadence memberships
@@ -4184,18 +4195,7 @@ export declare class CadenceMembershipsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    v2CadenceMembershipsJsonGet(ids?: Array<number>, personId?: number, cadenceId?: number, updatedAt?: Array<string>, currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CadenceMembership[]>;
-    /**
-     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-     * @summary Create a cadence membership
-     * @param {number} personId ID of the person to create a cadence membership for
-     * @param {number} cadenceId ID of the cadence to create a cadence membership for
-     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CadenceMembershipsApi
-     */
-    v2CadenceMembershipsJsonPost(personId: number, cadenceId: number, userId?: number, options?: any): Promise<CadenceMembership>;
+    listCadenceMemberships(ids?: Array<number>, personId?: number, cadenceId?: number, updatedAt?: Array<string>, currentlyOnCadence?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CadenceMembership[]>;
 }
 /**
  * CadencesApi - fetch parameter creator
@@ -4209,7 +4209,7 @@ export declare const CadencesApiFetchParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchACadence(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List cadences
@@ -4227,7 +4227,7 @@ export declare const CadencesApiFetchParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesJsonGet(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCadences(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CadencesApi - functional programming interface
@@ -4241,7 +4241,7 @@ export declare const CadencesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Cadence>;
+    fetchACadence(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Cadence>;
     /**
      * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List cadences
@@ -4259,7 +4259,7 @@ export declare const CadencesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesJsonGet(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Cadence[]>;
+    listCadences(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Cadence[]>;
 };
 /**
  * CadencesApi - factory interface
@@ -4273,7 +4273,7 @@ export declare const CadencesApiFactory: (configuration?: Configuration, fetch?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesIdJsonGet(id: string, options?: any): Promise<Cadence>;
+    fetchACadence(id: string, options?: any): Promise<Cadence>;
     /**
      * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List cadences
@@ -4291,7 +4291,7 @@ export declare const CadencesApiFactory: (configuration?: Configuration, fetch?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CadencesJsonGet(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Cadence[]>;
+    listCadences(ids?: number[], updatedAt?: string[], teamCadence?: boolean, shared?: boolean, ownedByGuid?: string[], peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Cadence[]>;
 };
 /**
  * CadencesApi - object-oriented interface
@@ -4308,7 +4308,7 @@ export declare class CadencesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CadencesApi
      */
-    v2CadencesIdJsonGet(id: string, options?: any): Promise<Cadence>;
+    fetchACadence(id: string, options?: any): Promise<Cadence>;
     /**
      * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List cadences
@@ -4327,7 +4327,7 @@ export declare class CadencesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CadencesApi
      */
-    v2CadencesJsonGet(ids?: Array<number>, updatedAt?: Array<string>, teamCadence?: boolean, shared?: boolean, ownedByGuid?: Array<string>, peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Cadence[]>;
+    listCadences(ids?: Array<number>, updatedAt?: Array<string>, teamCadence?: boolean, shared?: boolean, ownedByGuid?: Array<string>, peopleAddable?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Cadence[]>;
 }
 /**
  * CallDataRecordsApi - fetch parameter creator
@@ -4341,7 +4341,7 @@ export declare const CallDataRecordsApiFetchParamCreator: (configuration?: Confi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchACallDataRecord(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
      * @summary List call data records
@@ -4358,7 +4358,7 @@ export declare const CallDataRecordsApiFetchParamCreator: (configuration?: Confi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsJsonGet(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCallDataRecords(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CallDataRecordsApi - functional programming interface
@@ -4372,7 +4372,7 @@ export declare const CallDataRecordsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDataRecord>;
+    fetchACallDataRecord(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDataRecord>;
     /**
      * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
      * @summary List call data records
@@ -4389,7 +4389,7 @@ export declare const CallDataRecordsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsJsonGet(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDataRecord[]>;
+    listCallDataRecords(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDataRecord[]>;
 };
 /**
  * CallDataRecordsApi - factory interface
@@ -4403,7 +4403,7 @@ export declare const CallDataRecordsApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsIdJsonGet(id: string, options?: any): Promise<CallDataRecord>;
+    fetchACallDataRecord(id: string, options?: any): Promise<CallDataRecord>;
     /**
      * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
      * @summary List call data records
@@ -4420,7 +4420,7 @@ export declare const CallDataRecordsApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDataRecordsJsonGet(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDataRecord[]>;
+    listCallDataRecords(ids?: number[], hasCall?: boolean, createdAt?: string[], updatedAt?: string[], userGuid?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDataRecord[]>;
 };
 /**
  * CallDataRecordsApi - object-oriented interface
@@ -4437,7 +4437,7 @@ export declare class CallDataRecordsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallDataRecordsApi
      */
-    v2CallDataRecordsIdJsonGet(id: string, options?: any): Promise<CallDataRecord>;
+    fetchACallDataRecord(id: string, options?: any): Promise<CallDataRecord>;
     /**
      * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
      * @summary List call data records
@@ -4455,7 +4455,7 @@ export declare class CallDataRecordsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallDataRecordsApi
      */
-    v2CallDataRecordsJsonGet(ids?: Array<number>, hasCall?: boolean, createdAt?: Array<string>, updatedAt?: Array<string>, userGuid?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDataRecord[]>;
+    listCallDataRecords(ids?: Array<number>, hasCall?: boolean, createdAt?: Array<string>, updatedAt?: Array<string>, userGuid?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDataRecord[]>;
 }
 /**
  * CallDispositionsApi - fetch parameter creator
@@ -4473,7 +4473,7 @@ export declare const CallDispositionsApiFetchParamCreator: (configuration?: Conf
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDispositionsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCallDispositions(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CallDispositionsApi - functional programming interface
@@ -4491,7 +4491,7 @@ export declare const CallDispositionsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDispositionsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDisposition[]>;
+    listCallDispositions(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDisposition[]>;
 };
 /**
  * CallDispositionsApi - factory interface
@@ -4509,7 +4509,7 @@ export declare const CallDispositionsApiFactory: (configuration?: Configuration,
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallDispositionsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
+    listCallDispositions(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
 };
 /**
  * CallDispositionsApi - object-oriented interface
@@ -4530,7 +4530,7 @@ export declare class CallDispositionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallDispositionsApi
      */
-    v2CallDispositionsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
+    listCallDispositions(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
 }
 /**
  * CallSentimentsApi - fetch parameter creator
@@ -4548,7 +4548,7 @@ export declare const CallSentimentsApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallSentimentsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCallSentiments(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CallSentimentsApi - functional programming interface
@@ -4566,7 +4566,7 @@ export declare const CallSentimentsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallSentimentsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDisposition[]>;
+    listCallSentiments(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallDisposition[]>;
 };
 /**
  * CallSentimentsApi - factory interface
@@ -4584,7 +4584,7 @@ export declare const CallSentimentsApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CallSentimentsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
+    listCallSentiments(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
 };
 /**
  * CallSentimentsApi - object-oriented interface
@@ -4605,7 +4605,7 @@ export declare class CallSentimentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallSentimentsApi
      */
-    v2CallSentimentsJsonGet(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
+    listCallSentiments(sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CallDisposition[]>;
 }
 /**
  * CallerIDsApi - fetch parameter creator
@@ -4619,7 +4619,7 @@ export declare const CallerIDsApiFetchParamCreator: (configuration?: Configurati
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersCallerIdsJsonGet(phoneNumber: string, options?: any): FetchArgs;
+    listCallerIds(phoneNumber: string, options?: any): FetchArgs;
 };
 /**
  * CallerIDsApi - functional programming interface
@@ -4633,7 +4633,7 @@ export declare const CallerIDsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersCallerIdsJsonGet(phoneNumber: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallerId[]>;
+    listCallerIds(phoneNumber: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CallerId[]>;
 };
 /**
  * CallerIDsApi - factory interface
@@ -4647,7 +4647,7 @@ export declare const CallerIDsApiFactory: (configuration?: Configuration, fetch?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersCallerIdsJsonGet(phoneNumber: string, options?: any): Promise<CallerId[]>;
+    listCallerIds(phoneNumber: string, options?: any): Promise<CallerId[]>;
 };
 /**
  * CallerIDsApi - object-oriented interface
@@ -4664,7 +4664,7 @@ export declare class CallerIDsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallerIDsApi
      */
-    v2PhoneNumbersCallerIdsJsonGet(phoneNumber: string, options?: any): Promise<CallerId[]>;
+    listCallerIds(phoneNumber: string, options?: any): Promise<CallerId[]>;
 }
 /**
  * CallsApi - fetch parameter creator
@@ -4672,28 +4672,6 @@ export declare class CallerIDsApi extends BaseAPI {
  */
 export declare const CallsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
-     * Fetches a call, by ID only.
-     * @summary Fetch a call
-     * @param {string} id Call ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List calls
-     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
-    /**
      * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
      * @summary Create a call
      * @param {number} personId The ID of the person whom this call will be logged for
@@ -4709,9 +4687,31 @@ export declare const CallsApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesCallsJsonPost(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
+    createACall(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
         [key: string]: string;
     }, linkedCallDataRecordIds?: number[], options?: any): FetchArgs;
+    /**
+     * Fetches a call, by ID only.
+     * @summary Fetch a call
+     * @param {string} id Call ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fetchACall(id: string, options?: any): FetchArgs;
+    /**
+     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List calls
+     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listCalls(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * CallsApi - functional programming interface
@@ -4719,28 +4719,6 @@ export declare const CallsApiFetchParamCreator: (configuration?: Configuration) 
  */
 export declare const CallsApiFp: (configuration?: Configuration) => {
     /**
-     * Fetches a call, by ID only.
-     * @summary Fetch a call
-     * @param {string} id Call ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Call>;
-    /**
-     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List calls
-     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Call[]>;
-    /**
      * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
      * @summary Create a call
      * @param {number} personId The ID of the person whom this call will be logged for
@@ -4756,9 +4734,31 @@ export declare const CallsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesCallsJsonPost(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
+    createACall(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
         [key: string]: string;
     }, linkedCallDataRecordIds?: number[], options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Call>;
+    /**
+     * Fetches a call, by ID only.
+     * @summary Fetch a call
+     * @param {string} id Call ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fetchACall(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Call>;
+    /**
+     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List calls
+     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listCalls(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Call[]>;
 };
 /**
  * CallsApi - factory interface
@@ -4766,28 +4766,6 @@ export declare const CallsApiFp: (configuration?: Configuration) => {
  */
 export declare const CallsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
-     * Fetches a call, by ID only.
-     * @summary Fetch a call
-     * @param {string} id Call ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsIdJsonGet(id: string, options?: any): Promise<Call>;
-    /**
-     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List calls
-     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ActivitiesCallsJsonGet(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Call[]>;
-    /**
      * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
      * @summary Create a call
      * @param {number} personId The ID of the person whom this call will be logged for
@@ -4803,9 +4781,31 @@ export declare const CallsApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesCallsJsonPost(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
+    createACall(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
         [key: string]: string;
     }, linkedCallDataRecordIds?: number[], options?: any): Promise<Call>;
+    /**
+     * Fetches a call, by ID only.
+     * @summary Fetch a call
+     * @param {string} id Call ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fetchACall(id: string, options?: any): Promise<Call>;
+    /**
+     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List calls
+     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listCalls(ids?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Call[]>;
 };
 /**
  * CallsApi - object-oriented interface
@@ -4815,30 +4815,6 @@ export declare const CallsApiFactory: (configuration?: Configuration, fetch?: Fe
  */
 export declare class CallsApi extends BaseAPI {
     /**
-     * Fetches a call, by ID only.
-     * @summary Fetch a call
-     * @param {string} id Call ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CallsApi
-     */
-    v2ActivitiesCallsIdJsonGet(id: string, options?: any): Promise<Call>;
-    /**
-     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List calls
-     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CallsApi
-     */
-    v2ActivitiesCallsJsonGet(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Call[]>;
-    /**
      * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
      * @summary Create a call
      * @param {number} personId The ID of the person whom this call will be logged for
@@ -4855,9 +4831,33 @@ export declare class CallsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CallsApi
      */
-    v2ActivitiesCallsJsonPost(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
+    createACall(personId: number, to?: string, duration?: number, disposition?: string, sentiment?: string, notes?: string, userGuid?: string, actionId?: number, crmParams?: {
         [key: string]: string;
     }, linkedCallDataRecordIds?: Array<number>, options?: any): Promise<Call>;
+    /**
+     * Fetches a call, by ID only.
+     * @summary Fetch a call
+     * @param {string} id Call ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CallsApi
+     */
+    fetchACall(id: string, options?: any): Promise<Call>;
+    /**
+     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List calls
+     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CallsApi
+     */
+    listCalls(ids?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Call[]>;
 }
 /**
  * CustomFieldsApi - fetch parameter creator
@@ -4865,13 +4865,22 @@ export declare class CallsApi extends BaseAPI {
  */
 export declare const CustomFieldsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates a custom field.
+     * @summary Create a custom field
+     * @param {string} name The name of the custom field
+     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACustomField(name: string, fieldType?: string, options?: any): FetchArgs;
+    /**
      * Deletes a custom field.
      * @summary Delete a custom field
      * @param {string} id Custom Field ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteACustomField(id: string, options?: any): FetchArgs;
     /**
      * Fetches a custom field, by ID only.
      * @summary Fetch a custom field
@@ -4879,17 +4888,7 @@ export declare const CustomFieldsApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Update a custom field.
-     * @summary Update a custom field
-     * @param {string} id Custom Field ID
-     * @param {string} [name] The name of the custom field
-     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CustomFieldsIdJsonPut(id: string, name?: string, fieldType?: string, options?: any): FetchArgs;
+    fetchACustomField(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List custom fields
@@ -4903,16 +4902,17 @@ export declare const CustomFieldsApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonGet(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listCustomFields(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
-     * Creates a custom field.
-     * @summary Create a custom field
-     * @param {string} name The name of the custom field
+     * Update a custom field.
+     * @summary Update a custom field
+     * @param {string} id Custom Field ID
+     * @param {string} [name] The name of the custom field
      * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonPost(name: string, fieldType?: string, options?: any): FetchArgs;
+    updateACustomField(id: string, name?: string, fieldType?: string, options?: any): FetchArgs;
 };
 /**
  * CustomFieldsApi - functional programming interface
@@ -4920,13 +4920,22 @@ export declare const CustomFieldsApiFetchParamCreator: (configuration?: Configur
  */
 export declare const CustomFieldsApiFp: (configuration?: Configuration) => {
     /**
+     * Creates a custom field.
+     * @summary Create a custom field
+     * @param {string} name The name of the custom field
+     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACustomField(name: string, fieldType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
+    /**
      * Deletes a custom field.
      * @summary Delete a custom field
      * @param {string} id Custom Field ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteACustomField(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a custom field, by ID only.
      * @summary Fetch a custom field
@@ -4934,17 +4943,7 @@ export declare const CustomFieldsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
-    /**
-     * Update a custom field.
-     * @summary Update a custom field
-     * @param {string} id Custom Field ID
-     * @param {string} [name] The name of the custom field
-     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CustomFieldsIdJsonPut(id: string, name?: string, fieldType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
+    fetchACustomField(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
     /**
      * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List custom fields
@@ -4958,16 +4957,17 @@ export declare const CustomFieldsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonGet(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField[]>;
+    listCustomFields(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField[]>;
     /**
-     * Creates a custom field.
-     * @summary Create a custom field
-     * @param {string} name The name of the custom field
+     * Update a custom field.
+     * @summary Update a custom field
+     * @param {string} id Custom Field ID
+     * @param {string} [name] The name of the custom field
      * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonPost(name: string, fieldType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
+    updateACustomField(id: string, name?: string, fieldType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CustomField>;
 };
 /**
  * CustomFieldsApi - factory interface
@@ -4975,13 +4975,22 @@ export declare const CustomFieldsApiFp: (configuration?: Configuration) => {
  */
 export declare const CustomFieldsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates a custom field.
+     * @summary Create a custom field
+     * @param {string} name The name of the custom field
+     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createACustomField(name: string, fieldType?: string, options?: any): Promise<CustomField>;
+    /**
      * Deletes a custom field.
      * @summary Delete a custom field
      * @param {string} id Custom Field ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteACustomField(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a custom field, by ID only.
      * @summary Fetch a custom field
@@ -4989,17 +4998,7 @@ export declare const CustomFieldsApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsIdJsonGet(id: string, options?: any): Promise<CustomField>;
-    /**
-     * Update a custom field.
-     * @summary Update a custom field
-     * @param {string} id Custom Field ID
-     * @param {string} [name] The name of the custom field
-     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2CustomFieldsIdJsonPut(id: string, name?: string, fieldType?: string, options?: any): Promise<CustomField>;
+    fetchACustomField(id: string, options?: any): Promise<CustomField>;
     /**
      * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List custom fields
@@ -5013,16 +5012,17 @@ export declare const CustomFieldsApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonGet(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CustomField[]>;
+    listCustomFields(ids?: number[], fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CustomField[]>;
     /**
-     * Creates a custom field.
-     * @summary Create a custom field
-     * @param {string} name The name of the custom field
+     * Update a custom field.
+     * @summary Update a custom field
+     * @param {string} id Custom Field ID
+     * @param {string} [name] The name of the custom field
      * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2CustomFieldsJsonPost(name: string, fieldType?: string, options?: any): Promise<CustomField>;
+    updateACustomField(id: string, name?: string, fieldType?: string, options?: any): Promise<CustomField>;
 };
 /**
  * CustomFieldsApi - object-oriented interface
@@ -5032,6 +5032,16 @@ export declare const CustomFieldsApiFactory: (configuration?: Configuration, fet
  */
 export declare class CustomFieldsApi extends BaseAPI {
     /**
+     * Creates a custom field.
+     * @summary Create a custom field
+     * @param {string} name The name of the custom field
+     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CustomFieldsApi
+     */
+    createACustomField(name: string, fieldType?: string, options?: any): Promise<CustomField>;
+    /**
      * Deletes a custom field.
      * @summary Delete a custom field
      * @param {string} id Custom Field ID
@@ -5039,7 +5049,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    v2CustomFieldsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteACustomField(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a custom field, by ID only.
      * @summary Fetch a custom field
@@ -5048,18 +5058,7 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    v2CustomFieldsIdJsonGet(id: string, options?: any): Promise<CustomField>;
-    /**
-     * Update a custom field.
-     * @summary Update a custom field
-     * @param {string} id Custom Field ID
-     * @param {string} [name] The name of the custom field
-     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CustomFieldsApi
-     */
-    v2CustomFieldsIdJsonPut(id: string, name?: string, fieldType?: string, options?: any): Promise<CustomField>;
+    fetchACustomField(id: string, options?: any): Promise<CustomField>;
     /**
      * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List custom fields
@@ -5074,17 +5073,18 @@ export declare class CustomFieldsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    v2CustomFieldsJsonGet(ids?: Array<number>, fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CustomField[]>;
+    listCustomFields(ids?: Array<number>, fieldType?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<CustomField[]>;
     /**
-     * Creates a custom field.
-     * @summary Create a custom field
-     * @param {string} name The name of the custom field
+     * Update a custom field.
+     * @summary Update a custom field
+     * @param {string} id Custom Field ID
+     * @param {string} [name] The name of the custom field
      * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    v2CustomFieldsJsonPost(name: string, fieldType?: string, options?: any): Promise<CustomField>;
+    updateACustomField(id: string, name?: string, fieldType?: string, options?: any): Promise<CustomField>;
 }
 /**
  * EmailTemplateAttachmentsApi - fetch parameter creator
@@ -5102,7 +5102,7 @@ export declare const EmailTemplateAttachmentsApiFetchParamCreator: (configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplateAttachmentsJsonGet(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listEmailTemplateAttachments(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * EmailTemplateAttachmentsApi - functional programming interface
@@ -5120,7 +5120,7 @@ export declare const EmailTemplateAttachmentsApiFp: (configuration?: Configurati
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplateAttachmentsJsonGet(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplateAttachment[]>;
+    listEmailTemplateAttachments(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplateAttachment[]>;
 };
 /**
  * EmailTemplateAttachmentsApi - factory interface
@@ -5138,7 +5138,7 @@ export declare const EmailTemplateAttachmentsApiFactory: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplateAttachmentsJsonGet(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplateAttachment[]>;
+    listEmailTemplateAttachments(ids?: number[], emailTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplateAttachment[]>;
 };
 /**
  * EmailTemplateAttachmentsApi - object-oriented interface
@@ -5159,7 +5159,7 @@ export declare class EmailTemplateAttachmentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EmailTemplateAttachmentsApi
      */
-    v2EmailTemplateAttachmentsJsonGet(ids?: Array<number>, emailTemplateId?: Array<number>, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplateAttachment[]>;
+    listEmailTemplateAttachments(ids?: Array<number>, emailTemplateId?: Array<number>, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplateAttachment[]>;
 }
 /**
  * EmailTemplatesApi - fetch parameter creator
@@ -5174,7 +5174,7 @@ export declare const EmailTemplatesApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): FetchArgs;
+    fetchAnEmailTemplate(id: string, includeSignature?: boolean, options?: any): FetchArgs;
     /**
      * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List email templates
@@ -5196,7 +5196,7 @@ export declare const EmailTemplatesApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesJsonGet(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listEmailTemplates(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * EmailTemplatesApi - functional programming interface
@@ -5211,7 +5211,7 @@ export declare const EmailTemplatesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplate>;
+    fetchAnEmailTemplate(id: string, includeSignature?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplate>;
     /**
      * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List email templates
@@ -5233,7 +5233,7 @@ export declare const EmailTemplatesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesJsonGet(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplate[]>;
+    listEmailTemplates(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<EmailTemplate[]>;
 };
 /**
  * EmailTemplatesApi - factory interface
@@ -5248,7 +5248,7 @@ export declare const EmailTemplatesApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): Promise<EmailTemplate>;
+    fetchAnEmailTemplate(id: string, includeSignature?: boolean, options?: any): Promise<EmailTemplate>;
     /**
      * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List email templates
@@ -5270,7 +5270,7 @@ export declare const EmailTemplatesApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2EmailTemplatesJsonGet(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplate[]>;
+    listEmailTemplates(ids?: number[], updatedAt?: string[], linkedToTeamTemplate?: boolean, search?: string, tagIds?: number[], tag?: string[], filterByOwner?: boolean, groupId?: number[], includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplate[]>;
 };
 /**
  * EmailTemplatesApi - object-oriented interface
@@ -5288,7 +5288,7 @@ export declare class EmailTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EmailTemplatesApi
      */
-    v2EmailTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): Promise<EmailTemplate>;
+    fetchAnEmailTemplate(id: string, includeSignature?: boolean, options?: any): Promise<EmailTemplate>;
     /**
      * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List email templates
@@ -5311,7 +5311,7 @@ export declare class EmailTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EmailTemplatesApi
      */
-    v2EmailTemplatesJsonGet(ids?: Array<number>, updatedAt?: Array<string>, linkedToTeamTemplate?: boolean, search?: string, tagIds?: Array<number>, tag?: Array<string>, filterByOwner?: boolean, groupId?: Array<number>, includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplate[]>;
+    listEmailTemplates(ids?: Array<number>, updatedAt?: Array<string>, linkedToTeamTemplate?: boolean, search?: string, tagIds?: Array<number>, tag?: Array<string>, filterByOwner?: boolean, groupId?: Array<number>, includeCadenceTemplates?: boolean, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<EmailTemplate[]>;
 }
 /**
  * EmailsApi - fetch parameter creator
@@ -5325,7 +5325,7 @@ export declare const EmailsApiFetchParamCreator: (configuration?: Configuration)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAnEmail(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List emails
@@ -5342,7 +5342,7 @@ export declare const EmailsApiFetchParamCreator: (configuration?: Configuration)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsJsonGet(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listEmails(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * EmailsApi - functional programming interface
@@ -5356,7 +5356,7 @@ export declare const EmailsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Email>;
+    fetchAnEmail(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Email>;
     /**
      * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List emails
@@ -5373,7 +5373,7 @@ export declare const EmailsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsJsonGet(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Email[]>;
+    listEmails(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Email[]>;
 };
 /**
  * EmailsApi - factory interface
@@ -5387,7 +5387,7 @@ export declare const EmailsApiFactory: (configuration?: Configuration, fetch?: F
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsIdJsonGet(id: string, options?: any): Promise<Email>;
+    fetchAnEmail(id: string, options?: any): Promise<Email>;
     /**
      * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List emails
@@ -5404,7 +5404,7 @@ export declare const EmailsApiFactory: (configuration?: Configuration, fetch?: F
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ActivitiesEmailsJsonGet(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Email[]>;
+    listEmails(ids?: number[], updatedAt?: string[], bounced?: boolean, crmActivityId?: number[], actionId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Email[]>;
 };
 /**
  * EmailsApi - object-oriented interface
@@ -5421,7 +5421,7 @@ export declare class EmailsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EmailsApi
      */
-    v2ActivitiesEmailsIdJsonGet(id: string, options?: any): Promise<Email>;
+    fetchAnEmail(id: string, options?: any): Promise<Email>;
     /**
      * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List emails
@@ -5439,7 +5439,7 @@ export declare class EmailsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EmailsApi
      */
-    v2ActivitiesEmailsJsonGet(ids?: Array<number>, updatedAt?: Array<string>, bounced?: boolean, crmActivityId?: Array<number>, actionId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Email[]>;
+    listEmails(ids?: Array<number>, updatedAt?: Array<string>, bounced?: boolean, crmActivityId?: Array<number>, actionId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Email[]>;
 }
 /**
  * ImportsApi - fetch parameter creator
@@ -5447,6 +5447,15 @@ export declare class EmailsApi extends BaseAPI {
  */
 export declare const ImportsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates an import.
+     * @summary Create an import
+     * @param {number} [userId] ID of the User that owns this Import
+     * @param {string} [name] Name, recommended to be easily identifiable to a user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnImport(userId?: number, name?: string, options?: any): FetchArgs;
+    /**
      * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Delete an import
      * @param {string} id Import ID
@@ -5454,7 +5463,7 @@ export declare const ImportsApiFetchParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonDelete(id: string, undo?: string, options?: any): FetchArgs;
+    deleteAnImport(id: string, undo?: string, options?: any): FetchArgs;
     /**
      * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Fetch an import
@@ -5462,17 +5471,7 @@ export declare const ImportsApiFetchParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-     * @summary Update an import
-     * @param {string} id Import ID
-     * @param {number} [userId] ID of the User that owns this Import
-     * @param {string} [name] Name, recommended to be easily identifiable to a user
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ImportsIdJsonPut(id: string, userId?: number, name?: string, options?: any): FetchArgs;
+    fetchAnImport(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple imports.
      * @summary List imports
@@ -5486,16 +5485,17 @@ export declare const ImportsApiFetchParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonGet(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listImports(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
-     * Creates an import.
-     * @summary Create an import
+     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+     * @summary Update an import
+     * @param {string} id Import ID
      * @param {number} [userId] ID of the User that owns this Import
      * @param {string} [name] Name, recommended to be easily identifiable to a user
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonPost(userId?: number, name?: string, options?: any): FetchArgs;
+    updateAnImport(id: string, userId?: number, name?: string, options?: any): FetchArgs;
 };
 /**
  * ImportsApi - functional programming interface
@@ -5503,6 +5503,15 @@ export declare const ImportsApiFetchParamCreator: (configuration?: Configuration
  */
 export declare const ImportsApiFp: (configuration?: Configuration) => {
     /**
+     * Creates an import.
+     * @summary Create an import
+     * @param {number} [userId] ID of the User that owns this Import
+     * @param {string} [name] Name, recommended to be easily identifiable to a user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnImport(userId?: number, name?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
+    /**
      * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Delete an import
      * @param {string} id Import ID
@@ -5510,7 +5519,7 @@ export declare const ImportsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonDelete(id: string, undo?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteAnImport(id: string, undo?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Fetch an import
@@ -5518,17 +5527,7 @@ export declare const ImportsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
-    /**
-     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-     * @summary Update an import
-     * @param {string} id Import ID
-     * @param {number} [userId] ID of the User that owns this Import
-     * @param {string} [name] Name, recommended to be easily identifiable to a user
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ImportsIdJsonPut(id: string, userId?: number, name?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
+    fetchAnImport(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
     /**
      * Fetches multiple imports.
      * @summary List imports
@@ -5542,16 +5541,17 @@ export declare const ImportsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonGet(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport[]>;
+    listImports(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport[]>;
     /**
-     * Creates an import.
-     * @summary Create an import
+     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+     * @summary Update an import
+     * @param {string} id Import ID
      * @param {number} [userId] ID of the User that owns this Import
      * @param {string} [name] Name, recommended to be easily identifiable to a user
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonPost(userId?: number, name?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
+    updateAnImport(id: string, userId?: number, name?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ModelImport>;
 };
 /**
  * ImportsApi - factory interface
@@ -5559,6 +5559,15 @@ export declare const ImportsApiFp: (configuration?: Configuration) => {
  */
 export declare const ImportsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates an import.
+     * @summary Create an import
+     * @param {number} [userId] ID of the User that owns this Import
+     * @param {string} [name] Name, recommended to be easily identifiable to a user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAnImport(userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    /**
      * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Delete an import
      * @param {string} id Import ID
@@ -5566,7 +5575,7 @@ export declare const ImportsApiFactory: (configuration?: Configuration, fetch?: 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonDelete(id: string, undo?: string, options?: any): Promise<Response>;
+    deleteAnImport(id: string, undo?: string, options?: any): Promise<Response>;
     /**
      * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Fetch an import
@@ -5574,17 +5583,7 @@ export declare const ImportsApiFactory: (configuration?: Configuration, fetch?: 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsIdJsonGet(id: string, options?: any): Promise<ModelImport>;
-    /**
-     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-     * @summary Update an import
-     * @param {string} id Import ID
-     * @param {number} [userId] ID of the User that owns this Import
-     * @param {string} [name] Name, recommended to be easily identifiable to a user
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2ImportsIdJsonPut(id: string, userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    fetchAnImport(id: string, options?: any): Promise<ModelImport>;
     /**
      * Fetches multiple imports.
      * @summary List imports
@@ -5598,16 +5597,17 @@ export declare const ImportsApiFactory: (configuration?: Configuration, fetch?: 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonGet(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<ModelImport[]>;
+    listImports(ids?: number[], userIds?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<ModelImport[]>;
     /**
-     * Creates an import.
-     * @summary Create an import
+     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+     * @summary Update an import
+     * @param {string} id Import ID
      * @param {number} [userId] ID of the User that owns this Import
      * @param {string} [name] Name, recommended to be easily identifiable to a user
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2ImportsJsonPost(userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    updateAnImport(id: string, userId?: number, name?: string, options?: any): Promise<ModelImport>;
 };
 /**
  * ImportsApi - object-oriented interface
@@ -5617,6 +5617,16 @@ export declare const ImportsApiFactory: (configuration?: Configuration, fetch?: 
  */
 export declare class ImportsApi extends BaseAPI {
     /**
+     * Creates an import.
+     * @summary Create an import
+     * @param {number} [userId] ID of the User that owns this Import
+     * @param {string} [name] Name, recommended to be easily identifiable to a user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImportsApi
+     */
+    createAnImport(userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    /**
      * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Delete an import
      * @param {string} id Import ID
@@ -5625,7 +5635,7 @@ export declare class ImportsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    v2ImportsIdJsonDelete(id: string, undo?: string, options?: any): Promise<Response>;
+    deleteAnImport(id: string, undo?: string, options?: any): Promise<Response>;
     /**
      * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Fetch an import
@@ -5634,18 +5644,7 @@ export declare class ImportsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    v2ImportsIdJsonGet(id: string, options?: any): Promise<ModelImport>;
-    /**
-     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-     * @summary Update an import
-     * @param {string} id Import ID
-     * @param {number} [userId] ID of the User that owns this Import
-     * @param {string} [name] Name, recommended to be easily identifiable to a user
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ImportsApi
-     */
-    v2ImportsIdJsonPut(id: string, userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    fetchAnImport(id: string, options?: any): Promise<ModelImport>;
     /**
      * Fetches multiple imports.
      * @summary List imports
@@ -5660,17 +5659,18 @@ export declare class ImportsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    v2ImportsJsonGet(ids?: Array<number>, userIds?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<ModelImport[]>;
+    listImports(ids?: Array<number>, userIds?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<ModelImport[]>;
     /**
-     * Creates an import.
-     * @summary Create an import
+     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+     * @summary Update an import
+     * @param {string} id Import ID
      * @param {number} [userId] ID of the User that owns this Import
      * @param {string} [name] Name, recommended to be easily identifiable to a user
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    v2ImportsJsonPost(userId?: number, name?: string, options?: any): Promise<ModelImport>;
+    updateAnImport(id: string, userId?: number, name?: string, options?: any): Promise<ModelImport>;
 }
 /**
  * LiveWebsiteTrackingParametersApi - fetch parameter creator
@@ -5684,7 +5684,7 @@ export declare const LiveWebsiteTrackingParametersApiFetchParamCreator: (configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2LiveWebsiteTrackingParametersJsonPost(personId: number, options?: any): FetchArgs;
+    createAnLiveWebsiteTrackingParameter(personId: number, options?: any): FetchArgs;
 };
 /**
  * LiveWebsiteTrackingParametersApi - functional programming interface
@@ -5698,7 +5698,7 @@ export declare const LiveWebsiteTrackingParametersApiFp: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2LiveWebsiteTrackingParametersJsonPost(personId: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<LiveWebsiteTrackingParameter>;
+    createAnLiveWebsiteTrackingParameter(personId: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<LiveWebsiteTrackingParameter>;
 };
 /**
  * LiveWebsiteTrackingParametersApi - factory interface
@@ -5712,7 +5712,7 @@ export declare const LiveWebsiteTrackingParametersApiFactory: (configuration?: C
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2LiveWebsiteTrackingParametersJsonPost(personId: number, options?: any): Promise<LiveWebsiteTrackingParameter>;
+    createAnLiveWebsiteTrackingParameter(personId: number, options?: any): Promise<LiveWebsiteTrackingParameter>;
 };
 /**
  * LiveWebsiteTrackingParametersApi - object-oriented interface
@@ -5729,7 +5729,7 @@ export declare class LiveWebsiteTrackingParametersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LiveWebsiteTrackingParametersApi
      */
-    v2LiveWebsiteTrackingParametersJsonPost(personId: number, options?: any): Promise<LiveWebsiteTrackingParameter>;
+    createAnLiveWebsiteTrackingParameter(personId: number, options?: any): Promise<LiveWebsiteTrackingParameter>;
 }
 /**
  * MeApi - fetch parameter creator
@@ -5742,7 +5742,7 @@ export declare const MeApiFetchParamCreator: (configuration?: Configuration) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2MeJsonGet(options?: any): FetchArgs;
+    fetchCurrentUser(options?: any): FetchArgs;
 };
 /**
  * MeApi - functional programming interface
@@ -5755,7 +5755,7 @@ export declare const MeApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2MeJsonGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User>;
+    fetchCurrentUser(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User>;
 };
 /**
  * MeApi - factory interface
@@ -5768,7 +5768,7 @@ export declare const MeApiFactory: (configuration?: Configuration, fetch?: Fetch
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2MeJsonGet(options?: any): Promise<User>;
+    fetchCurrentUser(options?: any): Promise<User>;
 };
 /**
  * MeApi - object-oriented interface
@@ -5784,7 +5784,7 @@ export declare class MeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof MeApi
      */
-    v2MeJsonGet(options?: any): Promise<User>;
+    fetchCurrentUser(options?: any): Promise<User>;
 }
 /**
  * NotesApi - fetch parameter creator
@@ -5792,13 +5792,27 @@ export declare class MeApi extends BaseAPI {
  */
 export declare const NotesApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates a note.
+     * @summary Create a note
+     * @param {string} content The content of the note
+     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+     * @param {number} associatedWithId ID of the item with which the note is associated
+     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createANote(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): FetchArgs;
+    /**
      * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a note
      * @param {string} id Note ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteANote(id: string, options?: any): FetchArgs;
     /**
      * Fetches a note, by ID only.
      * @summary Fetch a note
@@ -5806,17 +5820,7 @@ export declare const NotesApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-     * @summary Update a note
-     * @param {string} id Note ID
-     * @param {string} content The content of the note
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2NotesIdJsonPut(id: string, content: string, callId?: number, options?: any): FetchArgs;
+    fetchANote(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List notes
@@ -5832,21 +5836,17 @@ export declare const NotesApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonGet(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listNotes(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
-     * Creates a note.
-     * @summary Create a note
+     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+     * @summary Update a note
+     * @param {string} id Note ID
      * @param {string} content The content of the note
-     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-     * @param {number} associatedWithId ID of the item with which the note is associated
-     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonPost(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): FetchArgs;
+    updateANote(id: string, content: string, callId?: number, options?: any): FetchArgs;
 };
 /**
  * NotesApi - functional programming interface
@@ -5854,13 +5854,27 @@ export declare const NotesApiFetchParamCreator: (configuration?: Configuration) 
  */
 export declare const NotesApiFp: (configuration?: Configuration) => {
     /**
+     * Creates a note.
+     * @summary Create a note
+     * @param {string} content The content of the note
+     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+     * @param {number} associatedWithId ID of the item with which the note is associated
+     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createANote(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note>;
+    /**
      * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a note
      * @param {string} id Note ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteANote(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a note, by ID only.
      * @summary Fetch a note
@@ -5868,17 +5882,7 @@ export declare const NotesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note>;
-    /**
-     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-     * @summary Update a note
-     * @param {string} id Note ID
-     * @param {string} content The content of the note
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2NotesIdJsonPut(id: string, content: string, callId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
+    fetchANote(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note>;
     /**
      * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List notes
@@ -5894,21 +5898,17 @@ export declare const NotesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonGet(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note[]>;
+    listNotes(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note[]>;
     /**
-     * Creates a note.
-     * @summary Create a note
+     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+     * @summary Update a note
+     * @param {string} id Note ID
      * @param {string} content The content of the note
-     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-     * @param {number} associatedWithId ID of the item with which the note is associated
-     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonPost(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Note>;
+    updateANote(id: string, content: string, callId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
 };
 /**
  * NotesApi - factory interface
@@ -5916,13 +5916,27 @@ export declare const NotesApiFp: (configuration?: Configuration) => {
  */
 export declare const NotesApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates a note.
+     * @summary Create a note
+     * @param {string} content The content of the note
+     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+     * @param {number} associatedWithId ID of the item with which the note is associated
+     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createANote(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): Promise<Note>;
+    /**
      * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a note
      * @param {string} id Note ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteANote(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a note, by ID only.
      * @summary Fetch a note
@@ -5930,17 +5944,7 @@ export declare const NotesApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesIdJsonGet(id: string, options?: any): Promise<Note>;
-    /**
-     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-     * @summary Update a note
-     * @param {string} id Note ID
-     * @param {string} content The content of the note
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2NotesIdJsonPut(id: string, content: string, callId?: number, options?: any): Promise<Person>;
+    fetchANote(id: string, options?: any): Promise<Note>;
     /**
      * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List notes
@@ -5956,21 +5960,17 @@ export declare const NotesApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonGet(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Note[]>;
+    listNotes(associatedWithType?: string, associatedWithId?: number, updatedAt?: string[], ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Note[]>;
     /**
-     * Creates a note.
-     * @summary Create a note
+     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+     * @summary Update a note
+     * @param {string} id Note ID
      * @param {string} content The content of the note
-     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-     * @param {number} associatedWithId ID of the item with which the note is associated
-     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2NotesJsonPost(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): Promise<Note>;
+    updateANote(id: string, content: string, callId?: number, options?: any): Promise<Person>;
 };
 /**
  * NotesApi - object-oriented interface
@@ -5980,6 +5980,21 @@ export declare const NotesApiFactory: (configuration?: Configuration, fetch?: Fe
  */
 export declare class NotesApi extends BaseAPI {
     /**
+     * Creates a note.
+     * @summary Create a note
+     * @param {string} content The content of the note
+     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+     * @param {number} associatedWithId ID of the item with which the note is associated
+     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotesApi
+     */
+    createANote(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): Promise<Note>;
+    /**
      * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a note
      * @param {string} id Note ID
@@ -5987,7 +6002,7 @@ export declare class NotesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    v2NotesIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteANote(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a note, by ID only.
      * @summary Fetch a note
@@ -5996,18 +6011,7 @@ export declare class NotesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    v2NotesIdJsonGet(id: string, options?: any): Promise<Note>;
-    /**
-     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-     * @summary Update a note
-     * @param {string} id Note ID
-     * @param {string} content The content of the note
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotesApi
-     */
-    v2NotesIdJsonPut(id: string, content: string, callId?: number, options?: any): Promise<Person>;
+    fetchANote(id: string, options?: any): Promise<Note>;
     /**
      * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List notes
@@ -6024,22 +6028,18 @@ export declare class NotesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    v2NotesJsonGet(associatedWithType?: string, associatedWithId?: number, updatedAt?: Array<string>, ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Note[]>;
+    listNotes(associatedWithType?: string, associatedWithId?: number, updatedAt?: Array<string>, ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Note[]>;
     /**
-     * Creates a note.
-     * @summary Create a note
+     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+     * @summary Update a note
+     * @param {string} id Note ID
      * @param {string} content The content of the note
-     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-     * @param {number} associatedWithId ID of the item with which the note is associated
-     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    v2NotesJsonPost(content: string, associatedWithType: string, associatedWithId: number, skipCrmSync?: boolean, callId?: number, subject?: string, userGuid?: string, options?: any): Promise<Note>;
+    updateANote(id: string, content: string, callId?: number, options?: any): Promise<Person>;
 }
 /**
  * OngoingActionsApi - fetch parameter creator
@@ -6053,7 +6053,7 @@ export declare const OngoingActionsApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2OngoingActionsJsonPost(actionId?: number, options?: any): FetchArgs;
+    createAnOngoingAction(actionId?: number, options?: any): FetchArgs;
 };
 /**
  * OngoingActionsApi - functional programming interface
@@ -6067,7 +6067,7 @@ export declare const OngoingActionsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2OngoingActionsJsonPost(actionId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action>;
+    createAnOngoingAction(actionId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Action>;
 };
 /**
  * OngoingActionsApi - factory interface
@@ -6081,7 +6081,7 @@ export declare const OngoingActionsApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2OngoingActionsJsonPost(actionId?: number, options?: any): Promise<Action>;
+    createAnOngoingAction(actionId?: number, options?: any): Promise<Action>;
 };
 /**
  * OngoingActionsApi - object-oriented interface
@@ -6098,7 +6098,7 @@ export declare class OngoingActionsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof OngoingActionsApi
      */
-    v2OngoingActionsJsonPost(actionId?: number, options?: any): Promise<Action>;
+    createAnOngoingAction(actionId?: number, options?: any): Promise<Action>;
 }
 /**
  * PeopleApi - fetch parameter creator
@@ -6106,13 +6106,53 @@ export declare class OngoingActionsApi extends BaseAPI {
  */
 export declare const PeopleApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+     * @summary Create a person
+     * @param {string} [emailAddress] Email address
+     * @param {string} [secondaryEmailAddress] Alternate email address
+     * @param {string} [personalEmailAddress] Personal email address
+     * @param {string} [firstName] First name
+     * @param {string} [lastName] Last name
+     * @param {string} [phone] Phone without formatting
+     * @param {string} [phoneExtension] Phone extension without formatting
+     * @param {string} [mobilePhone] Mobile phone without formatting
+     * @param {string} [homePhone] Home phone without formatting
+     * @param {string} [linkedinUrl] Linkedin URL
+     * @param {string} [title] Job title
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [country] Country
+     * @param {string} [workCity] Work location - city
+     * @param {string} [workState] Work location - state
+     * @param {string} [workCountry] Work location - country
+     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+     * @param {string} [locale] Time locale of the person
+     * @param {string} [personalWebsite] The website of this person
+     * @param {string} [twitterHandle] The twitter handle of this person
+     * @param {Array<string>} [tags] All tags applied to this person
+     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {number} [accountId] ID of the Account to link this person to
+     * @param {number} [ownerId] ID of the User that owns this person
+     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+     * @param {number} [personStageId] ID of the PersonStage of this person
+     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPerson(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): FetchArgs;
+    /**
      * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a person
      * @param {string} id Person id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteAPerson(id: string, options?: any): FetchArgs;
     /**
      * Fetches a person, by ID only.
      * @summary Fetch a person
@@ -6120,7 +6160,29 @@ export declare const PeopleApiFetchParamCreator: (configuration?: Configuration)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAPerson(id: string, options?: any): FetchArgs;
+    /**
+     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List people
+     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listPeople(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
      * Updates a person.
      * @summary Update a person
@@ -6160,69 +6222,7 @@ export declare const PeopleApiFetchParamCreator: (configuration?: Configuration)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonPut(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): FetchArgs;
-    /**
-     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List people
-     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonGet(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
-    /**
-     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-     * @summary Create a person
-     * @param {string} [emailAddress] Email address
-     * @param {string} [secondaryEmailAddress] Alternate email address
-     * @param {string} [personalEmailAddress] Personal email address
-     * @param {string} [firstName] First name
-     * @param {string} [lastName] Last name
-     * @param {string} [phone] Phone without formatting
-     * @param {string} [phoneExtension] Phone extension without formatting
-     * @param {string} [mobilePhone] Mobile phone without formatting
-     * @param {string} [homePhone] Home phone without formatting
-     * @param {string} [linkedinUrl] Linkedin URL
-     * @param {string} [title] Job title
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [country] Country
-     * @param {string} [workCity] Work location - city
-     * @param {string} [workState] Work location - state
-     * @param {string} [workCountry] Work location - country
-     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-     * @param {string} [locale] Time locale of the person
-     * @param {string} [personalWebsite] The website of this person
-     * @param {string} [twitterHandle] The twitter handle of this person
-     * @param {Array<string>} [tags] All tags applied to this person
-     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {number} [accountId] ID of the Account to link this person to
-     * @param {number} [ownerId] ID of the User that owns this person
-     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-     * @param {number} [personStageId] ID of the PersonStage of this person
-     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonPost(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): FetchArgs;
+    updateAPerson(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): FetchArgs;
 };
 /**
  * PeopleApi - functional programming interface
@@ -6230,13 +6230,53 @@ export declare const PeopleApiFetchParamCreator: (configuration?: Configuration)
  */
 export declare const PeopleApiFp: (configuration?: Configuration) => {
     /**
+     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+     * @summary Create a person
+     * @param {string} [emailAddress] Email address
+     * @param {string} [secondaryEmailAddress] Alternate email address
+     * @param {string} [personalEmailAddress] Personal email address
+     * @param {string} [firstName] First name
+     * @param {string} [lastName] Last name
+     * @param {string} [phone] Phone without formatting
+     * @param {string} [phoneExtension] Phone extension without formatting
+     * @param {string} [mobilePhone] Mobile phone without formatting
+     * @param {string} [homePhone] Home phone without formatting
+     * @param {string} [linkedinUrl] Linkedin URL
+     * @param {string} [title] Job title
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [country] Country
+     * @param {string} [workCity] Work location - city
+     * @param {string} [workState] Work location - state
+     * @param {string} [workCountry] Work location - country
+     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+     * @param {string} [locale] Time locale of the person
+     * @param {string} [personalWebsite] The website of this person
+     * @param {string} [twitterHandle] The twitter handle of this person
+     * @param {Array<string>} [tags] All tags applied to this person
+     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {number} [accountId] ID of the Account to link this person to
+     * @param {number} [ownerId] ID of the User that owns this person
+     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+     * @param {number} [personStageId] ID of the PersonStage of this person
+     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPerson(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
+    /**
      * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a person
      * @param {string} id Person id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteAPerson(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a person, by ID only.
      * @summary Fetch a person
@@ -6244,7 +6284,29 @@ export declare const PeopleApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
+    fetchAPerson(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
+    /**
+     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List people
+     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listPeople(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person[]>;
     /**
      * Updates a person.
      * @summary Update a person
@@ -6284,69 +6346,7 @@ export declare const PeopleApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonPut(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
-    /**
-     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List people
-     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonGet(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person[]>;
-    /**
-     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-     * @summary Create a person
-     * @param {string} [emailAddress] Email address
-     * @param {string} [secondaryEmailAddress] Alternate email address
-     * @param {string} [personalEmailAddress] Personal email address
-     * @param {string} [firstName] First name
-     * @param {string} [lastName] Last name
-     * @param {string} [phone] Phone without formatting
-     * @param {string} [phoneExtension] Phone extension without formatting
-     * @param {string} [mobilePhone] Mobile phone without formatting
-     * @param {string} [homePhone] Home phone without formatting
-     * @param {string} [linkedinUrl] Linkedin URL
-     * @param {string} [title] Job title
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [country] Country
-     * @param {string} [workCity] Work location - city
-     * @param {string} [workState] Work location - state
-     * @param {string} [workCountry] Work location - country
-     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-     * @param {string} [locale] Time locale of the person
-     * @param {string} [personalWebsite] The website of this person
-     * @param {string} [twitterHandle] The twitter handle of this person
-     * @param {Array<string>} [tags] All tags applied to this person
-     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {number} [accountId] ID of the Account to link this person to
-     * @param {number} [ownerId] ID of the User that owns this person
-     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-     * @param {number} [personStageId] ID of the PersonStage of this person
-     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonPost(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
+    updateAPerson(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Person>;
 };
 /**
  * PeopleApi - factory interface
@@ -6354,13 +6354,53 @@ export declare const PeopleApiFp: (configuration?: Configuration) => {
  */
 export declare const PeopleApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+     * @summary Create a person
+     * @param {string} [emailAddress] Email address
+     * @param {string} [secondaryEmailAddress] Alternate email address
+     * @param {string} [personalEmailAddress] Personal email address
+     * @param {string} [firstName] First name
+     * @param {string} [lastName] Last name
+     * @param {string} [phone] Phone without formatting
+     * @param {string} [phoneExtension] Phone extension without formatting
+     * @param {string} [mobilePhone] Mobile phone without formatting
+     * @param {string} [homePhone] Home phone without formatting
+     * @param {string} [linkedinUrl] Linkedin URL
+     * @param {string} [title] Job title
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [country] Country
+     * @param {string} [workCity] Work location - city
+     * @param {string} [workState] Work location - state
+     * @param {string} [workCountry] Work location - country
+     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+     * @param {string} [locale] Time locale of the person
+     * @param {string} [personalWebsite] The website of this person
+     * @param {string} [twitterHandle] The twitter handle of this person
+     * @param {Array<string>} [tags] All tags applied to this person
+     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {number} [accountId] ID of the Account to link this person to
+     * @param {number} [ownerId] ID of the User that owns this person
+     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+     * @param {number} [personStageId] ID of the PersonStage of this person
+     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPerson(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): Promise<Person>;
+    /**
      * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a person
      * @param {string} id Person id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAPerson(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a person, by ID only.
      * @summary Fetch a person
@@ -6368,7 +6408,29 @@ export declare const PeopleApiFactory: (configuration?: Configuration, fetch?: F
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonGet(id: string, options?: any): Promise<Person>;
+    fetchAPerson(id: string, options?: any): Promise<Person>;
+    /**
+     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List people
+     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    listPeople(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Person[]>;
     /**
      * Updates a person.
      * @summary Update a person
@@ -6408,69 +6470,7 @@ export declare const PeopleApiFactory: (configuration?: Configuration, fetch?: F
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PeopleIdJsonPut(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): Promise<Person>;
-    /**
-     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List people
-     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonGet(ids?: number[], updatedAt?: string[], emailAddresses?: string[], ownedByGuid?: string[], personStageId?: number[], crmId?: string[], doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Person[]>;
-    /**
-     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-     * @summary Create a person
-     * @param {string} [emailAddress] Email address
-     * @param {string} [secondaryEmailAddress] Alternate email address
-     * @param {string} [personalEmailAddress] Personal email address
-     * @param {string} [firstName] First name
-     * @param {string} [lastName] Last name
-     * @param {string} [phone] Phone without formatting
-     * @param {string} [phoneExtension] Phone extension without formatting
-     * @param {string} [mobilePhone] Mobile phone without formatting
-     * @param {string} [homePhone] Home phone without formatting
-     * @param {string} [linkedinUrl] Linkedin URL
-     * @param {string} [title] Job title
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [country] Country
-     * @param {string} [workCity] Work location - city
-     * @param {string} [workState] Work location - state
-     * @param {string} [workCountry] Work location - country
-     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-     * @param {string} [locale] Time locale of the person
-     * @param {string} [personalWebsite] The website of this person
-     * @param {string} [twitterHandle] The twitter handle of this person
-     * @param {Array<string>} [tags] All tags applied to this person
-     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {number} [accountId] ID of the Account to link this person to
-     * @param {number} [ownerId] ID of the User that owns this person
-     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-     * @param {number} [personStageId] ID of the PersonStage of this person
-     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PeopleJsonPost(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): Promise<Person>;
+    updateAPerson(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: string[], contactRestrictions?: string[], customFields?: string[], accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): Promise<Person>;
 };
 /**
  * PeopleApi - object-oriented interface
@@ -6480,6 +6480,47 @@ export declare const PeopleApiFactory: (configuration?: Configuration, fetch?: F
  */
 export declare class PeopleApi extends BaseAPI {
     /**
+     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+     * @summary Create a person
+     * @param {string} [emailAddress] Email address
+     * @param {string} [secondaryEmailAddress] Alternate email address
+     * @param {string} [personalEmailAddress] Personal email address
+     * @param {string} [firstName] First name
+     * @param {string} [lastName] Last name
+     * @param {string} [phone] Phone without formatting
+     * @param {string} [phoneExtension] Phone extension without formatting
+     * @param {string} [mobilePhone] Mobile phone without formatting
+     * @param {string} [homePhone] Home phone without formatting
+     * @param {string} [linkedinUrl] Linkedin URL
+     * @param {string} [title] Job title
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [country] Country
+     * @param {string} [workCity] Work location - city
+     * @param {string} [workState] Work location - state
+     * @param {string} [workCountry] Work location - country
+     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+     * @param {string} [locale] Time locale of the person
+     * @param {string} [personalWebsite] The website of this person
+     * @param {string} [twitterHandle] The twitter handle of this person
+     * @param {Array<string>} [tags] All tags applied to this person
+     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {number} [accountId] ID of the Account to link this person to
+     * @param {number} [ownerId] ID of the User that owns this person
+     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+     * @param {number} [personStageId] ID of the PersonStage of this person
+     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PeopleApi
+     */
+    createAPerson(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: Array<string>, contactRestrictions?: Array<string>, customFields?: Array<string>, accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): Promise<Person>;
+    /**
      * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a person
      * @param {string} id Person id
@@ -6487,7 +6528,7 @@ export declare class PeopleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    v2PeopleIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAPerson(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a person, by ID only.
      * @summary Fetch a person
@@ -6496,7 +6537,30 @@ export declare class PeopleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    v2PeopleIdJsonGet(id: string, options?: any): Promise<Person>;
+    fetchAPerson(id: string, options?: any): Promise<Person>;
+    /**
+     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List people
+     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PeopleApi
+     */
+    listPeople(ids?: Array<number>, updatedAt?: Array<string>, emailAddresses?: Array<string>, ownedByGuid?: Array<string>, personStageId?: Array<number>, crmId?: Array<string>, doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Person[]>;
     /**
      * Updates a person.
      * @summary Update a person
@@ -6537,71 +6601,7 @@ export declare class PeopleApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    v2PeopleIdJsonPut(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: Array<string>, contactRestrictions?: Array<string>, customFields?: Array<string>, accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): Promise<Person>;
-    /**
-     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List people
-     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PeopleApi
-     */
-    v2PeopleJsonGet(ids?: Array<number>, updatedAt?: Array<string>, emailAddresses?: Array<string>, ownedByGuid?: Array<string>, personStageId?: Array<number>, crmId?: Array<string>, doNotContact?: boolean, canEmail?: boolean, canCall?: boolean, accountId?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Person[]>;
-    /**
-     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-     * @summary Create a person
-     * @param {string} [emailAddress] Email address
-     * @param {string} [secondaryEmailAddress] Alternate email address
-     * @param {string} [personalEmailAddress] Personal email address
-     * @param {string} [firstName] First name
-     * @param {string} [lastName] Last name
-     * @param {string} [phone] Phone without formatting
-     * @param {string} [phoneExtension] Phone extension without formatting
-     * @param {string} [mobilePhone] Mobile phone without formatting
-     * @param {string} [homePhone] Home phone without formatting
-     * @param {string} [linkedinUrl] Linkedin URL
-     * @param {string} [title] Job title
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [country] Country
-     * @param {string} [workCity] Work location - city
-     * @param {string} [workState] Work location - state
-     * @param {string} [workCountry] Work location - country
-     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-     * @param {string} [locale] Time locale of the person
-     * @param {string} [personalWebsite] The website of this person
-     * @param {string} [twitterHandle] The twitter handle of this person
-     * @param {Array<string>} [tags] All tags applied to this person
-     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {number} [accountId] ID of the Account to link this person to
-     * @param {number} [ownerId] ID of the User that owns this person
-     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-     * @param {number} [personStageId] ID of the PersonStage of this person
-     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PeopleApi
-     */
-    v2PeopleJsonPost(emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: Array<string>, contactRestrictions?: Array<string>, customFields?: Array<string>, accountId?: number, ownerId?: number, importId?: number, personStageId?: number, autotagDate?: boolean, options?: any): Promise<Person>;
+    updateAPerson(id: string, emailAddress?: string, secondaryEmailAddress?: string, personalEmailAddress?: string, firstName?: string, lastName?: string, phone?: string, phoneExtension?: string, mobilePhone?: string, homePhone?: string, linkedinUrl?: string, title?: string, city?: string, state?: string, country?: string, workCity?: string, workState?: string, workCountry?: string, personCompanyName?: string, personCompanyWebsite?: string, personCompanyIndustry?: string, jobSeniority?: string, doNotContact?: boolean, locale?: string, personalWebsite?: string, twitterHandle?: string, tags?: Array<string>, contactRestrictions?: Array<string>, customFields?: Array<string>, accountId?: number, ownerId?: number, importId?: number, personStageId?: number, options?: any): Promise<Person>;
 }
 /**
  * PersonStagesApi - fetch parameter creator
@@ -6609,13 +6609,21 @@ export declare class PeopleApi extends BaseAPI {
  */
 export declare const PersonStagesApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates a person stage.
+     * @summary Create a person stage
+     * @param {string} name The name of the new stage
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPersonStage(name: string, options?: any): FetchArgs;
+    /**
      * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete an person stage
      * @param {string} id Stage ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteAnPersonStage(id: string, options?: any): FetchArgs;
     /**
      * Fetches a person stage, by ID only.
      * @summary Fetch a person stage
@@ -6623,16 +6631,7 @@ export declare const PersonStagesApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Updates a person stage.
-     * @summary Update a person stage
-     * @param {string} id Stage ID
-     * @param {string} name The name of the stage.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PersonStagesIdJsonPut(id: string, name: string, options?: any): FetchArgs;
+    fetchAPersonStage(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List person stages
@@ -6645,15 +6644,16 @@ export declare const PersonStagesApiFetchParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listPersonStages(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
-     * Creates a person stage.
-     * @summary Create a person stage
-     * @param {string} name The name of the new stage
+     * Updates a person stage.
+     * @summary Update a person stage
+     * @param {string} id Stage ID
+     * @param {string} name The name of the stage.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonPost(name: string, options?: any): FetchArgs;
+    updateAPersonStage(id: string, name: string, options?: any): FetchArgs;
 };
 /**
  * PersonStagesApi - functional programming interface
@@ -6661,13 +6661,21 @@ export declare const PersonStagesApiFetchParamCreator: (configuration?: Configur
  */
 export declare const PersonStagesApiFp: (configuration?: Configuration) => {
     /**
+     * Creates a person stage.
+     * @summary Create a person stage
+     * @param {string} name The name of the new stage
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPersonStage(name: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
+    /**
      * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete an person stage
      * @param {string} id Stage ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteAnPersonStage(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a person stage, by ID only.
      * @summary Fetch a person stage
@@ -6675,16 +6683,7 @@ export declare const PersonStagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
-    /**
-     * Updates a person stage.
-     * @summary Update a person stage
-     * @param {string} id Stage ID
-     * @param {string} name The name of the stage.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PersonStagesIdJsonPut(id: string, name: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
+    fetchAPersonStage(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
     /**
      * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List person stages
@@ -6697,15 +6696,16 @@ export declare const PersonStagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage[]>;
+    listPersonStages(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage[]>;
     /**
-     * Creates a person stage.
-     * @summary Create a person stage
-     * @param {string} name The name of the new stage
+     * Updates a person stage.
+     * @summary Update a person stage
+     * @param {string} id Stage ID
+     * @param {string} name The name of the stage.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonPost(name: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
+    updateAPersonStage(id: string, name: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PersonStage>;
 };
 /**
  * PersonStagesApi - factory interface
@@ -6713,13 +6713,21 @@ export declare const PersonStagesApiFp: (configuration?: Configuration) => {
  */
 export declare const PersonStagesApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates a person stage.
+     * @summary Create a person stage
+     * @param {string} name The name of the new stage
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createAPersonStage(name: string, options?: any): Promise<PersonStage>;
+    /**
      * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete an person stage
      * @param {string} id Stage ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAnPersonStage(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a person stage, by ID only.
      * @summary Fetch a person stage
@@ -6727,16 +6735,7 @@ export declare const PersonStagesApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesIdJsonGet(id: string, options?: any): Promise<PersonStage>;
-    /**
-     * Updates a person stage.
-     * @summary Update a person stage
-     * @param {string} id Stage ID
-     * @param {string} name The name of the stage.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2PersonStagesIdJsonPut(id: string, name: string, options?: any): Promise<PersonStage>;
+    fetchAPersonStage(id: string, options?: any): Promise<PersonStage>;
     /**
      * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List person stages
@@ -6749,15 +6748,16 @@ export declare const PersonStagesApiFactory: (configuration?: Configuration, fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PersonStage[]>;
+    listPersonStages(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PersonStage[]>;
     /**
-     * Creates a person stage.
-     * @summary Create a person stage
-     * @param {string} name The name of the new stage
+     * Updates a person stage.
+     * @summary Update a person stage
+     * @param {string} id Stage ID
+     * @param {string} name The name of the stage.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PersonStagesJsonPost(name: string, options?: any): Promise<PersonStage>;
+    updateAPersonStage(id: string, name: string, options?: any): Promise<PersonStage>;
 };
 /**
  * PersonStagesApi - object-oriented interface
@@ -6767,6 +6767,15 @@ export declare const PersonStagesApiFactory: (configuration?: Configuration, fet
  */
 export declare class PersonStagesApi extends BaseAPI {
     /**
+     * Creates a person stage.
+     * @summary Create a person stage
+     * @param {string} name The name of the new stage
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PersonStagesApi
+     */
+    createAPersonStage(name: string, options?: any): Promise<PersonStage>;
+    /**
      * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete an person stage
      * @param {string} id Stage ID
@@ -6774,7 +6783,7 @@ export declare class PersonStagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    v2PersonStagesIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteAnPersonStage(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a person stage, by ID only.
      * @summary Fetch a person stage
@@ -6783,17 +6792,7 @@ export declare class PersonStagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    v2PersonStagesIdJsonGet(id: string, options?: any): Promise<PersonStage>;
-    /**
-     * Updates a person stage.
-     * @summary Update a person stage
-     * @param {string} id Stage ID
-     * @param {string} name The name of the stage.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PersonStagesApi
-     */
-    v2PersonStagesIdJsonPut(id: string, name: string, options?: any): Promise<PersonStage>;
+    fetchAPersonStage(id: string, options?: any): Promise<PersonStage>;
     /**
      * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List person stages
@@ -6807,16 +6806,17 @@ export declare class PersonStagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    v2PersonStagesJsonGet(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PersonStage[]>;
+    listPersonStages(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PersonStage[]>;
     /**
-     * Creates a person stage.
-     * @summary Create a person stage
-     * @param {string} name The name of the new stage
+     * Updates a person stage.
+     * @summary Update a person stage
+     * @param {string} id Stage ID
+     * @param {string} name The name of the stage.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    v2PersonStagesJsonPost(name: string, options?: any): Promise<PersonStage>;
+    updateAPersonStage(id: string, name: string, options?: any): Promise<PersonStage>;
 }
 /**
  * PhoneNumberAssignmentsApi - fetch parameter creator
@@ -6830,7 +6830,7 @@ export declare const PhoneNumberAssignmentsApiFetchParamCreator: (configuration?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAPhoneNumberAssignment(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List phone number assignments
@@ -6843,7 +6843,7 @@ export declare const PhoneNumberAssignmentsApiFetchParamCreator: (configuration?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listPhoneNumberAssignments(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * PhoneNumberAssignmentsApi - functional programming interface
@@ -6857,7 +6857,7 @@ export declare const PhoneNumberAssignmentsApiFp: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PhoneNumberAssignment>;
+    fetchAPhoneNumberAssignment(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PhoneNumberAssignment>;
     /**
      * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List phone number assignments
@@ -6870,7 +6870,7 @@ export declare const PhoneNumberAssignmentsApiFp: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PhoneNumberAssignment[]>;
+    listPhoneNumberAssignments(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PhoneNumberAssignment[]>;
 };
 /**
  * PhoneNumberAssignmentsApi - factory interface
@@ -6884,7 +6884,7 @@ export declare const PhoneNumberAssignmentsApiFactory: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsIdJsonGet(id: string, options?: any): Promise<PhoneNumberAssignment>;
+    fetchAPhoneNumberAssignment(id: string, options?: any): Promise<PhoneNumberAssignment>;
     /**
      * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List phone number assignments
@@ -6897,7 +6897,7 @@ export declare const PhoneNumberAssignmentsApiFactory: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumberAssignmentsJsonGet(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PhoneNumberAssignment[]>;
+    listPhoneNumberAssignments(ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PhoneNumberAssignment[]>;
 };
 /**
  * PhoneNumberAssignmentsApi - object-oriented interface
@@ -6914,7 +6914,7 @@ export declare class PhoneNumberAssignmentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhoneNumberAssignmentsApi
      */
-    v2PhoneNumberAssignmentsIdJsonGet(id: string, options?: any): Promise<PhoneNumberAssignment>;
+    fetchAPhoneNumberAssignment(id: string, options?: any): Promise<PhoneNumberAssignment>;
     /**
      * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List phone number assignments
@@ -6928,7 +6928,7 @@ export declare class PhoneNumberAssignmentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof PhoneNumberAssignmentsApi
      */
-    v2PhoneNumberAssignmentsJsonGet(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PhoneNumberAssignment[]>;
+    listPhoneNumberAssignments(ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<PhoneNumberAssignment[]>;
 }
 /**
  * RecordingSettingsApi - fetch parameter creator
@@ -6942,7 +6942,7 @@ export declare const RecordingSettingsApiFetchParamCreator: (configuration?: Con
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersRecordingSettingsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchRecordingSetting(id: string, options?: any): FetchArgs;
 };
 /**
  * RecordingSettingsApi - functional programming interface
@@ -6956,7 +6956,7 @@ export declare const RecordingSettingsApiFp: (configuration?: Configuration) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersRecordingSettingsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RecordingSetting>;
+    fetchRecordingSetting(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RecordingSetting>;
 };
 /**
  * RecordingSettingsApi - factory interface
@@ -6970,7 +6970,7 @@ export declare const RecordingSettingsApiFactory: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2PhoneNumbersRecordingSettingsIdJsonGet(id: string, options?: any): Promise<RecordingSetting>;
+    fetchRecordingSetting(id: string, options?: any): Promise<RecordingSetting>;
 };
 /**
  * RecordingSettingsApi - object-oriented interface
@@ -6987,7 +6987,7 @@ export declare class RecordingSettingsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RecordingSettingsApi
      */
-    v2PhoneNumbersRecordingSettingsIdJsonGet(id: string, options?: any): Promise<RecordingSetting>;
+    fetchRecordingSetting(id: string, options?: any): Promise<RecordingSetting>;
 }
 /**
  * SavedListViewsApi - fetch parameter creator
@@ -6995,13 +6995,24 @@ export declare class RecordingSettingsApi extends BaseAPI {
  */
 export declare const SavedListViewsApiFetchParamCreator: (configuration?: Configuration) => {
     /**
+     * Creates a saved list view.
+     * @summary Create a saved list view
+     * @param {string} name The name of the saved list view
+     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * @param {boolean} [isDefault] Whether the saved list view is the default
+     * @param {string} [viewParams] JSON object of list view parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createASavedListView(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): FetchArgs;
+    /**
      * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a saved list view
      * @param {string} id Saved List View ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonDelete(id: string, options?: any): FetchArgs;
+    deleteASavedListView(id: string, options?: any): FetchArgs;
     /**
      * Fetches a saved list view, by ID only.
      * @summary Fetch a saved list view
@@ -7009,18 +7020,7 @@ export declare const SavedListViewsApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonGet(id: string, options?: any): FetchArgs;
-    /**
-     * Updates a saved list view.
-     * @summary Update a saved list view
-     * @param {string} id Saved List View ID
-     * @param {string} [name] The name of the saved list view
-     * @param {boolean} [isDefault] Whether the saved list view is the default
-     * @param {string} [viewParams] JSON object of list view parameters
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2SavedListViewsIdJsonPut(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): FetchArgs;
+    fetchASavedListView(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List saved list views
@@ -7034,18 +7034,18 @@ export declare const SavedListViewsApiFetchParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonGet(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listSavedListViews(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
     /**
-     * Creates a saved list view.
-     * @summary Create a saved list view
-     * @param {string} name The name of the saved list view
-     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * Updates a saved list view.
+     * @summary Update a saved list view
+     * @param {string} id Saved List View ID
+     * @param {string} [name] The name of the saved list view
      * @param {boolean} [isDefault] Whether the saved list view is the default
      * @param {string} [viewParams] JSON object of list view parameters
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonPost(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): FetchArgs;
+    updateASavedListView(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): FetchArgs;
 };
 /**
  * SavedListViewsApi - functional programming interface
@@ -7053,13 +7053,24 @@ export declare const SavedListViewsApiFetchParamCreator: (configuration?: Config
  */
 export declare const SavedListViewsApiFp: (configuration?: Configuration) => {
     /**
+     * Creates a saved list view.
+     * @summary Create a saved list view
+     * @param {string} name The name of the saved list view
+     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * @param {boolean} [isDefault] Whether the saved list view is the default
+     * @param {string} [viewParams] JSON object of list view parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createASavedListView(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
+    /**
      * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a saved list view
      * @param {string} id Saved List View ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonDelete(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
+    deleteASavedListView(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response>;
     /**
      * Fetches a saved list view, by ID only.
      * @summary Fetch a saved list view
@@ -7067,18 +7078,7 @@ export declare const SavedListViewsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
-    /**
-     * Updates a saved list view.
-     * @summary Update a saved list view
-     * @param {string} id Saved List View ID
-     * @param {string} [name] The name of the saved list view
-     * @param {boolean} [isDefault] Whether the saved list view is the default
-     * @param {string} [viewParams] JSON object of list view parameters
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2SavedListViewsIdJsonPut(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
+    fetchASavedListView(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
     /**
      * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List saved list views
@@ -7092,18 +7092,18 @@ export declare const SavedListViewsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonGet(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView[]>;
+    listSavedListViews(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView[]>;
     /**
-     * Creates a saved list view.
-     * @summary Create a saved list view
-     * @param {string} name The name of the saved list view
-     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * Updates a saved list view.
+     * @summary Update a saved list view
+     * @param {string} id Saved List View ID
+     * @param {string} [name] The name of the saved list view
      * @param {boolean} [isDefault] Whether the saved list view is the default
      * @param {string} [viewParams] JSON object of list view parameters
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonPost(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
+    updateASavedListView(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SavedListView>;
 };
 /**
  * SavedListViewsApi - factory interface
@@ -7111,13 +7111,24 @@ export declare const SavedListViewsApiFp: (configuration?: Configuration) => {
  */
 export declare const SavedListViewsApiFactory: (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) => {
     /**
+     * Creates a saved list view.
+     * @summary Create a saved list view
+     * @param {string} name The name of the saved list view
+     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * @param {boolean} [isDefault] Whether the saved list view is the default
+     * @param {string} [viewParams] JSON object of list view parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    createASavedListView(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    /**
      * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a saved list view
      * @param {string} id Saved List View ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteASavedListView(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a saved list view, by ID only.
      * @summary Fetch a saved list view
@@ -7125,18 +7136,7 @@ export declare const SavedListViewsApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsIdJsonGet(id: string, options?: any): Promise<SavedListView>;
-    /**
-     * Updates a saved list view.
-     * @summary Update a saved list view
-     * @param {string} id Saved List View ID
-     * @param {string} [name] The name of the saved list view
-     * @param {boolean} [isDefault] Whether the saved list view is the default
-     * @param {string} [viewParams] JSON object of list view parameters
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    v2SavedListViewsIdJsonPut(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    fetchASavedListView(id: string, options?: any): Promise<SavedListView>;
     /**
      * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List saved list views
@@ -7150,18 +7150,18 @@ export declare const SavedListViewsApiFactory: (configuration?: Configuration, f
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonGet(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<SavedListView[]>;
+    listSavedListViews(ids?: number[], view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<SavedListView[]>;
     /**
-     * Creates a saved list view.
-     * @summary Create a saved list view
-     * @param {string} name The name of the saved list view
-     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * Updates a saved list view.
+     * @summary Update a saved list view
+     * @param {string} id Saved List View ID
+     * @param {string} [name] The name of the saved list view
      * @param {boolean} [isDefault] Whether the saved list view is the default
      * @param {string} [viewParams] JSON object of list view parameters
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SavedListViewsJsonPost(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    updateASavedListView(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
 };
 /**
  * SavedListViewsApi - object-oriented interface
@@ -7171,6 +7171,18 @@ export declare const SavedListViewsApiFactory: (configuration?: Configuration, f
  */
 export declare class SavedListViewsApi extends BaseAPI {
     /**
+     * Creates a saved list view.
+     * @summary Create a saved list view
+     * @param {string} name The name of the saved list view
+     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * @param {boolean} [isDefault] Whether the saved list view is the default
+     * @param {string} [viewParams] JSON object of list view parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SavedListViewsApi
+     */
+    createASavedListView(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    /**
      * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a saved list view
      * @param {string} id Saved List View ID
@@ -7178,7 +7190,7 @@ export declare class SavedListViewsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    v2SavedListViewsIdJsonDelete(id: string, options?: any): Promise<Response>;
+    deleteASavedListView(id: string, options?: any): Promise<Response>;
     /**
      * Fetches a saved list view, by ID only.
      * @summary Fetch a saved list view
@@ -7187,19 +7199,7 @@ export declare class SavedListViewsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    v2SavedListViewsIdJsonGet(id: string, options?: any): Promise<SavedListView>;
-    /**
-     * Updates a saved list view.
-     * @summary Update a saved list view
-     * @param {string} id Saved List View ID
-     * @param {string} [name] The name of the saved list view
-     * @param {boolean} [isDefault] Whether the saved list view is the default
-     * @param {string} [viewParams] JSON object of list view parameters
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SavedListViewsApi
-     */
-    v2SavedListViewsIdJsonPut(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    fetchASavedListView(id: string, options?: any): Promise<SavedListView>;
     /**
      * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List saved list views
@@ -7214,19 +7214,19 @@ export declare class SavedListViewsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    v2SavedListViewsJsonGet(ids?: Array<number>, view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<SavedListView[]>;
+    listSavedListViews(ids?: Array<number>, view?: string, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<SavedListView[]>;
     /**
-     * Creates a saved list view.
-     * @summary Create a saved list view
-     * @param {string} name The name of the saved list view
-     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * Updates a saved list view.
+     * @summary Update a saved list view
+     * @param {string} id Saved List View ID
+     * @param {string} [name] The name of the saved list view
      * @param {boolean} [isDefault] Whether the saved list view is the default
      * @param {string} [viewParams] JSON object of list view parameters
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    v2SavedListViewsJsonPost(name: string, view: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
+    updateASavedListView(id: string, name?: string, isDefault?: boolean, viewParams?: string, options?: any): Promise<SavedListView>;
 }
 /**
  * StepsApi - fetch parameter creator
@@ -7240,7 +7240,7 @@ export declare const StepsApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAStep(id: string, options?: any): FetchArgs;
     /**
      * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List steps
@@ -7256,7 +7256,7 @@ export declare const StepsApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsJsonGet(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listSteps(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * StepsApi - functional programming interface
@@ -7270,7 +7270,7 @@ export declare const StepsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Step>;
+    fetchAStep(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Step>;
     /**
      * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List steps
@@ -7286,7 +7286,7 @@ export declare const StepsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsJsonGet(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Step[]>;
+    listSteps(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Step[]>;
 };
 /**
  * StepsApi - factory interface
@@ -7300,7 +7300,7 @@ export declare const StepsApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsIdJsonGet(id: string, options?: any): Promise<Step>;
+    fetchAStep(id: string, options?: any): Promise<Step>;
     /**
      * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List steps
@@ -7316,7 +7316,7 @@ export declare const StepsApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2StepsJsonGet(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Step[]>;
+    listSteps(ids?: number[], cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Step[]>;
 };
 /**
  * StepsApi - object-oriented interface
@@ -7333,7 +7333,7 @@ export declare class StepsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StepsApi
      */
-    v2StepsIdJsonGet(id: string, options?: any): Promise<Step>;
+    fetchAStep(id: string, options?: any): Promise<Step>;
     /**
      * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
      * @summary List steps
@@ -7350,7 +7350,7 @@ export declare class StepsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StepsApi
      */
-    v2StepsJsonGet(ids?: Array<number>, cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Step[]>;
+    listSteps(ids?: Array<number>, cadenceId?: number, type?: string, hasDueActions?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Step[]>;
 }
 /**
  * SuccessesApi - fetch parameter creator
@@ -7371,7 +7371,7 @@ export declare const SuccessesApiFetchParamCreator: (configuration?: Configurati
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SuccessesJsonGet(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listSuccesses(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * SuccessesApi - functional programming interface
@@ -7392,7 +7392,7 @@ export declare const SuccessesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SuccessesJsonGet(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Success[]>;
+    listSuccesses(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Success[]>;
 };
 /**
  * SuccessesApi - factory interface
@@ -7413,7 +7413,7 @@ export declare const SuccessesApiFactory: (configuration?: Configuration, fetch?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2SuccessesJsonGet(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Success[]>;
+    listSuccesses(ids?: number[], personId?: number[], updatedAt?: string[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Success[]>;
 };
 /**
  * SuccessesApi - object-oriented interface
@@ -7437,7 +7437,7 @@ export declare class SuccessesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SuccessesApi
      */
-    v2SuccessesJsonGet(ids?: Array<number>, personId?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Success[]>;
+    listSuccesses(ids?: Array<number>, personId?: Array<number>, updatedAt?: Array<string>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Success[]>;
 }
 /**
  * TagsApi - fetch parameter creator
@@ -7457,7 +7457,7 @@ export declare const TagsApiFetchParamCreator: (configuration?: Configuration) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TagsJsonGet(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listTeamTags(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * TagsApi - functional programming interface
@@ -7477,7 +7477,7 @@ export declare const TagsApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TagsJsonGet(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Tag[]>;
+    listTeamTags(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Tag[]>;
 };
 /**
  * TagsApi - factory interface
@@ -7497,7 +7497,7 @@ export declare const TagsApiFactory: (configuration?: Configuration, fetch?: Fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TagsJsonGet(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Tag[]>;
+    listTeamTags(search?: string, ids?: number[], sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Tag[]>;
 };
 /**
  * TagsApi - object-oriented interface
@@ -7520,7 +7520,7 @@ export declare class TagsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    v2TagsJsonGet(search?: string, ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Tag[]>;
+    listTeamTags(search?: string, ids?: Array<number>, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<Tag[]>;
 }
 /**
  * TeamApi - fetch parameter creator
@@ -7533,7 +7533,7 @@ export declare const TeamApiFetchParamCreator: (configuration?: Configuration) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamJsonGet(options?: any): FetchArgs;
+    fetchCurrentTeam(options?: any): FetchArgs;
 };
 /**
  * TeamApi - functional programming interface
@@ -7546,7 +7546,7 @@ export declare const TeamApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamJsonGet(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Team>;
+    fetchCurrentTeam(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Team>;
 };
 /**
  * TeamApi - factory interface
@@ -7559,7 +7559,7 @@ export declare const TeamApiFactory: (configuration?: Configuration, fetch?: Fet
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamJsonGet(options?: any): Promise<Team>;
+    fetchCurrentTeam(options?: any): Promise<Team>;
 };
 /**
  * TeamApi - object-oriented interface
@@ -7575,7 +7575,7 @@ export declare class TeamApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TeamApi
      */
-    v2TeamJsonGet(options?: any): Promise<Team>;
+    fetchCurrentTeam(options?: any): Promise<Team>;
 }
 /**
  * TeamTemplateAttachmentsApi - fetch parameter creator
@@ -7593,7 +7593,7 @@ export declare const TeamTemplateAttachmentsApiFetchParamCreator: (configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplateAttachmentsJsonGet(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listTeamTemplateAttachments(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * TeamTemplateAttachmentsApi - functional programming interface
@@ -7611,7 +7611,7 @@ export declare const TeamTemplateAttachmentsApiFp: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplateAttachmentsJsonGet(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplateAttachment[]>;
+    listTeamTemplateAttachments(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplateAttachment[]>;
 };
 /**
  * TeamTemplateAttachmentsApi - factory interface
@@ -7629,7 +7629,7 @@ export declare const TeamTemplateAttachmentsApiFactory: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplateAttachmentsJsonGet(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplateAttachment[]>;
+    listTeamTemplateAttachments(ids?: number[], teamTemplateId?: number[], perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplateAttachment[]>;
 };
 /**
  * TeamTemplateAttachmentsApi - object-oriented interface
@@ -7650,7 +7650,7 @@ export declare class TeamTemplateAttachmentsApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TeamTemplateAttachmentsApi
      */
-    v2TeamTemplateAttachmentsJsonGet(ids?: Array<number>, teamTemplateId?: Array<number>, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplateAttachment[]>;
+    listTeamTemplateAttachments(ids?: Array<number>, teamTemplateId?: Array<number>, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplateAttachment[]>;
 }
 /**
  * TeamTemplatesApi - fetch parameter creator
@@ -7665,7 +7665,7 @@ export declare const TeamTemplatesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): FetchArgs;
+    fetchATeamTemplate(id: string, includeSignature?: boolean, options?: any): FetchArgs;
     /**
      * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
      * @summary List team templates
@@ -7683,7 +7683,7 @@ export declare const TeamTemplatesApiFetchParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesJsonGet(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
+    listTeamTemplates(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): FetchArgs;
 };
 /**
  * TeamTemplatesApi - functional programming interface
@@ -7698,7 +7698,7 @@ export declare const TeamTemplatesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplate>;
+    fetchATeamTemplate(id: string, includeSignature?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplate>;
     /**
      * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
      * @summary List team templates
@@ -7716,7 +7716,7 @@ export declare const TeamTemplatesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesJsonGet(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplate[]>;
+    listTeamTemplates(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<TeamTemplate[]>;
 };
 /**
  * TeamTemplatesApi - factory interface
@@ -7731,7 +7731,7 @@ export declare const TeamTemplatesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): Promise<TeamTemplate>;
+    fetchATeamTemplate(id: string, includeSignature?: boolean, options?: any): Promise<TeamTemplate>;
     /**
      * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
      * @summary List team templates
@@ -7749,7 +7749,7 @@ export declare const TeamTemplatesApiFactory: (configuration?: Configuration, fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2TeamTemplatesJsonGet(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplate[]>;
+    listTeamTemplates(ids?: string[], updatedAt?: string[], search?: string, tagIds?: number[], tag?: string[], includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplate[]>;
 };
 /**
  * TeamTemplatesApi - object-oriented interface
@@ -7767,7 +7767,7 @@ export declare class TeamTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TeamTemplatesApi
      */
-    v2TeamTemplatesIdJsonGet(id: string, includeSignature?: boolean, options?: any): Promise<TeamTemplate>;
+    fetchATeamTemplate(id: string, includeSignature?: boolean, options?: any): Promise<TeamTemplate>;
     /**
      * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
      * @summary List team templates
@@ -7786,7 +7786,7 @@ export declare class TeamTemplatesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof TeamTemplatesApi
      */
-    v2TeamTemplatesJsonGet(ids?: Array<string>, updatedAt?: Array<string>, search?: string, tagIds?: Array<number>, tag?: Array<string>, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplate[]>;
+    listTeamTemplates(ids?: Array<string>, updatedAt?: Array<string>, search?: string, tagIds?: Array<number>, tag?: Array<string>, includeArchivedTemplates?: boolean, sortBy?: string, sortDirection?: string, perPage?: number, page?: number, includePagingCounts?: boolean, options?: any): Promise<TeamTemplate[]>;
 }
 /**
  * UsersApi - fetch parameter creator
@@ -7800,7 +7800,7 @@ export declare const UsersApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersIdJsonGet(id: string, options?: any): FetchArgs;
+    fetchAUser(id: string, options?: any): FetchArgs;
     /**
      * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
      * @summary List users
@@ -7809,7 +7809,7 @@ export declare const UsersApiFetchParamCreator: (configuration?: Configuration) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersJsonGet(guid?: string[], groupId?: string[], options?: any): FetchArgs;
+    listUsers(guid?: string[], groupId?: string[], options?: any): FetchArgs;
 };
 /**
  * UsersApi - functional programming interface
@@ -7823,7 +7823,7 @@ export declare const UsersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersIdJsonGet(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User>;
+    fetchAUser(id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User>;
     /**
      * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
      * @summary List users
@@ -7832,7 +7832,7 @@ export declare const UsersApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersJsonGet(guid?: string[], groupId?: string[], options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User[]>;
+    listUsers(guid?: string[], groupId?: string[], options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<User[]>;
 };
 /**
  * UsersApi - factory interface
@@ -7846,7 +7846,7 @@ export declare const UsersApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersIdJsonGet(id: string, options?: any): Promise<User>;
+    fetchAUser(id: string, options?: any): Promise<User>;
     /**
      * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
      * @summary List users
@@ -7855,7 +7855,7 @@ export declare const UsersApiFactory: (configuration?: Configuration, fetch?: Fe
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    v2UsersJsonGet(guid?: string[], groupId?: string[], options?: any): Promise<User[]>;
+    listUsers(guid?: string[], groupId?: string[], options?: any): Promise<User[]>;
 };
 /**
  * UsersApi - object-oriented interface
@@ -7872,7 +7872,7 @@ export declare class UsersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    v2UsersIdJsonGet(id: string, options?: any): Promise<User>;
+    fetchAUser(id: string, options?: any): Promise<User>;
     /**
      * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
      * @summary List users
@@ -7882,5 +7882,5 @@ export declare class UsersApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    v2UsersJsonGet(guid?: Array<string>, groupId?: Array<string>, options?: any): Promise<User[]>;
+    listUsers(guid?: Array<string>, groupId?: Array<string>, options?: any): Promise<User[]>;
 }

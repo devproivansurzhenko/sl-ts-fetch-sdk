@@ -88,11 +88,11 @@ exports.AccountStagesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesIdJsonGet: function (id, options) {
+        fetchAnAccountStage: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2AccountStagesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnAccountStage.');
             }
             var localVarPath = "/v2/account_stages/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -122,7 +122,7 @@ exports.AccountStagesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listAccountStages: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/account_stages.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -174,8 +174,8 @@ exports.AccountStagesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.AccountStagesApiFetchParamCreator(configuration).v2AccountStagesIdJsonGet(id, options);
+        fetchAnAccountStage: function (id, options) {
+            var localVarFetchArgs = exports.AccountStagesApiFetchParamCreator(configuration).fetchAnAccountStage(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -202,8 +202,8 @@ exports.AccountStagesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.AccountStagesApiFetchParamCreator(configuration).v2AccountStagesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listAccountStages: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.AccountStagesApiFetchParamCreator(configuration).listAccountStages(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -232,8 +232,8 @@ exports.AccountStagesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesIdJsonGet: function (id, options) {
-            return exports.AccountStagesApiFp(configuration).v2AccountStagesIdJsonGet(id, options)(fetch, basePath);
+        fetchAnAccountStage: function (id, options) {
+            return exports.AccountStagesApiFp(configuration).fetchAnAccountStage(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -248,8 +248,8 @@ exports.AccountStagesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountStagesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.AccountStagesApiFp(configuration).v2AccountStagesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listAccountStages: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.AccountStagesApiFp(configuration).listAccountStages(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -272,8 +272,8 @@ var AccountStagesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountStagesApi
      */
-    AccountStagesApi.prototype.v2AccountStagesIdJsonGet = function (id, options) {
-        return exports.AccountStagesApiFp(this.configuration).v2AccountStagesIdJsonGet(id, options)(this.fetch, this.basePath);
+    AccountStagesApi.prototype.fetchAnAccountStage = function (id, options) {
+        return exports.AccountStagesApiFp(this.configuration).fetchAnAccountStage(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple account stage records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -289,8 +289,8 @@ var AccountStagesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountStagesApi
      */
-    AccountStagesApi.prototype.v2AccountStagesJsonGet = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.AccountStagesApiFp(this.configuration).v2AccountStagesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    AccountStagesApi.prototype.listAccountStages = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.AccountStagesApiFp(this.configuration).listAccountStages(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return AccountStagesApi;
 }(BaseAPI));
@@ -308,11 +308,11 @@ exports.AccountTiersApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersIdJsonGet: function (id, options) {
+        fetchAnAccountTier: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2AccountTiersIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnAccountTier.');
             }
             var localVarPath = "/v2/account_tiers/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -342,7 +342,7 @@ exports.AccountTiersApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersJsonGet: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listAccountTiers: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/account_tiers.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -394,8 +394,8 @@ exports.AccountTiersApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.AccountTiersApiFetchParamCreator(configuration).v2AccountTiersIdJsonGet(id, options);
+        fetchAnAccountTier: function (id, options) {
+            var localVarFetchArgs = exports.AccountTiersApiFetchParamCreator(configuration).fetchAnAccountTier(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -422,8 +422,8 @@ exports.AccountTiersApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersJsonGet: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.AccountTiersApiFetchParamCreator(configuration).v2AccountTiersJsonGet(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listAccountTiers: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.AccountTiersApiFetchParamCreator(configuration).listAccountTiers(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -452,8 +452,8 @@ exports.AccountTiersApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersIdJsonGet: function (id, options) {
-            return exports.AccountTiersApiFp(configuration).v2AccountTiersIdJsonGet(id, options)(fetch, basePath);
+        fetchAnAccountTier: function (id, options) {
+            return exports.AccountTiersApiFp(configuration).fetchAnAccountTier(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -468,8 +468,8 @@ exports.AccountTiersApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountTiersJsonGet: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.AccountTiersApiFp(configuration).v2AccountTiersJsonGet(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listAccountTiers: function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.AccountTiersApiFp(configuration).listAccountTiers(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -492,8 +492,8 @@ var AccountTiersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountTiersApi
      */
-    AccountTiersApi.prototype.v2AccountTiersIdJsonGet = function (id, options) {
-        return exports.AccountTiersApiFp(this.configuration).v2AccountTiersIdJsonGet(id, options)(this.fetch, this.basePath);
+    AccountTiersApi.prototype.fetchAnAccountTier = function (id, options) {
+        return exports.AccountTiersApiFp(this.configuration).fetchAnAccountTier(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple account tier records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -509,8 +509,8 @@ var AccountTiersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountTiersApi
      */
-    AccountTiersApi.prototype.v2AccountTiersJsonGet = function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.AccountTiersApiFp(this.configuration).v2AccountTiersJsonGet(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    AccountTiersApi.prototype.listAccountTiers = function (ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.AccountTiersApiFp(this.configuration).listAccountTiers(ids, name, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return AccountTiersApi;
 }(BaseAPI));
@@ -522,17 +522,146 @@ exports.AccountTiersApi = AccountTiersApi;
 exports.AccountsApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates an account.  \"domain\" must be unique on the current team.
+         * @summary Create an account
+         * @param {string} name Account Full Name
+         * @param {string} domain Website domain, not a fully qualified URI
+         * @param {string} [conversationalName] Conversational name of the Account
+         * @param {string} [description] Description
+         * @param {string} [phone] Phone number without formatting
+         * @param {string} [website] Website
+         * @param {string} [linkedinUrl] Full LinkedIn url
+         * @param {string} [twitterHandle] Twitter handle, with @
+         * @param {string} [street] Street name and number
+         * @param {string} [city] City
+         * @param {string} [state] State
+         * @param {string} [postalCode] Postal code
+         * @param {string} [country] Country
+         * @param {string} [locale] Time locale
+         * @param {string} [industry] Industry
+         * @param {string} [companyType] Type of the Account&#39;s company
+         * @param {string} [founded] Date or year of founding
+         * @param {string} [revenueRange] Estimated revenue range
+         * @param {string} [size] Estimated number of people in employment
+         * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+         * @param {Array<string>} [tags] All tags applied to this Account
+         * @param {number} [ownerId] ID of the User that owns this Account
+         * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAnAccount: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling createAnAccount.');
+            }
+            // verify required parameter 'domain' is not null or undefined
+            if (domain === null || domain === undefined) {
+                throw new RequiredError('domain', 'Required parameter domain was null or undefined when calling createAnAccount.');
+            }
+            var localVarPath = "/v2/accounts.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (name !== undefined) {
+                localVarFormParams.set('name', name);
+            }
+            if (domain !== undefined) {
+                localVarFormParams.set('domain', domain);
+            }
+            if (conversationalName !== undefined) {
+                localVarFormParams.set('conversational_name', conversationalName);
+            }
+            if (description !== undefined) {
+                localVarFormParams.set('description', description);
+            }
+            if (phone !== undefined) {
+                localVarFormParams.set('phone', phone);
+            }
+            if (website !== undefined) {
+                localVarFormParams.set('website', website);
+            }
+            if (linkedinUrl !== undefined) {
+                localVarFormParams.set('linkedin_url', linkedinUrl);
+            }
+            if (twitterHandle !== undefined) {
+                localVarFormParams.set('twitter_handle', twitterHandle);
+            }
+            if (street !== undefined) {
+                localVarFormParams.set('street', street);
+            }
+            if (city !== undefined) {
+                localVarFormParams.set('city', city);
+            }
+            if (state !== undefined) {
+                localVarFormParams.set('state', state);
+            }
+            if (postalCode !== undefined) {
+                localVarFormParams.set('postal_code', postalCode);
+            }
+            if (country !== undefined) {
+                localVarFormParams.set('country', country);
+            }
+            if (locale !== undefined) {
+                localVarFormParams.set('locale', locale);
+            }
+            if (industry !== undefined) {
+                localVarFormParams.set('industry', industry);
+            }
+            if (companyType !== undefined) {
+                localVarFormParams.set('company_type', companyType);
+            }
+            if (founded !== undefined) {
+                localVarFormParams.set('founded', founded);
+            }
+            if (revenueRange !== undefined) {
+                localVarFormParams.set('revenue_range', revenueRange);
+            }
+            if (size !== undefined) {
+                localVarFormParams.set('size', size);
+            }
+            if (doNotContact !== undefined) {
+                localVarFormParams.set('do_not_contact', doNotContact);
+            }
+            if (customFields) {
+                localVarFormParams.set('custom_fields', customFields.join(exports.COLLECTION_FORMATS["csv"]));
+            }
+            if (tags) {
+                localVarFormParams.set('tags', tags.join(exports.COLLECTION_FORMATS["csv"]));
+            }
+            if (ownerId !== undefined) {
+                localVarFormParams.set('owner_id', ownerId);
+            }
+            if (companyStageId !== undefined) {
+                localVarFormParams.set('company_stage_id', companyStageId);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
          * @summary Delete an account
          * @param {string} id Account ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonDelete: function (id, options) {
+        deleteAnAccount: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2AccountsIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteAnAccount.');
             }
             var localVarPath = "/v2/accounts/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -556,11 +685,11 @@ exports.AccountsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonGet: function (id, options) {
+        fetchAnAccount: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2AccountsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnAccount.');
             }
             var localVarPath = "/v2/accounts/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -568,6 +697,80 @@ exports.AccountsApiFetchParamCreator = function (configuration) {
             var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List accounts
+         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAccounts: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/v2/accounts.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (ids) {
+                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (crmId) {
+                localVarQueryParameter['crm_id'] = crmId.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (tag) {
+                localVarQueryParameter['tag'] = tag.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (updatedAt) {
+                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (domain !== undefined) {
+                localVarQueryParameter['domain'] = domain;
+            }
+            if (archived !== undefined) {
+                localVarQueryParameter['archived'] = archived;
+            }
+            if (name) {
+                localVarQueryParameter['name'] = name.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (accountStageId) {
+                localVarQueryParameter['account_stage_id'] = accountStageId.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+            if (sortDirection !== undefined) {
+                localVarQueryParameter['sort_direction'] = sortDirection;
+            }
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+            if (includePagingCounts !== undefined) {
+                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
+            }
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
@@ -609,19 +812,19 @@ exports.AccountsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonPut: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
+        updateAnExistingAccount: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2AccountsIdJsonPut.');
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling updateAnExistingAccount.');
             }
             // verify required parameter 'domain' is not null or undefined
             if (domain === null || domain === undefined) {
-                throw new RequiredError('domain', 'Required parameter domain was null or undefined when calling v2AccountsIdJsonPut.');
+                throw new RequiredError('domain', 'Required parameter domain was null or undefined when calling updateAnExistingAccount.');
             }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2AccountsIdJsonPut.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateAnExistingAccount.');
             }
             var localVarPath = "/v2/accounts/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -716,80 +919,14 @@ exports.AccountsApiFetchParamCreator = function (configuration) {
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List accounts
-         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2AccountsJsonGet: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            if (options === void 0) { options = {}; }
-            var localVarPath = "/v2/accounts.json";
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            if (ids) {
-                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (crmId) {
-                localVarQueryParameter['crm_id'] = crmId.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (tag) {
-                localVarQueryParameter['tag'] = tag.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (updatedAt) {
-                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (domain !== undefined) {
-                localVarQueryParameter['domain'] = domain;
-            }
-            if (archived !== undefined) {
-                localVarQueryParameter['archived'] = archived;
-            }
-            if (name) {
-                localVarQueryParameter['name'] = name.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (accountStageId) {
-                localVarQueryParameter['account_stage_id'] = accountStageId.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-            if (sortDirection !== undefined) {
-                localVarQueryParameter['sort_direction'] = sortDirection;
-            }
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
-            }
-            if (page !== undefined) {
-                localVarQueryParameter['page'] = page;
-            }
-            if (includePagingCounts !== undefined) {
-                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
+    };
+};
+/**
+ * AccountsApi - functional programming interface
+ * @export
+ */
+exports.AccountsApiFp = function (configuration) {
+    return {
         /**
          * Creates an account.  \"domain\" must be unique on the current team.
          * @summary Create an account
@@ -820,113 +957,21 @@ exports.AccountsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsJsonPost: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'name' is not null or undefined
-            if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2AccountsJsonPost.');
-            }
-            // verify required parameter 'domain' is not null or undefined
-            if (domain === null || domain === undefined) {
-                throw new RequiredError('domain', 'Required parameter domain was null or undefined when calling v2AccountsJsonPost.');
-            }
-            var localVarPath = "/v2/accounts.json";
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (name !== undefined) {
-                localVarFormParams.set('name', name);
-            }
-            if (domain !== undefined) {
-                localVarFormParams.set('domain', domain);
-            }
-            if (conversationalName !== undefined) {
-                localVarFormParams.set('conversational_name', conversationalName);
-            }
-            if (description !== undefined) {
-                localVarFormParams.set('description', description);
-            }
-            if (phone !== undefined) {
-                localVarFormParams.set('phone', phone);
-            }
-            if (website !== undefined) {
-                localVarFormParams.set('website', website);
-            }
-            if (linkedinUrl !== undefined) {
-                localVarFormParams.set('linkedin_url', linkedinUrl);
-            }
-            if (twitterHandle !== undefined) {
-                localVarFormParams.set('twitter_handle', twitterHandle);
-            }
-            if (street !== undefined) {
-                localVarFormParams.set('street', street);
-            }
-            if (city !== undefined) {
-                localVarFormParams.set('city', city);
-            }
-            if (state !== undefined) {
-                localVarFormParams.set('state', state);
-            }
-            if (postalCode !== undefined) {
-                localVarFormParams.set('postal_code', postalCode);
-            }
-            if (country !== undefined) {
-                localVarFormParams.set('country', country);
-            }
-            if (locale !== undefined) {
-                localVarFormParams.set('locale', locale);
-            }
-            if (industry !== undefined) {
-                localVarFormParams.set('industry', industry);
-            }
-            if (companyType !== undefined) {
-                localVarFormParams.set('company_type', companyType);
-            }
-            if (founded !== undefined) {
-                localVarFormParams.set('founded', founded);
-            }
-            if (revenueRange !== undefined) {
-                localVarFormParams.set('revenue_range', revenueRange);
-            }
-            if (size !== undefined) {
-                localVarFormParams.set('size', size);
-            }
-            if (doNotContact !== undefined) {
-                localVarFormParams.set('do_not_contact', doNotContact);
-            }
-            if (customFields) {
-                localVarFormParams.set('custom_fields', customFields.join(exports.COLLECTION_FORMATS["csv"]));
-            }
-            if (tags) {
-                localVarFormParams.set('tags', tags.join(exports.COLLECTION_FORMATS["csv"]));
-            }
-            if (ownerId !== undefined) {
-                localVarFormParams.set('owner_id', ownerId);
-            }
-            if (companyStageId !== undefined) {
-                localVarFormParams.set('company_stage_id', companyStageId);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+        createAnAccount: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
+            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).createAnAccount(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
             };
         },
-    };
-};
-/**
- * AccountsApi - functional programming interface
- * @export
- */
-exports.AccountsApiFp = function (configuration) {
-    return {
         /**
          * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
          * @summary Delete an account
@@ -934,8 +979,8 @@ exports.AccountsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).v2AccountsIdJsonDelete(id, options);
+        deleteAnAccount: function (id, options) {
+            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).deleteAnAccount(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -956,8 +1001,42 @@ exports.AccountsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).v2AccountsIdJsonGet(id, options);
+        fetchAnAccount: function (id, options) {
+            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).fetchAnAccount(id, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List accounts
+         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAccounts: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).listAccounts(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1003,87 +1082,8 @@ exports.AccountsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonPut: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
-            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).v2AccountsIdJsonPut(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List accounts
-         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2AccountsJsonGet: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).v2AccountsJsonGet(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Creates an account.  \"domain\" must be unique on the current team.
-         * @summary Create an account
-         * @param {string} name Account Full Name
-         * @param {string} domain Website domain, not a fully qualified URI
-         * @param {string} [conversationalName] Conversational name of the Account
-         * @param {string} [description] Description
-         * @param {string} [phone] Phone number without formatting
-         * @param {string} [website] Website
-         * @param {string} [linkedinUrl] Full LinkedIn url
-         * @param {string} [twitterHandle] Twitter handle, with @
-         * @param {string} [street] Street name and number
-         * @param {string} [city] City
-         * @param {string} [state] State
-         * @param {string} [postalCode] Postal code
-         * @param {string} [country] Country
-         * @param {string} [locale] Time locale
-         * @param {string} [industry] Industry
-         * @param {string} [companyType] Type of the Account&#39;s company
-         * @param {string} [founded] Date or year of founding
-         * @param {string} [revenueRange] Estimated revenue range
-         * @param {string} [size] Estimated number of people in employment
-         * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-         * @param {Array<string>} [tags] All tags applied to this Account
-         * @param {number} [ownerId] ID of the User that owns this Account
-         * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2AccountsJsonPost: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
-            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).v2AccountsJsonPost(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options);
+        updateAnExistingAccount: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
+            var localVarFetchArgs = exports.AccountsApiFetchParamCreator(configuration).updateAnExistingAccount(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1106,14 +1106,47 @@ exports.AccountsApiFp = function (configuration) {
 exports.AccountsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates an account.  \"domain\" must be unique on the current team.
+         * @summary Create an account
+         * @param {string} name Account Full Name
+         * @param {string} domain Website domain, not a fully qualified URI
+         * @param {string} [conversationalName] Conversational name of the Account
+         * @param {string} [description] Description
+         * @param {string} [phone] Phone number without formatting
+         * @param {string} [website] Website
+         * @param {string} [linkedinUrl] Full LinkedIn url
+         * @param {string} [twitterHandle] Twitter handle, with @
+         * @param {string} [street] Street name and number
+         * @param {string} [city] City
+         * @param {string} [state] State
+         * @param {string} [postalCode] Postal code
+         * @param {string} [country] Country
+         * @param {string} [locale] Time locale
+         * @param {string} [industry] Industry
+         * @param {string} [companyType] Type of the Account&#39;s company
+         * @param {string} [founded] Date or year of founding
+         * @param {string} [revenueRange] Estimated revenue range
+         * @param {string} [size] Estimated number of people in employment
+         * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+         * @param {Array<string>} [tags] All tags applied to this Account
+         * @param {number} [ownerId] ID of the User that owns this Account
+         * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAnAccount: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
+            return exports.AccountsApiFp(configuration).createAnAccount(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options)(fetch, basePath);
+        },
+        /**
          * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
          * @summary Delete an account
          * @param {string} id Account ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonDelete: function (id, options) {
-            return exports.AccountsApiFp(configuration).v2AccountsIdJsonDelete(id, options)(fetch, basePath);
+        deleteAnAccount: function (id, options) {
+            return exports.AccountsApiFp(configuration).deleteAnAccount(id, options)(fetch, basePath);
         },
         /**
          * Fetches an account, by ID only.
@@ -1122,8 +1155,30 @@ exports.AccountsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonGet: function (id, options) {
-            return exports.AccountsApiFp(configuration).v2AccountsIdJsonGet(id, options)(fetch, basePath);
+        fetchAnAccount: function (id, options) {
+            return exports.AccountsApiFp(configuration).fetchAnAccount(id, options)(fetch, basePath);
+        },
+        /**
+         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List accounts
+         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAccounts: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.AccountsApiFp(configuration).listAccounts(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
          * Updates an account.  \"domain\" must be unique on the current team.
@@ -1157,63 +1212,8 @@ exports.AccountsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2AccountsIdJsonPut: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
-            return exports.AccountsApiFp(configuration).v2AccountsIdJsonPut(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options)(fetch, basePath);
-        },
-        /**
-         * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List accounts
-         * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-         * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-         * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-         * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-         * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2AccountsJsonGet: function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.AccountsApiFp(configuration).v2AccountsJsonGet(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
-        },
-        /**
-         * Creates an account.  \"domain\" must be unique on the current team.
-         * @summary Create an account
-         * @param {string} name Account Full Name
-         * @param {string} domain Website domain, not a fully qualified URI
-         * @param {string} [conversationalName] Conversational name of the Account
-         * @param {string} [description] Description
-         * @param {string} [phone] Phone number without formatting
-         * @param {string} [website] Website
-         * @param {string} [linkedinUrl] Full LinkedIn url
-         * @param {string} [twitterHandle] Twitter handle, with @
-         * @param {string} [street] Street name and number
-         * @param {string} [city] City
-         * @param {string} [state] State
-         * @param {string} [postalCode] Postal code
-         * @param {string} [country] Country
-         * @param {string} [locale] Time locale
-         * @param {string} [industry] Industry
-         * @param {string} [companyType] Type of the Account&#39;s company
-         * @param {string} [founded] Date or year of founding
-         * @param {string} [revenueRange] Estimated revenue range
-         * @param {string} [size] Estimated number of people in employment
-         * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-         * @param {Array<string>} [tags] All tags applied to this Account
-         * @param {number} [ownerId] ID of the User that owns this Account
-         * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2AccountsJsonPost: function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
-            return exports.AccountsApiFp(configuration).v2AccountsJsonPost(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options)(fetch, basePath);
+        updateAnExistingAccount: function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
+            return exports.AccountsApiFp(configuration).updateAnExistingAccount(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options)(fetch, basePath);
         },
     };
 };
@@ -1229,6 +1229,40 @@ var AccountsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates an account.  \"domain\" must be unique on the current team.
+     * @summary Create an account
+     * @param {string} name Account Full Name
+     * @param {string} domain Website domain, not a fully qualified URI
+     * @param {string} [conversationalName] Conversational name of the Account
+     * @param {string} [description] Description
+     * @param {string} [phone] Phone number without formatting
+     * @param {string} [website] Website
+     * @param {string} [linkedinUrl] Full LinkedIn url
+     * @param {string} [twitterHandle] Twitter handle, with @
+     * @param {string} [street] Street name and number
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [postalCode] Postal code
+     * @param {string} [country] Country
+     * @param {string} [locale] Time locale
+     * @param {string} [industry] Industry
+     * @param {string} [companyType] Type of the Account&#39;s company
+     * @param {string} [founded] Date or year of founding
+     * @param {string} [revenueRange] Estimated revenue range
+     * @param {string} [size] Estimated number of people in employment
+     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {Array<string>} [tags] All tags applied to this Account
+     * @param {number} [ownerId] ID of the User that owns this Account
+     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsApi
+     */
+    AccountsApi.prototype.createAnAccount = function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
+        return exports.AccountsApiFp(this.configuration).createAnAccount(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes an account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.  Deleting an account will remove all connected people from that account.
      * @summary Delete an account
      * @param {string} id Account ID
@@ -1236,8 +1270,8 @@ var AccountsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    AccountsApi.prototype.v2AccountsIdJsonDelete = function (id, options) {
-        return exports.AccountsApiFp(this.configuration).v2AccountsIdJsonDelete(id, options)(this.fetch, this.basePath);
+    AccountsApi.prototype.deleteAnAccount = function (id, options) {
+        return exports.AccountsApiFp(this.configuration).deleteAnAccount(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches an account, by ID only.
@@ -1247,8 +1281,31 @@ var AccountsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    AccountsApi.prototype.v2AccountsIdJsonGet = function (id, options) {
-        return exports.AccountsApiFp(this.configuration).v2AccountsIdJsonGet(id, options)(this.fetch, this.basePath);
+    AccountsApi.prototype.fetchAnAccount = function (id, options) {
+        return exports.AccountsApiFp(this.configuration).fetchAnAccount(id, options)(this.fetch, this.basePath);
+    };
+    /**
+     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List accounts
+     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
+     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
+     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
+     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
+     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AccountsApi
+     */
+    AccountsApi.prototype.listAccounts = function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.AccountsApiFp(this.configuration).listAccounts(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
      * Updates an account.  \"domain\" must be unique on the current team.
@@ -1283,65 +1340,8 @@ var AccountsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof AccountsApi
      */
-    AccountsApi.prototype.v2AccountsIdJsonPut = function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
-        return exports.AccountsApiFp(this.configuration).v2AccountsIdJsonPut(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Fetches multiple account records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List accounts
-     * @param {Array<number>} [ids] IDs of accounts to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [crmId] Filters accounts by crm_id. Multiple crm ids can be applied
-     * @param {Array<string>} [tag] Filters accounts by the tags applied to the account. Multiple tags can be applied
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [domain] Domain of the accounts to fetch. Domains are unique and lowercase
-     * @param {boolean} [archived] Filters accounts by archived_at status. Returns only accounts where archived_at is not null if this field is true. Returns only accounts where archived_at is null if this field is false. Do not pass this parameter to return both archived and unarchived accounts. This filter is not applied if any value other than \&quot;true\&quot; or \&quot;false\&quot; is passed.
-     * @param {Array<string>} [name] Names of accounts to fetch. Name matches are exact and case sensitive. Multiple names can be fetched.
-     * @param {Array<number>} [accountStageId] Filters accounts by account_stage_id. Multiple account_stage_ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at, account_stage, account_tier. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountsApi
-     */
-    AccountsApi.prototype.v2AccountsJsonGet = function (ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.AccountsApiFp(this.configuration).v2AccountsJsonGet(ids, crmId, tag, updatedAt, domain, archived, name, accountStageId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Creates an account.  \"domain\" must be unique on the current team.
-     * @summary Create an account
-     * @param {string} name Account Full Name
-     * @param {string} domain Website domain, not a fully qualified URI
-     * @param {string} [conversationalName] Conversational name of the Account
-     * @param {string} [description] Description
-     * @param {string} [phone] Phone number without formatting
-     * @param {string} [website] Website
-     * @param {string} [linkedinUrl] Full LinkedIn url
-     * @param {string} [twitterHandle] Twitter handle, with @
-     * @param {string} [street] Street name and number
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [postalCode] Postal code
-     * @param {string} [country] Country
-     * @param {string} [locale] Time locale
-     * @param {string} [industry] Industry
-     * @param {string} [companyType] Type of the Account&#39;s company
-     * @param {string} [founded] Date or year of founding
-     * @param {string} [revenueRange] Estimated revenue range
-     * @param {string} [size] Estimated number of people in employment
-     * @param {boolean} [doNotContact] Whether this company can not be contacted. Values are either true or false. Setting this to true will remove all associated people from all active communications
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {Array<string>} [tags] All tags applied to this Account
-     * @param {number} [ownerId] ID of the User that owns this Account
-     * @param {number} [companyStageId] ID of the CompanyStage assigned to this Account
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AccountsApi
-     */
-    AccountsApi.prototype.v2AccountsJsonPost = function (name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options) {
-        return exports.AccountsApiFp(this.configuration).v2AccountsJsonPost(name, domain, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, options)(this.fetch, this.basePath);
+    AccountsApi.prototype.updateAnExistingAccount = function (name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options) {
+        return exports.AccountsApiFp(this.configuration).updateAnExistingAccount(name, domain, id, conversationalName, description, phone, website, linkedinUrl, twitterHandle, street, city, state, postalCode, country, locale, industry, companyType, founded, revenueRange, size, doNotContact, customFields, tags, ownerId, companyStageId, archived, options)(this.fetch, this.basePath);
     };
     return AccountsApi;
 }(BaseAPI));
@@ -1359,11 +1359,11 @@ exports.ActionDetailsCallInstructionsApiFetchParamCreator = function (configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsIdJsonGet: function (id, options) {
+        fetchACallInstructions: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ActionDetailsCallInstructionsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACallInstructions.');
             }
             var localVarPath = "/v2/action_details/call_instructions/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -1392,7 +1392,7 @@ exports.ActionDetailsCallInstructionsApiFetchParamCreator = function (configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCallInstructions: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/action_details/call_instructions.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -1441,8 +1441,8 @@ exports.ActionDetailsCallInstructionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.ActionDetailsCallInstructionsApiFetchParamCreator(configuration).v2ActionDetailsCallInstructionsIdJsonGet(id, options);
+        fetchACallInstructions: function (id, options) {
+            var localVarFetchArgs = exports.ActionDetailsCallInstructionsApiFetchParamCreator(configuration).fetchACallInstructions(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1468,8 +1468,8 @@ exports.ActionDetailsCallInstructionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.ActionDetailsCallInstructionsApiFetchParamCreator(configuration).v2ActionDetailsCallInstructionsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCallInstructions: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.ActionDetailsCallInstructionsApiFetchParamCreator(configuration).listCallInstructions(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1498,8 +1498,8 @@ exports.ActionDetailsCallInstructionsApiFactory = function (configuration, fetch
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsIdJsonGet: function (id, options) {
-            return exports.ActionDetailsCallInstructionsApiFp(configuration).v2ActionDetailsCallInstructionsIdJsonGet(id, options)(fetch, basePath);
+        fetchACallInstructions: function (id, options) {
+            return exports.ActionDetailsCallInstructionsApiFp(configuration).fetchACallInstructions(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -1513,8 +1513,8 @@ exports.ActionDetailsCallInstructionsApiFactory = function (configuration, fetch
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionDetailsCallInstructionsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.ActionDetailsCallInstructionsApiFp(configuration).v2ActionDetailsCallInstructionsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCallInstructions: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.ActionDetailsCallInstructionsApiFp(configuration).listCallInstructions(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -1537,8 +1537,8 @@ var ActionDetailsCallInstructionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ActionDetailsCallInstructionsApi
      */
-    ActionDetailsCallInstructionsApi.prototype.v2ActionDetailsCallInstructionsIdJsonGet = function (id, options) {
-        return exports.ActionDetailsCallInstructionsApiFp(this.configuration).v2ActionDetailsCallInstructionsIdJsonGet(id, options)(this.fetch, this.basePath);
+    ActionDetailsCallInstructionsApi.prototype.fetchACallInstructions = function (id, options) {
+        return exports.ActionDetailsCallInstructionsApiFp(this.configuration).fetchACallInstructions(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple call instruction records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -1553,8 +1553,8 @@ var ActionDetailsCallInstructionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ActionDetailsCallInstructionsApi
      */
-    ActionDetailsCallInstructionsApi.prototype.v2ActionDetailsCallInstructionsJsonGet = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.ActionDetailsCallInstructionsApiFp(this.configuration).v2ActionDetailsCallInstructionsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    ActionDetailsCallInstructionsApi.prototype.listCallInstructions = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.ActionDetailsCallInstructionsApiFp(this.configuration).listCallInstructions(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return ActionDetailsCallInstructionsApi;
 }(BaseAPI));
@@ -1572,11 +1572,11 @@ exports.ActionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsIdJsonGet: function (id, options) {
+        fetchAnAction: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ActionsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnAction.');
             }
             var localVarPath = "/v2/actions/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -1610,7 +1610,7 @@ exports.ActionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsJsonGet: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listActions: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/actions.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -1674,8 +1674,8 @@ exports.ActionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.ActionsApiFetchParamCreator(configuration).v2ActionsIdJsonGet(id, options);
+        fetchAnAction: function (id, options) {
+            var localVarFetchArgs = exports.ActionsApiFetchParamCreator(configuration).fetchAnAction(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1706,8 +1706,8 @@ exports.ActionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsJsonGet: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.ActionsApiFetchParamCreator(configuration).v2ActionsJsonGet(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listActions: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.ActionsApiFetchParamCreator(configuration).listActions(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1736,8 +1736,8 @@ exports.ActionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsIdJsonGet: function (id, options) {
-            return exports.ActionsApiFp(configuration).v2ActionsIdJsonGet(id, options)(fetch, basePath);
+        fetchAnAction: function (id, options) {
+            return exports.ActionsApiFp(configuration).fetchAnAction(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
@@ -1756,8 +1756,8 @@ exports.ActionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActionsJsonGet: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.ActionsApiFp(configuration).v2ActionsJsonGet(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listActions: function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.ActionsApiFp(configuration).listActions(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -1780,8 +1780,8 @@ var ActionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ActionsApi
      */
-    ActionsApi.prototype.v2ActionsIdJsonGet = function (id, options) {
-        return exports.ActionsApiFp(this.configuration).v2ActionsIdJsonGet(id, options)(this.fetch, this.basePath);
+    ActionsApi.prototype.fetchAnAction = function (id, options) {
+        return exports.ActionsApiFp(this.configuration).fetchAnAction(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple action records. The records can be filtered, paged, and sorted according to the respective parameters. Only actions that are currently \"in_progess\" will be returned by this endpoint.  By default, only the requesting user's actions will be returned by this endpoint. It is possible for team admin users to request other users' actions by passing the user_guid parameter.
@@ -1801,8 +1801,8 @@ var ActionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ActionsApi
      */
-    ActionsApi.prototype.v2ActionsJsonGet = function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.ActionsApiFp(this.configuration).v2ActionsJsonGet(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    ActionsApi.prototype.listActions = function (ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.ActionsApiFp(this.configuration).listActions(ids, stepId, type, dueOn, userGuid, personId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return ActionsApi;
 }(BaseAPI));
@@ -1820,7 +1820,7 @@ exports.ActivitiesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesJsonPost: function (actionId, options) {
+        createAnActivity: function (actionId, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/activities.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -1857,8 +1857,8 @@ exports.ActivitiesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesJsonPost: function (actionId, options) {
-            var localVarFetchArgs = exports.ActivitiesApiFetchParamCreator(configuration).v2ActivitiesJsonPost(actionId, options);
+        createAnActivity: function (actionId, options) {
+            var localVarFetchArgs = exports.ActivitiesApiFetchParamCreator(configuration).createAnActivity(actionId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -1887,8 +1887,8 @@ exports.ActivitiesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesJsonPost: function (actionId, options) {
-            return exports.ActivitiesApiFp(configuration).v2ActivitiesJsonPost(actionId, options)(fetch, basePath);
+        createAnActivity: function (actionId, options) {
+            return exports.ActivitiesApiFp(configuration).createAnActivity(actionId, options)(fetch, basePath);
         },
     };
 };
@@ -1911,8 +1911,8 @@ var ActivitiesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    ActivitiesApi.prototype.v2ActivitiesJsonPost = function (actionId, options) {
-        return exports.ActivitiesApiFp(this.configuration).v2ActivitiesJsonPost(actionId, options)(this.fetch, this.basePath);
+    ActivitiesApi.prototype.createAnActivity = function (actionId, options) {
+        return exports.ActivitiesApiFp(this.configuration).createAnActivity(actionId, options)(this.fetch, this.basePath);
     };
     return ActivitiesApi;
 }(BaseAPI));
@@ -1930,11 +1930,11 @@ exports.CRMActivitiesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesIdJsonGet: function (id, options) {
+        fetchACrmActivity: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CrmActivitiesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACrmActivity.');
             }
             var localVarPath = "/v2/crm_activities/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -1964,7 +1964,7 @@ exports.CRMActivitiesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCrmActivities: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/crm_activities.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -2016,8 +2016,8 @@ exports.CRMActivitiesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CRMActivitiesApiFetchParamCreator(configuration).v2CrmActivitiesIdJsonGet(id, options);
+        fetchACrmActivity: function (id, options) {
+            var localVarFetchArgs = exports.CRMActivitiesApiFetchParamCreator(configuration).fetchACrmActivity(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2044,8 +2044,8 @@ exports.CRMActivitiesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CRMActivitiesApiFetchParamCreator(configuration).v2CrmActivitiesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCrmActivities: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CRMActivitiesApiFetchParamCreator(configuration).listCrmActivities(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2074,8 +2074,8 @@ exports.CRMActivitiesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesIdJsonGet: function (id, options) {
-            return exports.CRMActivitiesApiFp(configuration).v2CrmActivitiesIdJsonGet(id, options)(fetch, basePath);
+        fetchACrmActivity: function (id, options) {
+            return exports.CRMActivitiesApiFp(configuration).fetchACrmActivity(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -2090,8 +2090,8 @@ exports.CRMActivitiesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivitiesJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CRMActivitiesApiFp(configuration).v2CrmActivitiesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCrmActivities: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CRMActivitiesApiFp(configuration).listCrmActivities(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -2114,8 +2114,8 @@ var CRMActivitiesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CRMActivitiesApi
      */
-    CRMActivitiesApi.prototype.v2CrmActivitiesIdJsonGet = function (id, options) {
-        return exports.CRMActivitiesApiFp(this.configuration).v2CrmActivitiesIdJsonGet(id, options)(this.fetch, this.basePath);
+    CRMActivitiesApi.prototype.fetchACrmActivity = function (id, options) {
+        return exports.CRMActivitiesApiFp(this.configuration).fetchACrmActivity(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple crm activity records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -2131,8 +2131,8 @@ var CRMActivitiesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CRMActivitiesApi
      */
-    CRMActivitiesApi.prototype.v2CrmActivitiesJsonGet = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CRMActivitiesApiFp(this.configuration).v2CrmActivitiesJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CRMActivitiesApi.prototype.listCrmActivities = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CRMActivitiesApiFp(this.configuration).listCrmActivities(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CRMActivitiesApi;
 }(BaseAPI));
@@ -2155,7 +2155,7 @@ exports.CRMActivityFieldsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivityFieldsJsonGet: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCrmActivityFields: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/crm_activity_fields.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -2209,8 +2209,8 @@ exports.CRMActivityFieldsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivityFieldsJsonGet: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CRMActivityFieldsApiFetchParamCreator(configuration).v2CrmActivityFieldsJsonGet(source, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCrmActivityFields: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CRMActivityFieldsApiFetchParamCreator(configuration).listCrmActivityFields(source, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2244,8 +2244,8 @@ exports.CRMActivityFieldsApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CrmActivityFieldsJsonGet: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CRMActivityFieldsApiFp(configuration).v2CrmActivityFieldsJsonGet(source, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCrmActivityFields: function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CRMActivityFieldsApiFp(configuration).listCrmActivityFields(source, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -2273,8 +2273,8 @@ var CRMActivityFieldsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CRMActivityFieldsApi
      */
-    CRMActivityFieldsApi.prototype.v2CrmActivityFieldsJsonGet = function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CRMActivityFieldsApiFp(this.configuration).v2CrmActivityFieldsJsonGet(source, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CRMActivityFieldsApi.prototype.listCrmActivityFields = function (source, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CRMActivityFieldsApiFp(this.configuration).listCrmActivityFields(source, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CRMActivityFieldsApi;
 }(BaseAPI));
@@ -2286,17 +2286,59 @@ exports.CRMActivityFieldsApi = CRMActivityFieldsApi;
 exports.CadenceMembershipsApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+         * @summary Create a cadence membership
+         * @param {number} personId ID of the person to create a cadence membership for
+         * @param {number} cadenceId ID of the cadence to create a cadence membership for
+         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACadenceMembership: function (personId, cadenceId, userId, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'personId' is not null or undefined
+            if (personId === null || personId === undefined) {
+                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling createACadenceMembership.');
+            }
+            // verify required parameter 'cadenceId' is not null or undefined
+            if (cadenceId === null || cadenceId === undefined) {
+                throw new RequiredError('cadenceId', 'Required parameter cadenceId was null or undefined when calling createACadenceMembership.');
+            }
+            var localVarPath = "/v2/cadence_memberships.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (personId !== undefined) {
+                localVarQueryParameter['person_id'] = personId;
+            }
+            if (cadenceId !== undefined) {
+                localVarQueryParameter['cadence_id'] = cadenceId;
+            }
+            if (userId !== undefined) {
+                localVarQueryParameter['user_id'] = userId;
+            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          *
          * @summary Delete a cadence membership
          * @param {string} id CadenceMembership ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonDelete: function (id, options) {
+        deleteACadenceMembership: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CadenceMembershipsIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteACadenceMembership.');
             }
             var localVarPath = "/v2/cadence_memberships/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -2320,11 +2362,11 @@ exports.CadenceMembershipsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonGet: function (id, options) {
+        fetchACadenceMembership: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CadenceMembershipsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACadenceMembership.');
             }
             var localVarPath = "/v2/cadence_memberships/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -2357,7 +2399,7 @@ exports.CadenceMembershipsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsJsonGet: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCadenceMemberships: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/cadence_memberships.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -2403,48 +2445,6 @@ exports.CadenceMembershipsApiFetchParamCreator = function (configuration) {
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-         * @summary Create a cadence membership
-         * @param {number} personId ID of the person to create a cadence membership for
-         * @param {number} cadenceId ID of the cadence to create a cadence membership for
-         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CadenceMembershipsJsonPost: function (personId, cadenceId, userId, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'personId' is not null or undefined
-            if (personId === null || personId === undefined) {
-                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling v2CadenceMembershipsJsonPost.');
-            }
-            // verify required parameter 'cadenceId' is not null or undefined
-            if (cadenceId === null || cadenceId === undefined) {
-                throw new RequiredError('cadenceId', 'Required parameter cadenceId was null or undefined when calling v2CadenceMembershipsJsonPost.');
-            }
-            var localVarPath = "/v2/cadence_memberships.json";
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            if (personId !== undefined) {
-                localVarQueryParameter['person_id'] = personId;
-            }
-            if (cadenceId !== undefined) {
-                localVarQueryParameter['cadence_id'] = cadenceId;
-            }
-            if (userId !== undefined) {
-                localVarQueryParameter['user_id'] = userId;
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     };
 };
 /**
@@ -2454,14 +2454,38 @@ exports.CadenceMembershipsApiFetchParamCreator = function (configuration) {
 exports.CadenceMembershipsApiFp = function (configuration) {
     return {
         /**
+         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+         * @summary Create a cadence membership
+         * @param {number} personId ID of the person to create a cadence membership for
+         * @param {number} cadenceId ID of the cadence to create a cadence membership for
+         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACadenceMembership: function (personId, cadenceId, userId, options) {
+            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).createACadenceMembership(personId, cadenceId, userId, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          *
          * @summary Delete a cadence membership
          * @param {string} id CadenceMembership ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).v2CadenceMembershipsIdJsonDelete(id, options);
+        deleteACadenceMembership: function (id, options) {
+            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).deleteACadenceMembership(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2482,8 +2506,8 @@ exports.CadenceMembershipsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).v2CadenceMembershipsIdJsonGet(id, options);
+        fetchACadenceMembership: function (id, options) {
+            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).fetchACadenceMembership(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2513,32 +2537,8 @@ exports.CadenceMembershipsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsJsonGet: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).v2CadenceMembershipsJsonGet(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-         * @summary Create a cadence membership
-         * @param {number} personId ID of the person to create a cadence membership for
-         * @param {number} cadenceId ID of the cadence to create a cadence membership for
-         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CadenceMembershipsJsonPost: function (personId, cadenceId, userId, options) {
-            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).v2CadenceMembershipsJsonPost(personId, cadenceId, userId, options);
+        listCadenceMemberships: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CadenceMembershipsApiFetchParamCreator(configuration).listCadenceMemberships(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2561,14 +2561,26 @@ exports.CadenceMembershipsApiFp = function (configuration) {
 exports.CadenceMembershipsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+         * @summary Create a cadence membership
+         * @param {number} personId ID of the person to create a cadence membership for
+         * @param {number} cadenceId ID of the cadence to create a cadence membership for
+         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACadenceMembership: function (personId, cadenceId, userId, options) {
+            return exports.CadenceMembershipsApiFp(configuration).createACadenceMembership(personId, cadenceId, userId, options)(fetch, basePath);
+        },
+        /**
          *
          * @summary Delete a cadence membership
          * @param {string} id CadenceMembership ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonDelete: function (id, options) {
-            return exports.CadenceMembershipsApiFp(configuration).v2CadenceMembershipsIdJsonDelete(id, options)(fetch, basePath);
+        deleteACadenceMembership: function (id, options) {
+            return exports.CadenceMembershipsApiFp(configuration).deleteACadenceMembership(id, options)(fetch, basePath);
         },
         /**
          * Fetches a cadence membership, by ID only.
@@ -2577,8 +2589,8 @@ exports.CadenceMembershipsApiFactory = function (configuration, fetch, basePath)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsIdJsonGet: function (id, options) {
-            return exports.CadenceMembershipsApiFp(configuration).v2CadenceMembershipsIdJsonGet(id, options)(fetch, basePath);
+        fetchACadenceMembership: function (id, options) {
+            return exports.CadenceMembershipsApiFp(configuration).fetchACadenceMembership(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
@@ -2596,20 +2608,8 @@ exports.CadenceMembershipsApiFactory = function (configuration, fetch, basePath)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadenceMembershipsJsonGet: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CadenceMembershipsApiFp(configuration).v2CadenceMembershipsJsonGet(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
-        },
-        /**
-         * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-         * @summary Create a cadence membership
-         * @param {number} personId ID of the person to create a cadence membership for
-         * @param {number} cadenceId ID of the cadence to create a cadence membership for
-         * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CadenceMembershipsJsonPost: function (personId, cadenceId, userId, options) {
-            return exports.CadenceMembershipsApiFp(configuration).v2CadenceMembershipsJsonPost(personId, cadenceId, userId, options)(fetch, basePath);
+        listCadenceMemberships: function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CadenceMembershipsApiFp(configuration).listCadenceMemberships(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -2625,6 +2625,19 @@ var CadenceMembershipsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
+     * @summary Create a cadence membership
+     * @param {number} personId ID of the person to create a cadence membership for
+     * @param {number} cadenceId ID of the cadence to create a cadence membership for
+     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CadenceMembershipsApi
+     */
+    CadenceMembershipsApi.prototype.createACadenceMembership = function (personId, cadenceId, userId, options) {
+        return exports.CadenceMembershipsApiFp(this.configuration).createACadenceMembership(personId, cadenceId, userId, options)(this.fetch, this.basePath);
+    };
+    /**
      *
      * @summary Delete a cadence membership
      * @param {string} id CadenceMembership ID
@@ -2632,8 +2645,8 @@ var CadenceMembershipsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    CadenceMembershipsApi.prototype.v2CadenceMembershipsIdJsonDelete = function (id, options) {
-        return exports.CadenceMembershipsApiFp(this.configuration).v2CadenceMembershipsIdJsonDelete(id, options)(this.fetch, this.basePath);
+    CadenceMembershipsApi.prototype.deleteACadenceMembership = function (id, options) {
+        return exports.CadenceMembershipsApiFp(this.configuration).deleteACadenceMembership(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a cadence membership, by ID only.
@@ -2643,8 +2656,8 @@ var CadenceMembershipsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    CadenceMembershipsApi.prototype.v2CadenceMembershipsIdJsonGet = function (id, options) {
-        return exports.CadenceMembershipsApiFp(this.configuration).v2CadenceMembershipsIdJsonGet(id, options)(this.fetch, this.basePath);
+    CadenceMembershipsApi.prototype.fetchACadenceMembership = function (id, options) {
+        return exports.CadenceMembershipsApiFp(this.configuration).fetchACadenceMembership(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple cadence membership records. The records can be filtered, paged, and sorted according to the respective parameters. A cadence membership is the association between a person and their current and historical time on a cadence. Cadence membership records are mutable and change over time. If a person is added to a cadence and re-added to the same cadence in the future, there is a single membership record.
@@ -2663,21 +2676,8 @@ var CadenceMembershipsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CadenceMembershipsApi
      */
-    CadenceMembershipsApi.prototype.v2CadenceMembershipsJsonGet = function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CadenceMembershipsApiFp(this.configuration).v2CadenceMembershipsJsonGet(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Adds a person to a cadence. person_id and cadence_id are required, and must be visible to the authenticated user. user_id will default to the authenticated user, but can be set to any visible user on the authenticated team.  A person cannot be added to a cadence on behalf of a teammate unless the cadence is a team cadence, or the cadence is owned by the teammate.
-     * @summary Create a cadence membership
-     * @param {number} personId ID of the person to create a cadence membership for
-     * @param {number} cadenceId ID of the cadence to create a cadence membership for
-     * @param {number} [userId] ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CadenceMembershipsApi
-     */
-    CadenceMembershipsApi.prototype.v2CadenceMembershipsJsonPost = function (personId, cadenceId, userId, options) {
-        return exports.CadenceMembershipsApiFp(this.configuration).v2CadenceMembershipsJsonPost(personId, cadenceId, userId, options)(this.fetch, this.basePath);
+    CadenceMembershipsApi.prototype.listCadenceMemberships = function (ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CadenceMembershipsApiFp(this.configuration).listCadenceMemberships(ids, personId, cadenceId, updatedAt, currentlyOnCadence, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CadenceMembershipsApi;
 }(BaseAPI));
@@ -2695,11 +2695,11 @@ exports.CadencesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesIdJsonGet: function (id, options) {
+        fetchACadence: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CadencesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACadence.');
             }
             var localVarPath = "/v2/cadences/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -2733,7 +2733,7 @@ exports.CadencesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesJsonGet: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCadences: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/cadences.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -2797,8 +2797,8 @@ exports.CadencesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CadencesApiFetchParamCreator(configuration).v2CadencesIdJsonGet(id, options);
+        fetchACadence: function (id, options) {
+            var localVarFetchArgs = exports.CadencesApiFetchParamCreator(configuration).fetchACadence(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2829,8 +2829,8 @@ exports.CadencesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesJsonGet: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CadencesApiFetchParamCreator(configuration).v2CadencesJsonGet(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCadences: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CadencesApiFetchParamCreator(configuration).listCadences(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -2859,8 +2859,8 @@ exports.CadencesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesIdJsonGet: function (id, options) {
-            return exports.CadencesApiFp(configuration).v2CadencesIdJsonGet(id, options)(fetch, basePath);
+        fetchACadence: function (id, options) {
+            return exports.CadencesApiFp(configuration).fetchACadence(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -2879,8 +2879,8 @@ exports.CadencesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CadencesJsonGet: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CadencesApiFp(configuration).v2CadencesJsonGet(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCadences: function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CadencesApiFp(configuration).listCadences(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -2903,8 +2903,8 @@ var CadencesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CadencesApi
      */
-    CadencesApi.prototype.v2CadencesIdJsonGet = function (id, options) {
-        return exports.CadencesApiFp(this.configuration).v2CadencesIdJsonGet(id, options)(this.fetch, this.basePath);
+    CadencesApi.prototype.fetchACadence = function (id, options) {
+        return exports.CadencesApiFp(this.configuration).fetchACadence(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple cadence records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -2924,8 +2924,8 @@ var CadencesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CadencesApi
      */
-    CadencesApi.prototype.v2CadencesJsonGet = function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CadencesApiFp(this.configuration).v2CadencesJsonGet(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CadencesApi.prototype.listCadences = function (ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CadencesApiFp(this.configuration).listCadences(ids, updatedAt, teamCadence, shared, ownedByGuid, peopleAddable, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CadencesApi;
 }(BaseAPI));
@@ -2943,11 +2943,11 @@ exports.CallDataRecordsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsIdJsonGet: function (id, options) {
+        fetchACallDataRecord: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CallDataRecordsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACallDataRecord.');
             }
             var localVarPath = "/v2/call_data_records/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -2980,7 +2980,7 @@ exports.CallDataRecordsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsJsonGet: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCallDataRecords: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/call_data_records.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -3041,8 +3041,8 @@ exports.CallDataRecordsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CallDataRecordsApiFetchParamCreator(configuration).v2CallDataRecordsIdJsonGet(id, options);
+        fetchACallDataRecord: function (id, options) {
+            var localVarFetchArgs = exports.CallDataRecordsApiFetchParamCreator(configuration).fetchACallDataRecord(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3072,8 +3072,8 @@ exports.CallDataRecordsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsJsonGet: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CallDataRecordsApiFetchParamCreator(configuration).v2CallDataRecordsJsonGet(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCallDataRecords: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CallDataRecordsApiFetchParamCreator(configuration).listCallDataRecords(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3102,8 +3102,8 @@ exports.CallDataRecordsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsIdJsonGet: function (id, options) {
-            return exports.CallDataRecordsApiFp(configuration).v2CallDataRecordsIdJsonGet(id, options)(fetch, basePath);
+        fetchACallDataRecord: function (id, options) {
+            return exports.CallDataRecordsApiFp(configuration).fetchACallDataRecord(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
@@ -3121,8 +3121,8 @@ exports.CallDataRecordsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDataRecordsJsonGet: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CallDataRecordsApiFp(configuration).v2CallDataRecordsJsonGet(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCallDataRecords: function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CallDataRecordsApiFp(configuration).listCallDataRecords(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -3145,8 +3145,8 @@ var CallDataRecordsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallDataRecordsApi
      */
-    CallDataRecordsApi.prototype.v2CallDataRecordsIdJsonGet = function (id, options) {
-        return exports.CallDataRecordsApiFp(this.configuration).v2CallDataRecordsIdJsonGet(id, options)(this.fetch, this.basePath);
+    CallDataRecordsApi.prototype.fetchACallDataRecord = function (id, options) {
+        return exports.CallDataRecordsApiFp(this.configuration).fetchACallDataRecord(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple call data records. The records can be filtered, paged, and sorted according to the respective parameters.  Call data records are records of all inbound and outbound calls through SalesLoft. A call data record may be associated with a call, but does not have to be.
@@ -3165,8 +3165,8 @@ var CallDataRecordsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallDataRecordsApi
      */
-    CallDataRecordsApi.prototype.v2CallDataRecordsJsonGet = function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CallDataRecordsApiFp(this.configuration).v2CallDataRecordsJsonGet(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CallDataRecordsApi.prototype.listCallDataRecords = function (ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CallDataRecordsApiFp(this.configuration).listCallDataRecords(ids, hasCall, createdAt, updatedAt, userGuid, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CallDataRecordsApi;
 }(BaseAPI));
@@ -3188,7 +3188,7 @@ exports.CallDispositionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDispositionsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCallDispositions: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/call_dispositions.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -3238,8 +3238,8 @@ exports.CallDispositionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDispositionsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CallDispositionsApiFetchParamCreator(configuration).v2CallDispositionsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCallDispositions: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CallDispositionsApiFetchParamCreator(configuration).listCallDispositions(sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3272,8 +3272,8 @@ exports.CallDispositionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallDispositionsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CallDispositionsApiFp(configuration).v2CallDispositionsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCallDispositions: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CallDispositionsApiFp(configuration).listCallDispositions(sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -3300,8 +3300,8 @@ var CallDispositionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallDispositionsApi
      */
-    CallDispositionsApi.prototype.v2CallDispositionsJsonGet = function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CallDispositionsApiFp(this.configuration).v2CallDispositionsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CallDispositionsApi.prototype.listCallDispositions = function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CallDispositionsApiFp(this.configuration).listCallDispositions(sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CallDispositionsApi;
 }(BaseAPI));
@@ -3323,7 +3323,7 @@ exports.CallSentimentsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallSentimentsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCallSentiments: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/call_sentiments.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -3373,8 +3373,8 @@ exports.CallSentimentsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallSentimentsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CallSentimentsApiFetchParamCreator(configuration).v2CallSentimentsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCallSentiments: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CallSentimentsApiFetchParamCreator(configuration).listCallSentiments(sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3407,8 +3407,8 @@ exports.CallSentimentsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CallSentimentsJsonGet: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CallSentimentsApiFp(configuration).v2CallSentimentsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCallSentiments: function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CallSentimentsApiFp(configuration).listCallSentiments(sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -3435,8 +3435,8 @@ var CallSentimentsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallSentimentsApi
      */
-    CallSentimentsApi.prototype.v2CallSentimentsJsonGet = function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CallSentimentsApiFp(this.configuration).v2CallSentimentsJsonGet(sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CallSentimentsApi.prototype.listCallSentiments = function (sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CallSentimentsApiFp(this.configuration).listCallSentiments(sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CallSentimentsApi;
 }(BaseAPI));
@@ -3454,11 +3454,11 @@ exports.CallerIDsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersCallerIdsJsonGet: function (phoneNumber, options) {
+        listCallerIds: function (phoneNumber, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'phoneNumber' is not null or undefined
             if (phoneNumber === null || phoneNumber === undefined) {
-                throw new RequiredError('phoneNumber', 'Required parameter phoneNumber was null or undefined when calling v2PhoneNumbersCallerIdsJsonGet.');
+                throw new RequiredError('phoneNumber', 'Required parameter phoneNumber was null or undefined when calling listCallerIds.');
             }
             var localVarPath = "/v2/phone_numbers/caller_ids.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -3492,8 +3492,8 @@ exports.CallerIDsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersCallerIdsJsonGet: function (phoneNumber, options) {
-            var localVarFetchArgs = exports.CallerIDsApiFetchParamCreator(configuration).v2PhoneNumbersCallerIdsJsonGet(phoneNumber, options);
+        listCallerIds: function (phoneNumber, options) {
+            var localVarFetchArgs = exports.CallerIDsApiFetchParamCreator(configuration).listCallerIds(phoneNumber, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3522,8 +3522,8 @@ exports.CallerIDsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersCallerIdsJsonGet: function (phoneNumber, options) {
-            return exports.CallerIDsApiFp(configuration).v2PhoneNumbersCallerIdsJsonGet(phoneNumber, options)(fetch, basePath);
+        listCallerIds: function (phoneNumber, options) {
+            return exports.CallerIDsApiFp(configuration).listCallerIds(phoneNumber, options)(fetch, basePath);
         },
     };
 };
@@ -3546,8 +3546,8 @@ var CallerIDsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallerIDsApi
      */
-    CallerIDsApi.prototype.v2PhoneNumbersCallerIdsJsonGet = function (phoneNumber, options) {
-        return exports.CallerIDsApiFp(this.configuration).v2PhoneNumbersCallerIdsJsonGet(phoneNumber, options)(this.fetch, this.basePath);
+    CallerIDsApi.prototype.listCallerIds = function (phoneNumber, options) {
+        return exports.CallerIDsApiFp(this.configuration).listCallerIds(phoneNumber, options)(this.fetch, this.basePath);
     };
     return CallerIDsApi;
 }(BaseAPI));
@@ -3558,84 +3558,6 @@ exports.CallerIDsApi = CallerIDsApi;
  */
 exports.CallsApiFetchParamCreator = function (configuration) {
     return {
-        /**
-         * Fetches a call, by ID only.
-         * @summary Fetch a call
-         * @param {string} id Call ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ActivitiesCallsIdJsonGet: function (id, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ActivitiesCallsIdJsonGet.');
-            }
-            var localVarPath = "/v2/activities/calls/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List calls
-         * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ActivitiesCallsJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            if (options === void 0) { options = {}; }
-            var localVarPath = "/v2/activities/calls.json";
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            if (ids) {
-                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (updatedAt) {
-                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-            if (sortDirection !== undefined) {
-                localVarQueryParameter['sort_direction'] = sortDirection;
-            }
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
-            }
-            if (page !== undefined) {
-                localVarQueryParameter['page'] = page;
-            }
-            if (includePagingCounts !== undefined) {
-                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
         /**
          * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
          * @summary Create a call
@@ -3652,11 +3574,11 @@ exports.CallsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesCallsJsonPost: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
+        createACall: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'personId' is not null or undefined
             if (personId === null || personId === undefined) {
-                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling v2ActivitiesCallsJsonPost.');
+                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling createACall.');
             }
             var localVarPath = "/v2/activities/calls.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -3705,6 +3627,84 @@ exports.CallsApiFetchParamCreator = function (configuration) {
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Fetches a call, by ID only.
+         * @summary Fetch a call
+         * @param {string} id Call ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fetchACall: function (id, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACall.');
+            }
+            var localVarPath = "/v2/activities/calls/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List calls
+         * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listCalls: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/v2/activities/calls.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (ids) {
+                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (updatedAt) {
+                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+            if (sortDirection !== undefined) {
+                localVarQueryParameter['sort_direction'] = sortDirection;
+            }
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+            if (includePagingCounts !== undefined) {
+                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
+            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     };
 };
 /**
@@ -3714,14 +3714,45 @@ exports.CallsApiFetchParamCreator = function (configuration) {
 exports.CallsApiFp = function (configuration) {
     return {
         /**
+         * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
+         * @summary Create a call
+         * @param {number} personId The ID of the person whom this call will be logged for
+         * @param {string} [to] The phone number that was called
+         * @param {number} [duration] The length of the call, in seconds
+         * @param {string} [disposition] The disposition of the call. Can be required on a per-team basis. Must be present in the disposition list.
+         * @param {string} [sentiment] The sentiment of the call. Can be required on a per-team basis. Must be present in the sentiment list.
+         * @param {string} [notes] Notes to log for the call. This is similar to the notes endpoint, but ensures that the notes get synced to the user&#39;s CRM
+         * @param {string} [userGuid] Guid of the user whom this call should be logged for. Defaults to the authenticated user. Only team admins can pass another user&#39;s guid
+         * @param {number} [actionId] Action that this call is being logged for. This will validate that the action is still valid before completing it. The same action can never be successfully passed twice to this endpoint. The action must have a type of &#39;phone&#39;.
+         * @param {{ [key: string]: string; }} [crmParams] CRM specific parameters. Some parameters are required on a per-team basis. Consume the CrmActivityFields endpoint to receive a list of valid parameters. The \&quot;field\&quot; property is passed as the key of this object, and the value of this object is the value that you would like to set.  If CrmActivityField has a non-null value, then that value must be submitted, or excluded from API calls, as these values are automatically applied.
+         * @param {Array<number>} [linkedCallDataRecordIds] CallDataRecord associations that will become linked to the created call. It is possible to pass multiple CallDataRecord ids in this field; this can be used to represent multiple phone calls that made up a single call.  Any call data record that is used must not already be linked to a call. It is not possible to link a call data record to multiple calls, and it is not possible to re-assign a call data record to a different call.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACall: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
+            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).createACall(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Fetches a call, by ID only.
          * @summary Fetch a call
          * @param {string} id Call ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesCallsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).v2ActivitiesCallsIdJsonGet(id, options);
+        fetchACall: function (id, options) {
+            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).fetchACall(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3748,39 +3779,8 @@ exports.CallsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesCallsJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).v2ActivitiesCallsJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
-         * @summary Create a call
-         * @param {number} personId The ID of the person whom this call will be logged for
-         * @param {string} [to] The phone number that was called
-         * @param {number} [duration] The length of the call, in seconds
-         * @param {string} [disposition] The disposition of the call. Can be required on a per-team basis. Must be present in the disposition list.
-         * @param {string} [sentiment] The sentiment of the call. Can be required on a per-team basis. Must be present in the sentiment list.
-         * @param {string} [notes] Notes to log for the call. This is similar to the notes endpoint, but ensures that the notes get synced to the user&#39;s CRM
-         * @param {string} [userGuid] Guid of the user whom this call should be logged for. Defaults to the authenticated user. Only team admins can pass another user&#39;s guid
-         * @param {number} [actionId] Action that this call is being logged for. This will validate that the action is still valid before completing it. The same action can never be successfully passed twice to this endpoint. The action must have a type of &#39;phone&#39;.
-         * @param {{ [key: string]: string; }} [crmParams] CRM specific parameters. Some parameters are required on a per-team basis. Consume the CrmActivityFields endpoint to receive a list of valid parameters. The \&quot;field\&quot; property is passed as the key of this object, and the value of this object is the value that you would like to set.  If CrmActivityField has a non-null value, then that value must be submitted, or excluded from API calls, as these values are automatically applied.
-         * @param {Array<number>} [linkedCallDataRecordIds] CallDataRecord associations that will become linked to the created call. It is possible to pass multiple CallDataRecord ids in this field; this can be used to represent multiple phone calls that made up a single call.  Any call data record that is used must not already be linked to a call. It is not possible to link a call data record to multiple calls, and it is not possible to re-assign a call data record to a different call.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ActivitiesCallsJsonPost: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
-            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).v2ActivitiesCallsJsonPost(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options);
+        listCalls: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CallsApiFetchParamCreator(configuration).listCalls(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -3803,32 +3803,6 @@ exports.CallsApiFp = function (configuration) {
 exports.CallsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
-         * Fetches a call, by ID only.
-         * @summary Fetch a call
-         * @param {string} id Call ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ActivitiesCallsIdJsonGet: function (id, options) {
-            return exports.CallsApiFp(configuration).v2ActivitiesCallsIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List calls
-         * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ActivitiesCallsJsonGet: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CallsApiFp(configuration).v2ActivitiesCallsJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
-        },
-        /**
          * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
          * @summary Create a call
          * @param {number} personId The ID of the person whom this call will be logged for
@@ -3844,8 +3818,34 @@ exports.CallsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesCallsJsonPost: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
-            return exports.CallsApiFp(configuration).v2ActivitiesCallsJsonPost(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options)(fetch, basePath);
+        createACall: function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
+            return exports.CallsApiFp(configuration).createACall(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options)(fetch, basePath);
+        },
+        /**
+         * Fetches a call, by ID only.
+         * @summary Fetch a call
+         * @param {string} id Call ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fetchACall: function (id, options) {
+            return exports.CallsApiFp(configuration).fetchACall(id, options)(fetch, basePath);
+        },
+        /**
+         * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List calls
+         * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listCalls: function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CallsApiFp(configuration).listCalls(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -3860,34 +3860,6 @@ var CallsApi = /** @class */ (function (_super) {
     function CallsApi() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    /**
-     * Fetches a call, by ID only.
-     * @summary Fetch a call
-     * @param {string} id Call ID
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CallsApi
-     */
-    CallsApi.prototype.v2ActivitiesCallsIdJsonGet = function (id, options) {
-        return exports.CallsApiFp(this.configuration).v2ActivitiesCallsIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List calls
-     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CallsApi
-     */
-    CallsApi.prototype.v2ActivitiesCallsJsonGet = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CallsApiFp(this.configuration).v2ActivitiesCallsJsonGet(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
-    };
     /**
      * Creates a call. The parameters of this endpoint can be used to create an action and ensure that the CRM Task is mapped correctly.
      * @summary Create a call
@@ -3905,8 +3877,36 @@ var CallsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CallsApi
      */
-    CallsApi.prototype.v2ActivitiesCallsJsonPost = function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
-        return exports.CallsApiFp(this.configuration).v2ActivitiesCallsJsonPost(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options)(this.fetch, this.basePath);
+    CallsApi.prototype.createACall = function (personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options) {
+        return exports.CallsApiFp(this.configuration).createACall(personId, to, duration, disposition, sentiment, notes, userGuid, actionId, crmParams, linkedCallDataRecordIds, options)(this.fetch, this.basePath);
+    };
+    /**
+     * Fetches a call, by ID only.
+     * @summary Fetch a call
+     * @param {string} id Call ID
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CallsApi
+     */
+    CallsApi.prototype.fetchACall = function (id, options) {
+        return exports.CallsApiFp(this.configuration).fetchACall(id, options)(this.fetch, this.basePath);
+    };
+    /**
+     * Fetches multiple call records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List calls
+     * @param {Array<number>} [ids] IDs of calls to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CallsApi
+     */
+    CallsApi.prototype.listCalls = function (ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CallsApiFp(this.configuration).listCalls(ids, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return CallsApi;
 }(BaseAPI));
@@ -3918,17 +3918,54 @@ exports.CallsApi = CallsApi;
 exports.CustomFieldsApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates a custom field.
+         * @summary Create a custom field
+         * @param {string} name The name of the custom field
+         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACustomField: function (name, fieldType, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling createACustomField.');
+            }
+            var localVarPath = "/v2/custom_fields.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (name !== undefined) {
+                localVarFormParams.set('name', name);
+            }
+            if (fieldType !== undefined) {
+                localVarFormParams.set('field_type', fieldType);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes a custom field.
          * @summary Delete a custom field
          * @param {string} id Custom Field ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonDelete: function (id, options) {
+        deleteACustomField: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CustomFieldsIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteACustomField.');
             }
             var localVarPath = "/v2/custom_fields/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -3952,11 +3989,11 @@ exports.CustomFieldsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonGet: function (id, options) {
+        fetchACustomField: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CustomFieldsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchACustomField.');
             }
             var localVarPath = "/v2/custom_fields/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -3968,45 +4005,6 @@ exports.CustomFieldsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Update a custom field.
-         * @summary Update a custom field
-         * @param {string} id Custom Field ID
-         * @param {string} [name] The name of the custom field
-         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CustomFieldsIdJsonPut: function (id, name, fieldType, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2CustomFieldsIdJsonPut.');
-            }
-            var localVarPath = "/v2/custom_fields/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (name !== undefined) {
-                localVarFormParams.set('name', name);
-            }
-            if (fieldType !== undefined) {
-                localVarFormParams.set('field_type', fieldType);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
             return {
                 url: url.format(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -4025,7 +4023,7 @@ exports.CustomFieldsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonGet: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listCustomFields: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/custom_fields.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -4063,22 +4061,24 @@ exports.CustomFieldsApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Creates a custom field.
-         * @summary Create a custom field
-         * @param {string} name The name of the custom field
+         * Update a custom field.
+         * @summary Update a custom field
+         * @param {string} id Custom Field ID
+         * @param {string} [name] The name of the custom field
          * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonPost: function (name, fieldType, options) {
+        updateACustomField: function (id, name, fieldType, options) {
             if (options === void 0) { options = {}; }
-            // verify required parameter 'name' is not null or undefined
-            if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2CustomFieldsJsonPost.');
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateACustomField.');
             }
-            var localVarPath = "/v2/custom_fields.json";
+            var localVarPath = "/v2/custom_fields/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
             var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
             var localVarFormParams = new url.URLSearchParams();
@@ -4108,14 +4108,37 @@ exports.CustomFieldsApiFetchParamCreator = function (configuration) {
 exports.CustomFieldsApiFp = function (configuration) {
     return {
         /**
+         * Creates a custom field.
+         * @summary Create a custom field
+         * @param {string} name The name of the custom field
+         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACustomField: function (name, fieldType, options) {
+            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).createACustomField(name, fieldType, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes a custom field.
          * @summary Delete a custom field
          * @param {string} id Custom Field ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).v2CustomFieldsIdJsonDelete(id, options);
+        deleteACustomField: function (id, options) {
+            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).deleteACustomField(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4136,32 +4159,8 @@ exports.CustomFieldsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).v2CustomFieldsIdJsonGet(id, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Update a custom field.
-         * @summary Update a custom field
-         * @param {string} id Custom Field ID
-         * @param {string} [name] The name of the custom field
-         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CustomFieldsIdJsonPut: function (id, name, fieldType, options) {
-            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).v2CustomFieldsIdJsonPut(id, name, fieldType, options);
+        fetchACustomField: function (id, options) {
+            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).fetchACustomField(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4188,8 +4187,8 @@ exports.CustomFieldsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonGet: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).v2CustomFieldsJsonGet(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listCustomFields: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).listCustomFields(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4204,15 +4203,16 @@ exports.CustomFieldsApiFp = function (configuration) {
             };
         },
         /**
-         * Creates a custom field.
-         * @summary Create a custom field
-         * @param {string} name The name of the custom field
+         * Update a custom field.
+         * @summary Update a custom field
+         * @param {string} id Custom Field ID
+         * @param {string} [name] The name of the custom field
          * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonPost: function (name, fieldType, options) {
-            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).v2CustomFieldsJsonPost(name, fieldType, options);
+        updateACustomField: function (id, name, fieldType, options) {
+            var localVarFetchArgs = exports.CustomFieldsApiFetchParamCreator(configuration).updateACustomField(id, name, fieldType, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4235,14 +4235,25 @@ exports.CustomFieldsApiFp = function (configuration) {
 exports.CustomFieldsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates a custom field.
+         * @summary Create a custom field
+         * @param {string} name The name of the custom field
+         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createACustomField: function (name, fieldType, options) {
+            return exports.CustomFieldsApiFp(configuration).createACustomField(name, fieldType, options)(fetch, basePath);
+        },
+        /**
          * Deletes a custom field.
          * @summary Delete a custom field
          * @param {string} id Custom Field ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonDelete: function (id, options) {
-            return exports.CustomFieldsApiFp(configuration).v2CustomFieldsIdJsonDelete(id, options)(fetch, basePath);
+        deleteACustomField: function (id, options) {
+            return exports.CustomFieldsApiFp(configuration).deleteACustomField(id, options)(fetch, basePath);
         },
         /**
          * Fetches a custom field, by ID only.
@@ -4251,20 +4262,8 @@ exports.CustomFieldsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsIdJsonGet: function (id, options) {
-            return exports.CustomFieldsApiFp(configuration).v2CustomFieldsIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Update a custom field.
-         * @summary Update a custom field
-         * @param {string} id Custom Field ID
-         * @param {string} [name] The name of the custom field
-         * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2CustomFieldsIdJsonPut: function (id, name, fieldType, options) {
-            return exports.CustomFieldsApiFp(configuration).v2CustomFieldsIdJsonPut(id, name, fieldType, options)(fetch, basePath);
+        fetchACustomField: function (id, options) {
+            return exports.CustomFieldsApiFp(configuration).fetchACustomField(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -4279,19 +4278,20 @@ exports.CustomFieldsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonGet: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.CustomFieldsApiFp(configuration).v2CustomFieldsJsonGet(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listCustomFields: function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.CustomFieldsApiFp(configuration).listCustomFields(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
-         * Creates a custom field.
-         * @summary Create a custom field
-         * @param {string} name The name of the custom field
+         * Update a custom field.
+         * @summary Update a custom field
+         * @param {string} id Custom Field ID
+         * @param {string} [name] The name of the custom field
          * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2CustomFieldsJsonPost: function (name, fieldType, options) {
-            return exports.CustomFieldsApiFp(configuration).v2CustomFieldsJsonPost(name, fieldType, options)(fetch, basePath);
+        updateACustomField: function (id, name, fieldType, options) {
+            return exports.CustomFieldsApiFp(configuration).updateACustomField(id, name, fieldType, options)(fetch, basePath);
         },
     };
 };
@@ -4307,6 +4307,18 @@ var CustomFieldsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates a custom field.
+     * @summary Create a custom field
+     * @param {string} name The name of the custom field
+     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CustomFieldsApi
+     */
+    CustomFieldsApi.prototype.createACustomField = function (name, fieldType, options) {
+        return exports.CustomFieldsApiFp(this.configuration).createACustomField(name, fieldType, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes a custom field.
      * @summary Delete a custom field
      * @param {string} id Custom Field ID
@@ -4314,8 +4326,8 @@ var CustomFieldsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    CustomFieldsApi.prototype.v2CustomFieldsIdJsonDelete = function (id, options) {
-        return exports.CustomFieldsApiFp(this.configuration).v2CustomFieldsIdJsonDelete(id, options)(this.fetch, this.basePath);
+    CustomFieldsApi.prototype.deleteACustomField = function (id, options) {
+        return exports.CustomFieldsApiFp(this.configuration).deleteACustomField(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a custom field, by ID only.
@@ -4325,21 +4337,8 @@ var CustomFieldsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    CustomFieldsApi.prototype.v2CustomFieldsIdJsonGet = function (id, options) {
-        return exports.CustomFieldsApiFp(this.configuration).v2CustomFieldsIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Update a custom field.
-     * @summary Update a custom field
-     * @param {string} id Custom Field ID
-     * @param {string} [name] The name of the custom field
-     * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof CustomFieldsApi
-     */
-    CustomFieldsApi.prototype.v2CustomFieldsIdJsonPut = function (id, name, fieldType, options) {
-        return exports.CustomFieldsApiFp(this.configuration).v2CustomFieldsIdJsonPut(id, name, fieldType, options)(this.fetch, this.basePath);
+    CustomFieldsApi.prototype.fetchACustomField = function (id, options) {
+        return exports.CustomFieldsApiFp(this.configuration).fetchACustomField(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple custom field records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -4355,20 +4354,21 @@ var CustomFieldsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    CustomFieldsApi.prototype.v2CustomFieldsJsonGet = function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.CustomFieldsApiFp(this.configuration).v2CustomFieldsJsonGet(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    CustomFieldsApi.prototype.listCustomFields = function (ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.CustomFieldsApiFp(this.configuration).listCustomFields(ids, fieldType, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
-     * Creates a custom field.
-     * @summary Create a custom field
-     * @param {string} name The name of the custom field
+     * Update a custom field.
+     * @summary Update a custom field
+     * @param {string} id Custom Field ID
+     * @param {string} [name] The name of the custom field
      * @param {string} [fieldType] The field type of the custom field. Value must be one of: person, company, opportunity
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomFieldsApi
      */
-    CustomFieldsApi.prototype.v2CustomFieldsJsonPost = function (name, fieldType, options) {
-        return exports.CustomFieldsApiFp(this.configuration).v2CustomFieldsJsonPost(name, fieldType, options)(this.fetch, this.basePath);
+    CustomFieldsApi.prototype.updateACustomField = function (id, name, fieldType, options) {
+        return exports.CustomFieldsApiFp(this.configuration).updateACustomField(id, name, fieldType, options)(this.fetch, this.basePath);
     };
     return CustomFieldsApi;
 }(BaseAPI));
@@ -4390,7 +4390,7 @@ exports.EmailTemplateAttachmentsApiFetchParamCreator = function (configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplateAttachmentsJsonGet: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
+        listEmailTemplateAttachments: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/email_template_attachments.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -4440,8 +4440,8 @@ exports.EmailTemplateAttachmentsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplateAttachmentsJsonGet: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.EmailTemplateAttachmentsApiFetchParamCreator(configuration).v2EmailTemplateAttachmentsJsonGet(ids, emailTemplateId, perPage, page, includePagingCounts, options);
+        listEmailTemplateAttachments: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.EmailTemplateAttachmentsApiFetchParamCreator(configuration).listEmailTemplateAttachments(ids, emailTemplateId, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4474,8 +4474,8 @@ exports.EmailTemplateAttachmentsApiFactory = function (configuration, fetch, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplateAttachmentsJsonGet: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
-            return exports.EmailTemplateAttachmentsApiFp(configuration).v2EmailTemplateAttachmentsJsonGet(ids, emailTemplateId, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listEmailTemplateAttachments: function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
+            return exports.EmailTemplateAttachmentsApiFp(configuration).listEmailTemplateAttachments(ids, emailTemplateId, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -4502,8 +4502,8 @@ var EmailTemplateAttachmentsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof EmailTemplateAttachmentsApi
      */
-    EmailTemplateAttachmentsApi.prototype.v2EmailTemplateAttachmentsJsonGet = function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
-        return exports.EmailTemplateAttachmentsApiFp(this.configuration).v2EmailTemplateAttachmentsJsonGet(ids, emailTemplateId, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    EmailTemplateAttachmentsApi.prototype.listEmailTemplateAttachments = function (ids, emailTemplateId, perPage, page, includePagingCounts, options) {
+        return exports.EmailTemplateAttachmentsApiFp(this.configuration).listEmailTemplateAttachments(ids, emailTemplateId, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return EmailTemplateAttachmentsApi;
 }(BaseAPI));
@@ -4522,11 +4522,11 @@ exports.EmailTemplatesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesIdJsonGet: function (id, includeSignature, options) {
+        fetchAnEmailTemplate: function (id, includeSignature, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2EmailTemplatesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnEmailTemplate.');
             }
             var localVarPath = "/v2/email_templates/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -4567,7 +4567,7 @@ exports.EmailTemplatesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesJsonGet: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listEmailTemplates: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/email_templates.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -4644,8 +4644,8 @@ exports.EmailTemplatesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesIdJsonGet: function (id, includeSignature, options) {
-            var localVarFetchArgs = exports.EmailTemplatesApiFetchParamCreator(configuration).v2EmailTemplatesIdJsonGet(id, includeSignature, options);
+        fetchAnEmailTemplate: function (id, includeSignature, options) {
+            var localVarFetchArgs = exports.EmailTemplatesApiFetchParamCreator(configuration).fetchAnEmailTemplate(id, includeSignature, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4680,8 +4680,8 @@ exports.EmailTemplatesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesJsonGet: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.EmailTemplatesApiFetchParamCreator(configuration).v2EmailTemplatesJsonGet(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listEmailTemplates: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.EmailTemplatesApiFetchParamCreator(configuration).listEmailTemplates(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4711,8 +4711,8 @@ exports.EmailTemplatesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesIdJsonGet: function (id, includeSignature, options) {
-            return exports.EmailTemplatesApiFp(configuration).v2EmailTemplatesIdJsonGet(id, includeSignature, options)(fetch, basePath);
+        fetchAnEmailTemplate: function (id, includeSignature, options) {
+            return exports.EmailTemplatesApiFp(configuration).fetchAnEmailTemplate(id, includeSignature, options)(fetch, basePath);
         },
         /**
          * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -4735,8 +4735,8 @@ exports.EmailTemplatesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2EmailTemplatesJsonGet: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.EmailTemplatesApiFp(configuration).v2EmailTemplatesJsonGet(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listEmailTemplates: function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.EmailTemplatesApiFp(configuration).listEmailTemplates(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -4760,8 +4760,8 @@ var EmailTemplatesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof EmailTemplatesApi
      */
-    EmailTemplatesApi.prototype.v2EmailTemplatesIdJsonGet = function (id, includeSignature, options) {
-        return exports.EmailTemplatesApiFp(this.configuration).v2EmailTemplatesIdJsonGet(id, includeSignature, options)(this.fetch, this.basePath);
+    EmailTemplatesApi.prototype.fetchAnEmailTemplate = function (id, includeSignature, options) {
+        return exports.EmailTemplatesApiFp(this.configuration).fetchAnEmailTemplate(id, includeSignature, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple email template records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -4785,8 +4785,8 @@ var EmailTemplatesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof EmailTemplatesApi
      */
-    EmailTemplatesApi.prototype.v2EmailTemplatesJsonGet = function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.EmailTemplatesApiFp(this.configuration).v2EmailTemplatesJsonGet(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    EmailTemplatesApi.prototype.listEmailTemplates = function (ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.EmailTemplatesApiFp(this.configuration).listEmailTemplates(ids, updatedAt, linkedToTeamTemplate, search, tagIds, tag, filterByOwner, groupId, includeCadenceTemplates, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return EmailTemplatesApi;
 }(BaseAPI));
@@ -4804,11 +4804,11 @@ exports.EmailsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsIdJsonGet: function (id, options) {
+        fetchAnEmail: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ActivitiesEmailsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnEmail.');
             }
             var localVarPath = "/v2/activities/emails/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -4841,7 +4841,7 @@ exports.EmailsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsJsonGet: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listEmails: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/activities/emails.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -4902,8 +4902,8 @@ exports.EmailsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.EmailsApiFetchParamCreator(configuration).v2ActivitiesEmailsIdJsonGet(id, options);
+        fetchAnEmail: function (id, options) {
+            var localVarFetchArgs = exports.EmailsApiFetchParamCreator(configuration).fetchAnEmail(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4933,8 +4933,8 @@ exports.EmailsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsJsonGet: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.EmailsApiFetchParamCreator(configuration).v2ActivitiesEmailsJsonGet(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listEmails: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.EmailsApiFetchParamCreator(configuration).listEmails(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -4963,8 +4963,8 @@ exports.EmailsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsIdJsonGet: function (id, options) {
-            return exports.EmailsApiFp(configuration).v2ActivitiesEmailsIdJsonGet(id, options)(fetch, basePath);
+        fetchAnEmail: function (id, options) {
+            return exports.EmailsApiFp(configuration).fetchAnEmail(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -4982,8 +4982,8 @@ exports.EmailsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ActivitiesEmailsJsonGet: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.EmailsApiFp(configuration).v2ActivitiesEmailsJsonGet(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listEmails: function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.EmailsApiFp(configuration).listEmails(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -5006,8 +5006,8 @@ var EmailsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof EmailsApi
      */
-    EmailsApi.prototype.v2ActivitiesEmailsIdJsonGet = function (id, options) {
-        return exports.EmailsApiFp(this.configuration).v2ActivitiesEmailsIdJsonGet(id, options)(this.fetch, this.basePath);
+    EmailsApi.prototype.fetchAnEmail = function (id, options) {
+        return exports.EmailsApiFp(this.configuration).fetchAnEmail(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple email records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -5026,8 +5026,8 @@ var EmailsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof EmailsApi
      */
-    EmailsApi.prototype.v2ActivitiesEmailsJsonGet = function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.EmailsApiFp(this.configuration).v2ActivitiesEmailsJsonGet(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    EmailsApi.prototype.listEmails = function (ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.EmailsApiFp(this.configuration).listEmails(ids, updatedAt, bounced, crmActivityId, actionId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return EmailsApi;
 }(BaseAPI));
@@ -5039,6 +5039,39 @@ exports.EmailsApi = EmailsApi;
 exports.ImportsApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates an import.
+         * @summary Create an import
+         * @param {number} [userId] ID of the User that owns this Import
+         * @param {string} [name] Name, recommended to be easily identifiable to a user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAnImport: function (userId, name, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/v2/imports.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (userId !== undefined) {
+                localVarFormParams.set('user_id', userId);
+            }
+            if (name !== undefined) {
+                localVarFormParams.set('name', name);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
          * @summary Delete an import
          * @param {string} id Import ID
@@ -5046,11 +5079,11 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonDelete: function (id, undo, options) {
+        deleteAnImport: function (id, undo, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ImportsIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteAnImport.');
             }
             var localVarPath = "/v2/imports/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -5077,11 +5110,11 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonGet: function (id, options) {
+        fetchAnImport: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ImportsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAnImport.');
             }
             var localVarPath = "/v2/imports/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -5093,45 +5126,6 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-         * @summary Update an import
-         * @param {string} id Import ID
-         * @param {number} [userId] ID of the User that owns this Import
-         * @param {string} [name] Name, recommended to be easily identifiable to a user
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ImportsIdJsonPut: function (id, userId, name, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2ImportsIdJsonPut.');
-            }
-            var localVarPath = "/v2/imports/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (userId !== undefined) {
-                localVarFormParams.set('user_id', userId);
-            }
-            if (name !== undefined) {
-                localVarFormParams.set('name', name);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
             return {
                 url: url.format(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -5150,7 +5144,7 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonGet: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listImports: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/imports.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -5188,18 +5182,24 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Creates an import.
-         * @summary Create an import
+         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+         * @summary Update an import
+         * @param {string} id Import ID
          * @param {number} [userId] ID of the User that owns this Import
          * @param {string} [name] Name, recommended to be easily identifiable to a user
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonPost: function (userId, name, options) {
+        updateAnImport: function (id, userId, name, options) {
             if (options === void 0) { options = {}; }
-            var localVarPath = "/v2/imports.json";
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateAnImport.');
+            }
+            var localVarPath = "/v2/imports/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
             var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
             var localVarFormParams = new url.URLSearchParams();
@@ -5229,6 +5229,29 @@ exports.ImportsApiFetchParamCreator = function (configuration) {
 exports.ImportsApiFp = function (configuration) {
     return {
         /**
+         * Creates an import.
+         * @summary Create an import
+         * @param {number} [userId] ID of the User that owns this Import
+         * @param {string} [name] Name, recommended to be easily identifiable to a user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAnImport: function (userId, name, options) {
+            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).createAnImport(userId, name, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
          * @summary Delete an import
          * @param {string} id Import ID
@@ -5236,8 +5259,8 @@ exports.ImportsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonDelete: function (id, undo, options) {
-            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).v2ImportsIdJsonDelete(id, undo, options);
+        deleteAnImport: function (id, undo, options) {
+            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).deleteAnImport(id, undo, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5258,32 +5281,8 @@ exports.ImportsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).v2ImportsIdJsonGet(id, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-         * @summary Update an import
-         * @param {string} id Import ID
-         * @param {number} [userId] ID of the User that owns this Import
-         * @param {string} [name] Name, recommended to be easily identifiable to a user
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ImportsIdJsonPut: function (id, userId, name, options) {
-            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).v2ImportsIdJsonPut(id, userId, name, options);
+        fetchAnImport: function (id, options) {
+            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).fetchAnImport(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5310,8 +5309,8 @@ exports.ImportsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonGet: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).v2ImportsJsonGet(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listImports: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).listImports(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5326,15 +5325,16 @@ exports.ImportsApiFp = function (configuration) {
             };
         },
         /**
-         * Creates an import.
-         * @summary Create an import
+         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+         * @summary Update an import
+         * @param {string} id Import ID
          * @param {number} [userId] ID of the User that owns this Import
          * @param {string} [name] Name, recommended to be easily identifiable to a user
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonPost: function (userId, name, options) {
-            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).v2ImportsJsonPost(userId, name, options);
+        updateAnImport: function (id, userId, name, options) {
+            var localVarFetchArgs = exports.ImportsApiFetchParamCreator(configuration).updateAnImport(id, userId, name, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5357,6 +5357,17 @@ exports.ImportsApiFp = function (configuration) {
 exports.ImportsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates an import.
+         * @summary Create an import
+         * @param {number} [userId] ID of the User that owns this Import
+         * @param {string} [name] Name, recommended to be easily identifiable to a user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAnImport: function (userId, name, options) {
+            return exports.ImportsApiFp(configuration).createAnImport(userId, name, options)(fetch, basePath);
+        },
+        /**
          * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
          * @summary Delete an import
          * @param {string} id Import ID
@@ -5364,8 +5375,8 @@ exports.ImportsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonDelete: function (id, undo, options) {
-            return exports.ImportsApiFp(configuration).v2ImportsIdJsonDelete(id, undo, options)(fetch, basePath);
+        deleteAnImport: function (id, undo, options) {
+            return exports.ImportsApiFp(configuration).deleteAnImport(id, undo, options)(fetch, basePath);
         },
         /**
          * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
@@ -5374,20 +5385,8 @@ exports.ImportsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsIdJsonGet: function (id, options) {
-            return exports.ImportsApiFp(configuration).v2ImportsIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-         * @summary Update an import
-         * @param {string} id Import ID
-         * @param {number} [userId] ID of the User that owns this Import
-         * @param {string} [name] Name, recommended to be easily identifiable to a user
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2ImportsIdJsonPut: function (id, userId, name, options) {
-            return exports.ImportsApiFp(configuration).v2ImportsIdJsonPut(id, userId, name, options)(fetch, basePath);
+        fetchAnImport: function (id, options) {
+            return exports.ImportsApiFp(configuration).fetchAnImport(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple imports.
@@ -5402,19 +5401,20 @@ exports.ImportsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonGet: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.ImportsApiFp(configuration).v2ImportsJsonGet(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listImports: function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.ImportsApiFp(configuration).listImports(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
-         * Creates an import.
-         * @summary Create an import
+         * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+         * @summary Update an import
+         * @param {string} id Import ID
          * @param {number} [userId] ID of the User that owns this Import
          * @param {string} [name] Name, recommended to be easily identifiable to a user
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2ImportsJsonPost: function (userId, name, options) {
-            return exports.ImportsApiFp(configuration).v2ImportsJsonPost(userId, name, options)(fetch, basePath);
+        updateAnImport: function (id, userId, name, options) {
+            return exports.ImportsApiFp(configuration).updateAnImport(id, userId, name, options)(fetch, basePath);
         },
     };
 };
@@ -5430,6 +5430,18 @@ var ImportsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates an import.
+     * @summary Create an import
+     * @param {number} [userId] ID of the User that owns this Import
+     * @param {string} [name] Name, recommended to be easily identifiable to a user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ImportsApi
+     */
+    ImportsApi.prototype.createAnImport = function (userId, name, options) {
+        return exports.ImportsApiFp(this.configuration).createAnImport(userId, name, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes an import, by ID only. The associated people can be deleted as part of the deletion process.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
      * @summary Delete an import
      * @param {string} id Import ID
@@ -5438,8 +5450,8 @@ var ImportsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    ImportsApi.prototype.v2ImportsIdJsonDelete = function (id, undo, options) {
-        return exports.ImportsApiFp(this.configuration).v2ImportsIdJsonDelete(id, undo, options)(this.fetch, this.basePath);
+    ImportsApi.prototype.deleteAnImport = function (id, undo, options) {
+        return exports.ImportsApiFp(this.configuration).deleteAnImport(id, undo, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
@@ -5449,21 +5461,8 @@ var ImportsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    ImportsApi.prototype.v2ImportsIdJsonGet = function (id, options) {
-        return exports.ImportsApiFp(this.configuration).v2ImportsIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
-     * @summary Update an import
-     * @param {string} id Import ID
-     * @param {number} [userId] ID of the User that owns this Import
-     * @param {string} [name] Name, recommended to be easily identifiable to a user
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ImportsApi
-     */
-    ImportsApi.prototype.v2ImportsIdJsonPut = function (id, userId, name, options) {
-        return exports.ImportsApiFp(this.configuration).v2ImportsIdJsonPut(id, userId, name, options)(this.fetch, this.basePath);
+    ImportsApi.prototype.fetchAnImport = function (id, options) {
+        return exports.ImportsApiFp(this.configuration).fetchAnImport(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple imports.
@@ -5479,20 +5478,21 @@ var ImportsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    ImportsApi.prototype.v2ImportsJsonGet = function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.ImportsApiFp(this.configuration).v2ImportsJsonGet(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    ImportsApi.prototype.listImports = function (ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.ImportsApiFp(this.configuration).listImports(ids, userIds, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
-     * Creates an import.
-     * @summary Create an import
+     * Updates an import, by ID only.  Admin users can access imports for the entire team, but non-admin users can only access their own imports.
+     * @summary Update an import
+     * @param {string} id Import ID
      * @param {number} [userId] ID of the User that owns this Import
      * @param {string} [name] Name, recommended to be easily identifiable to a user
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImportsApi
      */
-    ImportsApi.prototype.v2ImportsJsonPost = function (userId, name, options) {
-        return exports.ImportsApiFp(this.configuration).v2ImportsJsonPost(userId, name, options)(this.fetch, this.basePath);
+    ImportsApi.prototype.updateAnImport = function (id, userId, name, options) {
+        return exports.ImportsApiFp(this.configuration).updateAnImport(id, userId, name, options)(this.fetch, this.basePath);
     };
     return ImportsApi;
 }(BaseAPI));
@@ -5510,11 +5510,11 @@ exports.LiveWebsiteTrackingParametersApiFetchParamCreator = function (configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2LiveWebsiteTrackingParametersJsonPost: function (personId, options) {
+        createAnLiveWebsiteTrackingParameter: function (personId, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'personId' is not null or undefined
             if (personId === null || personId === undefined) {
-                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling v2LiveWebsiteTrackingParametersJsonPost.');
+                throw new RequiredError('personId', 'Required parameter personId was null or undefined when calling createAnLiveWebsiteTrackingParameter.');
             }
             var localVarPath = "/v2/live_website_tracking_parameters.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -5551,8 +5551,8 @@ exports.LiveWebsiteTrackingParametersApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2LiveWebsiteTrackingParametersJsonPost: function (personId, options) {
-            var localVarFetchArgs = exports.LiveWebsiteTrackingParametersApiFetchParamCreator(configuration).v2LiveWebsiteTrackingParametersJsonPost(personId, options);
+        createAnLiveWebsiteTrackingParameter: function (personId, options) {
+            var localVarFetchArgs = exports.LiveWebsiteTrackingParametersApiFetchParamCreator(configuration).createAnLiveWebsiteTrackingParameter(personId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5581,8 +5581,8 @@ exports.LiveWebsiteTrackingParametersApiFactory = function (configuration, fetch
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2LiveWebsiteTrackingParametersJsonPost: function (personId, options) {
-            return exports.LiveWebsiteTrackingParametersApiFp(configuration).v2LiveWebsiteTrackingParametersJsonPost(personId, options)(fetch, basePath);
+        createAnLiveWebsiteTrackingParameter: function (personId, options) {
+            return exports.LiveWebsiteTrackingParametersApiFp(configuration).createAnLiveWebsiteTrackingParameter(personId, options)(fetch, basePath);
         },
     };
 };
@@ -5605,8 +5605,8 @@ var LiveWebsiteTrackingParametersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof LiveWebsiteTrackingParametersApi
      */
-    LiveWebsiteTrackingParametersApi.prototype.v2LiveWebsiteTrackingParametersJsonPost = function (personId, options) {
-        return exports.LiveWebsiteTrackingParametersApiFp(this.configuration).v2LiveWebsiteTrackingParametersJsonPost(personId, options)(this.fetch, this.basePath);
+    LiveWebsiteTrackingParametersApi.prototype.createAnLiveWebsiteTrackingParameter = function (personId, options) {
+        return exports.LiveWebsiteTrackingParametersApiFp(this.configuration).createAnLiveWebsiteTrackingParameter(personId, options)(this.fetch, this.basePath);
     };
     return LiveWebsiteTrackingParametersApi;
 }(BaseAPI));
@@ -5623,7 +5623,7 @@ exports.MeApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2MeJsonGet: function (options) {
+        fetchCurrentUser: function (options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/me.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -5653,8 +5653,8 @@ exports.MeApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2MeJsonGet: function (options) {
-            var localVarFetchArgs = exports.MeApiFetchParamCreator(configuration).v2MeJsonGet(options);
+        fetchCurrentUser: function (options) {
+            var localVarFetchArgs = exports.MeApiFetchParamCreator(configuration).fetchCurrentUser(options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5682,8 +5682,8 @@ exports.MeApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2MeJsonGet: function (options) {
-            return exports.MeApiFp(configuration).v2MeJsonGet(options)(fetch, basePath);
+        fetchCurrentUser: function (options) {
+            return exports.MeApiFp(configuration).fetchCurrentUser(options)(fetch, basePath);
         },
     };
 };
@@ -5705,8 +5705,8 @@ var MeApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof MeApi
      */
-    MeApi.prototype.v2MeJsonGet = function (options) {
-        return exports.MeApiFp(this.configuration).v2MeJsonGet(options)(this.fetch, this.basePath);
+    MeApi.prototype.fetchCurrentUser = function (options) {
+        return exports.MeApiFp(this.configuration).fetchCurrentUser(options)(this.fetch, this.basePath);
     };
     return MeApi;
 }(BaseAPI));
@@ -5718,17 +5718,82 @@ exports.MeApi = MeApi;
 exports.NotesApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates a note.
+         * @summary Create a note
+         * @param {string} content The content of the note
+         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+         * @param {number} associatedWithId ID of the item with which the note is associated
+         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createANote: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'content' is not null or undefined
+            if (content === null || content === undefined) {
+                throw new RequiredError('content', 'Required parameter content was null or undefined when calling createANote.');
+            }
+            // verify required parameter 'associatedWithType' is not null or undefined
+            if (associatedWithType === null || associatedWithType === undefined) {
+                throw new RequiredError('associatedWithType', 'Required parameter associatedWithType was null or undefined when calling createANote.');
+            }
+            // verify required parameter 'associatedWithId' is not null or undefined
+            if (associatedWithId === null || associatedWithId === undefined) {
+                throw new RequiredError('associatedWithId', 'Required parameter associatedWithId was null or undefined when calling createANote.');
+            }
+            var localVarPath = "/v2/notes.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (content !== undefined) {
+                localVarFormParams.set('content', content);
+            }
+            if (associatedWithType !== undefined) {
+                localVarFormParams.set('associated_with_type', associatedWithType);
+            }
+            if (associatedWithId !== undefined) {
+                localVarFormParams.set('associated_with_id', associatedWithId);
+            }
+            if (skipCrmSync !== undefined) {
+                localVarFormParams.set('skip_crm_sync', skipCrmSync);
+            }
+            if (callId !== undefined) {
+                localVarFormParams.set('call_id', callId);
+            }
+            if (subject !== undefined) {
+                localVarFormParams.set('subject', subject);
+            }
+            if (userGuid !== undefined) {
+                localVarFormParams.set('user_guid', userGuid);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a note
          * @param {string} id Note ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonDelete: function (id, options) {
+        deleteANote: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2NotesIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteANote.');
             }
             var localVarPath = "/v2/notes/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -5752,11 +5817,11 @@ exports.NotesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonGet: function (id, options) {
+        fetchANote: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2NotesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchANote.');
             }
             var localVarPath = "/v2/notes/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -5768,49 +5833,6 @@ exports.NotesApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-         * @summary Update a note
-         * @param {string} id Note ID
-         * @param {string} content The content of the note
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2NotesIdJsonPut: function (id, content, callId, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2NotesIdJsonPut.');
-            }
-            // verify required parameter 'content' is not null or undefined
-            if (content === null || content === undefined) {
-                throw new RequiredError('content', 'Required parameter content was null or undefined when calling v2NotesIdJsonPut.');
-            }
-            var localVarPath = "/v2/notes/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (content !== undefined) {
-                localVarFormParams.set('content', content);
-            }
-            if (callId !== undefined) {
-                localVarFormParams.set('call_id', callId);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
             return {
                 url: url.format(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -5831,7 +5853,7 @@ exports.NotesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonGet: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listNotes: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/notes.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -5875,58 +5897,36 @@ exports.NotesApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Creates a note.
-         * @summary Create a note
+         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+         * @summary Update a note
+         * @param {string} id Note ID
          * @param {string} content The content of the note
-         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-         * @param {number} associatedWithId ID of the item with which the note is associated
-         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonPost: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
+        updateANote: function (id, content, callId, options) {
             if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateANote.');
+            }
             // verify required parameter 'content' is not null or undefined
             if (content === null || content === undefined) {
-                throw new RequiredError('content', 'Required parameter content was null or undefined when calling v2NotesJsonPost.');
+                throw new RequiredError('content', 'Required parameter content was null or undefined when calling updateANote.');
             }
-            // verify required parameter 'associatedWithType' is not null or undefined
-            if (associatedWithType === null || associatedWithType === undefined) {
-                throw new RequiredError('associatedWithType', 'Required parameter associatedWithType was null or undefined when calling v2NotesJsonPost.');
-            }
-            // verify required parameter 'associatedWithId' is not null or undefined
-            if (associatedWithId === null || associatedWithId === undefined) {
-                throw new RequiredError('associatedWithId', 'Required parameter associatedWithId was null or undefined when calling v2NotesJsonPost.');
-            }
-            var localVarPath = "/v2/notes.json";
+            var localVarPath = "/v2/notes/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
             var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
             var localVarFormParams = new url.URLSearchParams();
             if (content !== undefined) {
                 localVarFormParams.set('content', content);
             }
-            if (associatedWithType !== undefined) {
-                localVarFormParams.set('associated_with_type', associatedWithType);
-            }
-            if (associatedWithId !== undefined) {
-                localVarFormParams.set('associated_with_id', associatedWithId);
-            }
-            if (skipCrmSync !== undefined) {
-                localVarFormParams.set('skip_crm_sync', skipCrmSync);
-            }
             if (callId !== undefined) {
                 localVarFormParams.set('call_id', callId);
-            }
-            if (subject !== undefined) {
-                localVarFormParams.set('subject', subject);
-            }
-            if (userGuid !== undefined) {
-                localVarFormParams.set('user_guid', userGuid);
             }
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -5948,14 +5948,42 @@ exports.NotesApiFetchParamCreator = function (configuration) {
 exports.NotesApiFp = function (configuration) {
     return {
         /**
+         * Creates a note.
+         * @summary Create a note
+         * @param {string} content The content of the note
+         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+         * @param {number} associatedWithId ID of the item with which the note is associated
+         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createANote: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
+            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).createANote(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a note
          * @param {string} id Note ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).v2NotesIdJsonDelete(id, options);
+        deleteANote: function (id, options) {
+            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).deleteANote(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -5976,32 +6004,8 @@ exports.NotesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).v2NotesIdJsonGet(id, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-         * @summary Update a note
-         * @param {string} id Note ID
-         * @param {string} content The content of the note
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2NotesIdJsonPut: function (id, content, callId, options) {
-            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).v2NotesIdJsonPut(id, content, callId, options);
+        fetchANote: function (id, options) {
+            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).fetchANote(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6030,8 +6034,8 @@ exports.NotesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonGet: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).v2NotesJsonGet(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listNotes: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).listNotes(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6046,20 +6050,16 @@ exports.NotesApiFp = function (configuration) {
             };
         },
         /**
-         * Creates a note.
-         * @summary Create a note
+         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+         * @summary Update a note
+         * @param {string} id Note ID
          * @param {string} content The content of the note
-         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-         * @param {number} associatedWithId ID of the item with which the note is associated
-         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonPost: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
-            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).v2NotesJsonPost(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options);
+        updateANote: function (id, content, callId, options) {
+            var localVarFetchArgs = exports.NotesApiFetchParamCreator(configuration).updateANote(id, content, callId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6082,14 +6082,30 @@ exports.NotesApiFp = function (configuration) {
 exports.NotesApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates a note.
+         * @summary Create a note
+         * @param {string} content The content of the note
+         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+         * @param {number} associatedWithId ID of the item with which the note is associated
+         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createANote: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
+            return exports.NotesApiFp(configuration).createANote(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options)(fetch, basePath);
+        },
+        /**
          * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a note
          * @param {string} id Note ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonDelete: function (id, options) {
-            return exports.NotesApiFp(configuration).v2NotesIdJsonDelete(id, options)(fetch, basePath);
+        deleteANote: function (id, options) {
+            return exports.NotesApiFp(configuration).deleteANote(id, options)(fetch, basePath);
         },
         /**
          * Fetches a note, by ID only.
@@ -6098,20 +6114,8 @@ exports.NotesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesIdJsonGet: function (id, options) {
-            return exports.NotesApiFp(configuration).v2NotesIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-         * @summary Update a note
-         * @param {string} id Note ID
-         * @param {string} content The content of the note
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2NotesIdJsonPut: function (id, content, callId, options) {
-            return exports.NotesApiFp(configuration).v2NotesIdJsonPut(id, content, callId, options)(fetch, basePath);
+        fetchANote: function (id, options) {
+            return exports.NotesApiFp(configuration).fetchANote(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -6128,24 +6132,20 @@ exports.NotesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonGet: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.NotesApiFp(configuration).v2NotesJsonGet(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listNotes: function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.NotesApiFp(configuration).listNotes(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
-         * Creates a note.
-         * @summary Create a note
+         * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+         * @summary Update a note
+         * @param {string} id Note ID
          * @param {string} content The content of the note
-         * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-         * @param {number} associatedWithId ID of the item with which the note is associated
-         * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-         * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-         * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+         * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2NotesJsonPost: function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
-            return exports.NotesApiFp(configuration).v2NotesJsonPost(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options)(fetch, basePath);
+        updateANote: function (id, content, callId, options) {
+            return exports.NotesApiFp(configuration).updateANote(id, content, callId, options)(fetch, basePath);
         },
     };
 };
@@ -6161,6 +6161,23 @@ var NotesApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates a note.
+     * @summary Create a note
+     * @param {string} content The content of the note
+     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
+     * @param {number} associatedWithId ID of the item with which the note is associated
+     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
+     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
+     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotesApi
+     */
+    NotesApi.prototype.createANote = function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
+        return exports.NotesApiFp(this.configuration).createANote(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes a note owned by authorized account. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a note
      * @param {string} id Note ID
@@ -6168,8 +6185,8 @@ var NotesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    NotesApi.prototype.v2NotesIdJsonDelete = function (id, options) {
-        return exports.NotesApiFp(this.configuration).v2NotesIdJsonDelete(id, options)(this.fetch, this.basePath);
+    NotesApi.prototype.deleteANote = function (id, options) {
+        return exports.NotesApiFp(this.configuration).deleteANote(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a note, by ID only.
@@ -6179,21 +6196,8 @@ var NotesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    NotesApi.prototype.v2NotesIdJsonGet = function (id, options) {
-        return exports.NotesApiFp(this.configuration).v2NotesIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
-     * @summary Update a note
-     * @param {string} id Note ID
-     * @param {string} content The content of the note
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotesApi
-     */
-    NotesApi.prototype.v2NotesIdJsonPut = function (id, content, callId, options) {
-        return exports.NotesApiFp(this.configuration).v2NotesIdJsonPut(id, content, callId, options)(this.fetch, this.basePath);
+    NotesApi.prototype.fetchANote = function (id, options) {
+        return exports.NotesApiFp(this.configuration).fetchANote(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple note records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -6211,25 +6215,21 @@ var NotesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    NotesApi.prototype.v2NotesJsonGet = function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.NotesApiFp(this.configuration).v2NotesJsonGet(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    NotesApi.prototype.listNotes = function (associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.NotesApiFp(this.configuration).listNotes(associatedWithType, associatedWithId, updatedAt, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
-     * Creates a note.
-     * @summary Create a note
+     * Updates a note. Any changes to the note or associated records will not reflect in Salesforce.com.
+     * @summary Update a note
+     * @param {string} id Note ID
      * @param {string} content The content of the note
-     * @param {string} associatedWithType Case insensitive type of item with which the note is associated.  Value must be one of: person, account
-     * @param {number} associatedWithId ID of the item with which the note is associated
-     * @param {boolean} [skipCrmSync] Boolean indicating if the CRM sync should be skipped.  No syncing will occur if true
-     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note
-     * @param {string} [subject] The subject of the note&#39;s crm activity, defaults to &#39;Note&#39;
-     * @param {string} [userGuid] The user to create the note for. Only team admins may create notes on behalf of other users. Defaults to the requesting user
+     * @param {number} [callId] ID of the call with which the note is associated. The call cannot already have a note. If the note is associated to a call already, it will become associated to the requested call
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotesApi
      */
-    NotesApi.prototype.v2NotesJsonPost = function (content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options) {
-        return exports.NotesApiFp(this.configuration).v2NotesJsonPost(content, associatedWithType, associatedWithId, skipCrmSync, callId, subject, userGuid, options)(this.fetch, this.basePath);
+    NotesApi.prototype.updateANote = function (id, content, callId, options) {
+        return exports.NotesApiFp(this.configuration).updateANote(id, content, callId, options)(this.fetch, this.basePath);
     };
     return NotesApi;
 }(BaseAPI));
@@ -6247,7 +6247,7 @@ exports.OngoingActionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2OngoingActionsJsonPost: function (actionId, options) {
+        createAnOngoingAction: function (actionId, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/ongoing_actions.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -6284,8 +6284,8 @@ exports.OngoingActionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2OngoingActionsJsonPost: function (actionId, options) {
-            var localVarFetchArgs = exports.OngoingActionsApiFetchParamCreator(configuration).v2OngoingActionsJsonPost(actionId, options);
+        createAnOngoingAction: function (actionId, options) {
+            var localVarFetchArgs = exports.OngoingActionsApiFetchParamCreator(configuration).createAnOngoingAction(actionId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6314,8 +6314,8 @@ exports.OngoingActionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2OngoingActionsJsonPost: function (actionId, options) {
-            return exports.OngoingActionsApiFp(configuration).v2OngoingActionsJsonPost(actionId, options)(fetch, basePath);
+        createAnOngoingAction: function (actionId, options) {
+            return exports.OngoingActionsApiFp(configuration).createAnOngoingAction(actionId, options)(fetch, basePath);
         },
     };
 };
@@ -6338,8 +6338,8 @@ var OngoingActionsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof OngoingActionsApi
      */
-    OngoingActionsApi.prototype.v2OngoingActionsJsonPost = function (actionId, options) {
-        return exports.OngoingActionsApiFp(this.configuration).v2OngoingActionsJsonPost(actionId, options)(this.fetch, this.basePath);
+    OngoingActionsApi.prototype.createAnOngoingAction = function (actionId, options) {
+        return exports.OngoingActionsApiFp(this.configuration).createAnOngoingAction(actionId, options)(this.fetch, this.basePath);
     };
     return OngoingActionsApi;
 }(BaseAPI));
@@ -6350,303 +6350,6 @@ exports.OngoingActionsApi = OngoingActionsApi;
  */
 exports.PeopleApiFetchParamCreator = function (configuration) {
     return {
-        /**
-         * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
-         * @summary Delete a person
-         * @param {string} id Person id
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleIdJsonDelete: function (id, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PeopleIdJsonDelete.');
-            }
-            var localVarPath = "/v2/people/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'DELETE' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Fetches a person, by ID only.
-         * @summary Fetch a person
-         * @param {string} id Person ID
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleIdJsonGet: function (id, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PeopleIdJsonGet.');
-            }
-            var localVarPath = "/v2/people/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a person.
-         * @summary Update a person
-         * @param {string} id Person id
-         * @param {string} [emailAddress] Email address
-         * @param {string} [secondaryEmailAddress] Alternate email address
-         * @param {string} [personalEmailAddress] Personal email address
-         * @param {string} [firstName] First name
-         * @param {string} [lastName] Last name
-         * @param {string} [phone] Phone without formatting
-         * @param {string} [phoneExtension] Phone extension without formatting
-         * @param {string} [mobilePhone] Mobile phone without formatting
-         * @param {string} [homePhone] Home phone without formatting
-         * @param {string} [linkedinUrl] Linkedin URL
-         * @param {string} [title] Job title
-         * @param {string} [city] City
-         * @param {string} [state] State
-         * @param {string} [country] Country
-         * @param {string} [workCity] Work location - city
-         * @param {string} [workState] Work location - state
-         * @param {string} [workCountry] Work location - country
-         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-         * @param {string} [locale] Time locale of the person
-         * @param {string} [personalWebsite] The website of this person
-         * @param {string} [twitterHandle] The twitter handle of this person
-         * @param {Array<string>} [tags] All tags applied to this person
-         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-         * @param {number} [accountId] ID of the Account to link this person to
-         * @param {number} [ownerId] ID of the User that owns this person
-         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-         * @param {number} [personStageId] ID of the PersonStage of this person
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleIdJsonPut: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PeopleIdJsonPut.');
-            }
-            var localVarPath = "/v2/people/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (emailAddress !== undefined) {
-                localVarFormParams.set('email_address', emailAddress);
-            }
-            if (secondaryEmailAddress !== undefined) {
-                localVarFormParams.set('secondary_email_address', secondaryEmailAddress);
-            }
-            if (personalEmailAddress !== undefined) {
-                localVarFormParams.set('personal_email_address', personalEmailAddress);
-            }
-            if (firstName !== undefined) {
-                localVarFormParams.set('first_name', firstName);
-            }
-            if (lastName !== undefined) {
-                localVarFormParams.set('last_name', lastName);
-            }
-            if (phone !== undefined) {
-                localVarFormParams.set('phone', phone);
-            }
-            if (phoneExtension !== undefined) {
-                localVarFormParams.set('phone_extension', phoneExtension);
-            }
-            if (mobilePhone !== undefined) {
-                localVarFormParams.set('mobile_phone', mobilePhone);
-            }
-            if (homePhone !== undefined) {
-                localVarFormParams.set('home_phone', homePhone);
-            }
-            if (linkedinUrl !== undefined) {
-                localVarFormParams.set('linkedin_url', linkedinUrl);
-            }
-            if (title !== undefined) {
-                localVarFormParams.set('title', title);
-            }
-            if (city !== undefined) {
-                localVarFormParams.set('city', city);
-            }
-            if (state !== undefined) {
-                localVarFormParams.set('state', state);
-            }
-            if (country !== undefined) {
-                localVarFormParams.set('country', country);
-            }
-            if (workCity !== undefined) {
-                localVarFormParams.set('work_city', workCity);
-            }
-            if (workState !== undefined) {
-                localVarFormParams.set('work_state', workState);
-            }
-            if (workCountry !== undefined) {
-                localVarFormParams.set('work_country', workCountry);
-            }
-            if (personCompanyName !== undefined) {
-                localVarFormParams.set('person_company_name', personCompanyName);
-            }
-            if (personCompanyWebsite !== undefined) {
-                localVarFormParams.set('person_company_website', personCompanyWebsite);
-            }
-            if (personCompanyIndustry !== undefined) {
-                localVarFormParams.set('person_company_industry', personCompanyIndustry);
-            }
-            if (jobSeniority !== undefined) {
-                localVarFormParams.set('job_seniority', jobSeniority);
-            }
-            if (doNotContact !== undefined) {
-                localVarFormParams.set('do_not_contact', doNotContact);
-            }
-            if (locale !== undefined) {
-                localVarFormParams.set('locale', locale);
-            }
-            if (personalWebsite !== undefined) {
-                localVarFormParams.set('personal_website', personalWebsite);
-            }
-            if (twitterHandle !== undefined) {
-                localVarFormParams.set('twitter_handle', twitterHandle);
-            }
-            if (tags) {
-                localVarFormParams.set('tags', tags.join(exports.COLLECTION_FORMATS["csv"]));
-            }
-            if (contactRestrictions) {
-                localVarFormParams.set('contact_restrictions', contactRestrictions.join(exports.COLLECTION_FORMATS["csv"]));
-            }
-            if (customFields) {
-                localVarFormParams.set('custom_fields', customFields.join(exports.COLLECTION_FORMATS["csv"]));
-            }
-            if (accountId !== undefined) {
-                localVarFormParams.set('account_id', accountId);
-            }
-            if (ownerId !== undefined) {
-                localVarFormParams.set('owner_id', ownerId);
-            }
-            if (importId !== undefined) {
-                localVarFormParams.set('import_id', importId);
-            }
-            if (personStageId !== undefined) {
-                localVarFormParams.set('person_stage_id', personStageId);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List people
-         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleJsonGet: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            if (options === void 0) { options = {}; }
-            var localVarPath = "/v2/people.json";
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            if (ids) {
-                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (updatedAt) {
-                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (emailAddresses) {
-                localVarQueryParameter['email_addresses'] = emailAddresses.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (ownedByGuid) {
-                localVarQueryParameter['owned_by_guid'] = ownedByGuid.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (personStageId) {
-                localVarQueryParameter['person_stage_id'] = personStageId.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (crmId) {
-                localVarQueryParameter['crm_id'] = crmId.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (doNotContact !== undefined) {
-                localVarQueryParameter['do_not_contact'] = doNotContact;
-            }
-            if (canEmail !== undefined) {
-                localVarQueryParameter['can_email'] = canEmail;
-            }
-            if (canCall !== undefined) {
-                localVarQueryParameter['can_call'] = canCall;
-            }
-            if (accountId) {
-                localVarQueryParameter['account_id'] = accountId.join(exports.COLLECTION_FORMATS["csv"]);
-            }
-            if (sortBy !== undefined) {
-                localVarQueryParameter['sort_by'] = sortBy;
-            }
-            if (sortDirection !== undefined) {
-                localVarQueryParameter['sort_direction'] = sortDirection;
-            }
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
-            }
-            if (page !== undefined) {
-                localVarQueryParameter['page'] = page;
-            }
-            if (includePagingCounts !== undefined) {
-                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
         /**
          * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
          * @summary Create a person
@@ -6686,7 +6389,7 @@ exports.PeopleApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleJsonPost: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
+        createAPerson: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/people.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -6804,6 +6507,303 @@ exports.PeopleApiFetchParamCreator = function (configuration) {
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
+         * @summary Delete a person
+         * @param {string} id Person id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteAPerson: function (id, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteAPerson.');
+            }
+            var localVarPath = "/v2/people/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'DELETE' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetches a person, by ID only.
+         * @summary Fetch a person
+         * @param {string} id Person ID
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fetchAPerson: function (id, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAPerson.');
+            }
+            var localVarPath = "/v2/people/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List people
+         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPeople: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/v2/people.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (ids) {
+                localVarQueryParameter['ids'] = ids.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (updatedAt) {
+                localVarQueryParameter['updated_at'] = updatedAt.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (emailAddresses) {
+                localVarQueryParameter['email_addresses'] = emailAddresses.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (ownedByGuid) {
+                localVarQueryParameter['owned_by_guid'] = ownedByGuid.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (personStageId) {
+                localVarQueryParameter['person_stage_id'] = personStageId.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (crmId) {
+                localVarQueryParameter['crm_id'] = crmId.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (doNotContact !== undefined) {
+                localVarQueryParameter['do_not_contact'] = doNotContact;
+            }
+            if (canEmail !== undefined) {
+                localVarQueryParameter['can_email'] = canEmail;
+            }
+            if (canCall !== undefined) {
+                localVarQueryParameter['can_call'] = canCall;
+            }
+            if (accountId) {
+                localVarQueryParameter['account_id'] = accountId.join(exports.COLLECTION_FORMATS["csv"]);
+            }
+            if (sortBy !== undefined) {
+                localVarQueryParameter['sort_by'] = sortBy;
+            }
+            if (sortDirection !== undefined) {
+                localVarQueryParameter['sort_direction'] = sortDirection;
+            }
+            if (perPage !== undefined) {
+                localVarQueryParameter['per_page'] = perPage;
+            }
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+            if (includePagingCounts !== undefined) {
+                localVarQueryParameter['include_paging_counts'] = includePagingCounts;
+            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Updates a person.
+         * @summary Update a person
+         * @param {string} id Person id
+         * @param {string} [emailAddress] Email address
+         * @param {string} [secondaryEmailAddress] Alternate email address
+         * @param {string} [personalEmailAddress] Personal email address
+         * @param {string} [firstName] First name
+         * @param {string} [lastName] Last name
+         * @param {string} [phone] Phone without formatting
+         * @param {string} [phoneExtension] Phone extension without formatting
+         * @param {string} [mobilePhone] Mobile phone without formatting
+         * @param {string} [homePhone] Home phone without formatting
+         * @param {string} [linkedinUrl] Linkedin URL
+         * @param {string} [title] Job title
+         * @param {string} [city] City
+         * @param {string} [state] State
+         * @param {string} [country] Country
+         * @param {string} [workCity] Work location - city
+         * @param {string} [workState] Work location - state
+         * @param {string} [workCountry] Work location - country
+         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+         * @param {string} [locale] Time locale of the person
+         * @param {string} [personalWebsite] The website of this person
+         * @param {string} [twitterHandle] The twitter handle of this person
+         * @param {Array<string>} [tags] All tags applied to this person
+         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+         * @param {number} [accountId] ID of the Account to link this person to
+         * @param {number} [ownerId] ID of the User that owns this person
+         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+         * @param {number} [personStageId] ID of the PersonStage of this person
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        updateAPerson: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateAPerson.');
+            }
+            var localVarPath = "/v2/people/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (emailAddress !== undefined) {
+                localVarFormParams.set('email_address', emailAddress);
+            }
+            if (secondaryEmailAddress !== undefined) {
+                localVarFormParams.set('secondary_email_address', secondaryEmailAddress);
+            }
+            if (personalEmailAddress !== undefined) {
+                localVarFormParams.set('personal_email_address', personalEmailAddress);
+            }
+            if (firstName !== undefined) {
+                localVarFormParams.set('first_name', firstName);
+            }
+            if (lastName !== undefined) {
+                localVarFormParams.set('last_name', lastName);
+            }
+            if (phone !== undefined) {
+                localVarFormParams.set('phone', phone);
+            }
+            if (phoneExtension !== undefined) {
+                localVarFormParams.set('phone_extension', phoneExtension);
+            }
+            if (mobilePhone !== undefined) {
+                localVarFormParams.set('mobile_phone', mobilePhone);
+            }
+            if (homePhone !== undefined) {
+                localVarFormParams.set('home_phone', homePhone);
+            }
+            if (linkedinUrl !== undefined) {
+                localVarFormParams.set('linkedin_url', linkedinUrl);
+            }
+            if (title !== undefined) {
+                localVarFormParams.set('title', title);
+            }
+            if (city !== undefined) {
+                localVarFormParams.set('city', city);
+            }
+            if (state !== undefined) {
+                localVarFormParams.set('state', state);
+            }
+            if (country !== undefined) {
+                localVarFormParams.set('country', country);
+            }
+            if (workCity !== undefined) {
+                localVarFormParams.set('work_city', workCity);
+            }
+            if (workState !== undefined) {
+                localVarFormParams.set('work_state', workState);
+            }
+            if (workCountry !== undefined) {
+                localVarFormParams.set('work_country', workCountry);
+            }
+            if (personCompanyName !== undefined) {
+                localVarFormParams.set('person_company_name', personCompanyName);
+            }
+            if (personCompanyWebsite !== undefined) {
+                localVarFormParams.set('person_company_website', personCompanyWebsite);
+            }
+            if (personCompanyIndustry !== undefined) {
+                localVarFormParams.set('person_company_industry', personCompanyIndustry);
+            }
+            if (jobSeniority !== undefined) {
+                localVarFormParams.set('job_seniority', jobSeniority);
+            }
+            if (doNotContact !== undefined) {
+                localVarFormParams.set('do_not_contact', doNotContact);
+            }
+            if (locale !== undefined) {
+                localVarFormParams.set('locale', locale);
+            }
+            if (personalWebsite !== undefined) {
+                localVarFormParams.set('personal_website', personalWebsite);
+            }
+            if (twitterHandle !== undefined) {
+                localVarFormParams.set('twitter_handle', twitterHandle);
+            }
+            if (tags) {
+                localVarFormParams.set('tags', tags.join(exports.COLLECTION_FORMATS["csv"]));
+            }
+            if (contactRestrictions) {
+                localVarFormParams.set('contact_restrictions', contactRestrictions.join(exports.COLLECTION_FORMATS["csv"]));
+            }
+            if (customFields) {
+                localVarFormParams.set('custom_fields', customFields.join(exports.COLLECTION_FORMATS["csv"]));
+            }
+            if (accountId !== undefined) {
+                localVarFormParams.set('account_id', accountId);
+            }
+            if (ownerId !== undefined) {
+                localVarFormParams.set('owner_id', ownerId);
+            }
+            if (importId !== undefined) {
+                localVarFormParams.set('import_id', importId);
+            }
+            if (personStageId !== undefined) {
+                localVarFormParams.set('person_stage_id', personStageId);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     };
 };
 /**
@@ -6813,14 +6813,68 @@ exports.PeopleApiFetchParamCreator = function (configuration) {
 exports.PeopleApiFp = function (configuration) {
     return {
         /**
+         * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+         * @summary Create a person
+         * @param {string} [emailAddress] Email address
+         * @param {string} [secondaryEmailAddress] Alternate email address
+         * @param {string} [personalEmailAddress] Personal email address
+         * @param {string} [firstName] First name
+         * @param {string} [lastName] Last name
+         * @param {string} [phone] Phone without formatting
+         * @param {string} [phoneExtension] Phone extension without formatting
+         * @param {string} [mobilePhone] Mobile phone without formatting
+         * @param {string} [homePhone] Home phone without formatting
+         * @param {string} [linkedinUrl] Linkedin URL
+         * @param {string} [title] Job title
+         * @param {string} [city] City
+         * @param {string} [state] State
+         * @param {string} [country] Country
+         * @param {string} [workCity] Work location - city
+         * @param {string} [workState] Work location - state
+         * @param {string} [workCountry] Work location - country
+         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+         * @param {string} [locale] Time locale of the person
+         * @param {string} [personalWebsite] The website of this person
+         * @param {string} [twitterHandle] The twitter handle of this person
+         * @param {Array<string>} [tags] All tags applied to this person
+         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+         * @param {number} [accountId] ID of the Account to link this person to
+         * @param {number} [ownerId] ID of the User that owns this person
+         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+         * @param {number} [personStageId] ID of the PersonStage of this person
+         * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAPerson: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
+            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).createAPerson(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a person
          * @param {string} id Person id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).v2PeopleIdJsonDelete(id, options);
+        deleteAPerson: function (id, options) {
+            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).deleteAPerson(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6841,8 +6895,44 @@ exports.PeopleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).v2PeopleIdJsonGet(id, options);
+        fetchAPerson: function (id, options) {
+            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).fetchAPerson(id, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List people
+         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPeople: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).listPeople(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -6895,98 +6985,8 @@ exports.PeopleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonPut: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
-            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).v2PeopleIdJsonPut(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List people
-         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleJsonGet: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).v2PeopleJsonGet(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-         * @summary Create a person
-         * @param {string} [emailAddress] Email address
-         * @param {string} [secondaryEmailAddress] Alternate email address
-         * @param {string} [personalEmailAddress] Personal email address
-         * @param {string} [firstName] First name
-         * @param {string} [lastName] Last name
-         * @param {string} [phone] Phone without formatting
-         * @param {string} [phoneExtension] Phone extension without formatting
-         * @param {string} [mobilePhone] Mobile phone without formatting
-         * @param {string} [homePhone] Home phone without formatting
-         * @param {string} [linkedinUrl] Linkedin URL
-         * @param {string} [title] Job title
-         * @param {string} [city] City
-         * @param {string} [state] State
-         * @param {string} [country] Country
-         * @param {string} [workCity] Work location - city
-         * @param {string} [workState] Work location - state
-         * @param {string} [workCountry] Work location - country
-         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-         * @param {string} [locale] Time locale of the person
-         * @param {string} [personalWebsite] The website of this person
-         * @param {string} [twitterHandle] The twitter handle of this person
-         * @param {Array<string>} [tags] All tags applied to this person
-         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-         * @param {number} [accountId] ID of the Account to link this person to
-         * @param {number} [ownerId] ID of the User that owns this person
-         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-         * @param {number} [personStageId] ID of the PersonStage of this person
-         * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleJsonPost: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
-            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).v2PeopleJsonPost(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options);
+        updateAPerson: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
+            var localVarFetchArgs = exports.PeopleApiFetchParamCreator(configuration).updateAPerson(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7009,14 +7009,56 @@ exports.PeopleApiFp = function (configuration) {
 exports.PeopleApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+         * @summary Create a person
+         * @param {string} [emailAddress] Email address
+         * @param {string} [secondaryEmailAddress] Alternate email address
+         * @param {string} [personalEmailAddress] Personal email address
+         * @param {string} [firstName] First name
+         * @param {string} [lastName] Last name
+         * @param {string} [phone] Phone without formatting
+         * @param {string} [phoneExtension] Phone extension without formatting
+         * @param {string} [mobilePhone] Mobile phone without formatting
+         * @param {string} [homePhone] Home phone without formatting
+         * @param {string} [linkedinUrl] Linkedin URL
+         * @param {string} [title] Job title
+         * @param {string} [city] City
+         * @param {string} [state] State
+         * @param {string} [country] Country
+         * @param {string} [workCity] Work location - city
+         * @param {string} [workState] Work location - state
+         * @param {string} [workCountry] Work location - country
+         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+         * @param {string} [locale] Time locale of the person
+         * @param {string} [personalWebsite] The website of this person
+         * @param {string} [twitterHandle] The twitter handle of this person
+         * @param {Array<string>} [tags] All tags applied to this person
+         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+         * @param {number} [accountId] ID of the Account to link this person to
+         * @param {number} [ownerId] ID of the User that owns this person
+         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+         * @param {number} [personStageId] ID of the PersonStage of this person
+         * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAPerson: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
+            return exports.PeopleApiFp(configuration).createAPerson(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options)(fetch, basePath);
+        },
+        /**
          * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a person
          * @param {string} id Person id
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonDelete: function (id, options) {
-            return exports.PeopleApiFp(configuration).v2PeopleIdJsonDelete(id, options)(fetch, basePath);
+        deleteAPerson: function (id, options) {
+            return exports.PeopleApiFp(configuration).deleteAPerson(id, options)(fetch, basePath);
         },
         /**
          * Fetches a person, by ID only.
@@ -7025,8 +7067,32 @@ exports.PeopleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonGet: function (id, options) {
-            return exports.PeopleApiFp(configuration).v2PeopleIdJsonGet(id, options)(fetch, basePath);
+        fetchAPerson: function (id, options) {
+            return exports.PeopleApiFp(configuration).fetchAPerson(id, options)(fetch, basePath);
+        },
+        /**
+         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+         * @summary List people
+         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+         * @param {number} [page] The current page to fetch results from. Defaults to 1
+         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listPeople: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.PeopleApiFp(configuration).listPeople(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
          * Updates a person.
@@ -7067,74 +7133,8 @@ exports.PeopleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PeopleIdJsonPut: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
-            return exports.PeopleApiFp(configuration).v2PeopleIdJsonPut(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options)(fetch, basePath);
-        },
-        /**
-         * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-         * @summary List people
-         * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-         * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-         * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-         * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-         * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-         * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-         * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-         * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-         * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-         * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-         * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-         * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-         * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-         * @param {number} [page] The current page to fetch results from. Defaults to 1
-         * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleJsonGet: function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.PeopleApiFp(configuration).v2PeopleJsonGet(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
-        },
-        /**
-         * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-         * @summary Create a person
-         * @param {string} [emailAddress] Email address
-         * @param {string} [secondaryEmailAddress] Alternate email address
-         * @param {string} [personalEmailAddress] Personal email address
-         * @param {string} [firstName] First name
-         * @param {string} [lastName] Last name
-         * @param {string} [phone] Phone without formatting
-         * @param {string} [phoneExtension] Phone extension without formatting
-         * @param {string} [mobilePhone] Mobile phone without formatting
-         * @param {string} [homePhone] Home phone without formatting
-         * @param {string} [linkedinUrl] Linkedin URL
-         * @param {string} [title] Job title
-         * @param {string} [city] City
-         * @param {string} [state] State
-         * @param {string} [country] Country
-         * @param {string} [workCity] Work location - city
-         * @param {string} [workState] Work location - state
-         * @param {string} [workCountry] Work location - country
-         * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-         * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-         * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-         * @param {string} [locale] Time locale of the person
-         * @param {string} [personalWebsite] The website of this person
-         * @param {string} [twitterHandle] The twitter handle of this person
-         * @param {Array<string>} [tags] All tags applied to this person
-         * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-         * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-         * @param {number} [accountId] ID of the Account to link this person to
-         * @param {number} [ownerId] ID of the User that owns this person
-         * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-         * @param {number} [personStageId] ID of the PersonStage of this person
-         * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PeopleJsonPost: function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
-            return exports.PeopleApiFp(configuration).v2PeopleJsonPost(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options)(fetch, basePath);
+        updateAPerson: function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
+            return exports.PeopleApiFp(configuration).updateAPerson(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options)(fetch, basePath);
         },
     };
 };
@@ -7150,6 +7150,49 @@ var PeopleApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
+     * @summary Create a person
+     * @param {string} [emailAddress] Email address
+     * @param {string} [secondaryEmailAddress] Alternate email address
+     * @param {string} [personalEmailAddress] Personal email address
+     * @param {string} [firstName] First name
+     * @param {string} [lastName] Last name
+     * @param {string} [phone] Phone without formatting
+     * @param {string} [phoneExtension] Phone extension without formatting
+     * @param {string} [mobilePhone] Mobile phone without formatting
+     * @param {string} [homePhone] Home phone without formatting
+     * @param {string} [linkedinUrl] Linkedin URL
+     * @param {string} [title] Job title
+     * @param {string} [city] City
+     * @param {string} [state] State
+     * @param {string} [country] Country
+     * @param {string} [workCity] Work location - city
+     * @param {string} [workState] Work location - state
+     * @param {string} [workCountry] Work location - country
+     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
+     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
+     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
+     * @param {string} [locale] Time locale of the person
+     * @param {string} [personalWebsite] The website of this person
+     * @param {string} [twitterHandle] The twitter handle of this person
+     * @param {Array<string>} [tags] All tags applied to this person
+     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
+     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
+     * @param {number} [accountId] ID of the Account to link this person to
+     * @param {number} [ownerId] ID of the User that owns this person
+     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
+     * @param {number} [personStageId] ID of the PersonStage of this person
+     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PeopleApi
+     */
+    PeopleApi.prototype.createAPerson = function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
+        return exports.PeopleApiFp(this.configuration).createAPerson(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes a person. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a person
      * @param {string} id Person id
@@ -7157,8 +7200,8 @@ var PeopleApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    PeopleApi.prototype.v2PeopleIdJsonDelete = function (id, options) {
-        return exports.PeopleApiFp(this.configuration).v2PeopleIdJsonDelete(id, options)(this.fetch, this.basePath);
+    PeopleApi.prototype.deleteAPerson = function (id, options) {
+        return exports.PeopleApiFp(this.configuration).deleteAPerson(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a person, by ID only.
@@ -7168,8 +7211,33 @@ var PeopleApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    PeopleApi.prototype.v2PeopleIdJsonGet = function (id, options) {
-        return exports.PeopleApiFp(this.configuration).v2PeopleIdJsonGet(id, options)(this.fetch, this.basePath);
+    PeopleApi.prototype.fetchAPerson = function (id, options) {
+        return exports.PeopleApiFp(this.configuration).fetchAPerson(id, options)(this.fetch, this.basePath);
+    };
+    /**
+     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
+     * @summary List people
+     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
+     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
+     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
+     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
+     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
+     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
+     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
+     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
+     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
+     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
+     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
+     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
+     * @param {number} [page] The current page to fetch results from. Defaults to 1
+     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PeopleApi
+     */
+    PeopleApi.prototype.listPeople = function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.PeopleApiFp(this.configuration).listPeople(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
      * Updates a person.
@@ -7211,76 +7279,8 @@ var PeopleApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PeopleApi
      */
-    PeopleApi.prototype.v2PeopleIdJsonPut = function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
-        return exports.PeopleApiFp(this.configuration).v2PeopleIdJsonPut(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Fetches multiple person records. The records can be filtered, paged, and sorted according to the respective parameters.
-     * @summary List people
-     * @param {Array<number>} [ids] IDs of people to fetch. If a record can&#39;t be found, that record won&#39;t be returned and your request will be successful
-     * @param {Array<string>} [updatedAt] Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range. ---CUSTOM--- {\&quot;type\&quot;:\&quot;object\&quot;,\&quot;keys\&quot;:[{\&quot;name\&quot;:\&quot;gt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;gte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lt\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;},{\&quot;name\&quot;:\&quot;lte\&quot;,\&quot;type\&quot;:\&quot;iso8601 string\&quot;,\&quot;description\&quot;:\&quot;Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision.\&quot;}]}
-     * @param {Array<string>} [emailAddresses] Filters people by email address. Multiple emails can be applied
-     * @param {Array<string>} [ownedByGuid] Filters people by the owner&#39;s guid. Multiple owner guids can be applied
-     * @param {Array<number>} [personStageId] Includes people that have a given person_stage. Multiple person stage ids can be applied
-     * @param {Array<string>} [crmId] Filters people by crm_id. Multiple crm ids can be applied
-     * @param {boolean} [doNotContact] Includes people that have a given do_not_contact property
-     * @param {boolean} [canEmail] Includes people that can be emailed given do_not_contact and contact_restrictions property
-     * @param {boolean} [canCall] Includes people that can be called given do_not_contact and contact_restrictions property
-     * @param {Array<number>} [accountId] Filters people by the account they are linked to. Multiple account ids can be applied
-     * @param {string} [sortBy] Key to sort on, must be one of: created_at, updated_at, last_contacted_at. Defaults to updated_at
-     * @param {string} [sortDirection] Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
-     * @param {number} [perPage] How many records to show per page in the range [1, 100]. Defaults to 25
-     * @param {number} [page] The current page to fetch results from. Defaults to 1
-     * @param {boolean} [includePagingCounts] Whether to include total_pages and total_count in the metadata. Defaults to false
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PeopleApi
-     */
-    PeopleApi.prototype.v2PeopleJsonGet = function (ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.PeopleApiFp(this.configuration).v2PeopleJsonGet(ids, updatedAt, emailAddresses, ownedByGuid, personStageId, crmId, doNotContact, canEmail, canCall, accountId, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Creates a person. Either email_address or phone/last_name must be provided as a unique lookup on the team.
-     * @summary Create a person
-     * @param {string} [emailAddress] Email address
-     * @param {string} [secondaryEmailAddress] Alternate email address
-     * @param {string} [personalEmailAddress] Personal email address
-     * @param {string} [firstName] First name
-     * @param {string} [lastName] Last name
-     * @param {string} [phone] Phone without formatting
-     * @param {string} [phoneExtension] Phone extension without formatting
-     * @param {string} [mobilePhone] Mobile phone without formatting
-     * @param {string} [homePhone] Home phone without formatting
-     * @param {string} [linkedinUrl] Linkedin URL
-     * @param {string} [title] Job title
-     * @param {string} [city] City
-     * @param {string} [state] State
-     * @param {string} [country] Country
-     * @param {string} [workCity] Work location - city
-     * @param {string} [workState] Work location - state
-     * @param {string} [workCountry] Work location - country
-     * @param {string} [personCompanyName] Company name. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyWebsite] Company website. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [personCompanyIndustry] Company industry. This property is specific to this person, unrelated to the company object. Updating the company object associated with this person is recommended
-     * @param {string} [jobSeniority] The Job Seniority of a Person, must be one of director, executive, individual_contributor, manager, vice_president, unknown
-     * @param {boolean} [doNotContact] Whether or not this person has opted out of all communication. Setting this value to true prevents this person from being called, emailed, or added to a cadence in SalesLoft. If this person is currently in a cadence, they will be removed.
-     * @param {string} [locale] Time locale of the person
-     * @param {string} [personalWebsite] The website of this person
-     * @param {string} [twitterHandle] The twitter handle of this person
-     * @param {Array<string>} [tags] All tags applied to this person
-     * @param {Array<string>} [contactRestrictions] Specific methods of communication to prevent for this person. This will prevent individual execution of these communication types as well as automatically skip cadence steps of this communication type for this person in SalesLoft. Values currently accepted: call, email, message
-     * @param {Array<string>} [customFields] Custom fields are defined by the user&#39;s team. Only fields with values are presented in the API.
-     * @param {number} [accountId] ID of the Account to link this person to
-     * @param {number} [ownerId] ID of the User that owns this person
-     * @param {number} [importId] ID of the Import this person is a part of. A person can be part of multiple imports, but this ID will always be the most recent Import
-     * @param {number} [personStageId] ID of the PersonStage of this person
-     * @param {boolean} [autotagDate] Whether the date should be added to this person as a tag. Default is false. The tag will be Y-m-d format.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PeopleApi
-     */
-    PeopleApi.prototype.v2PeopleJsonPost = function (emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options) {
-        return exports.PeopleApiFp(this.configuration).v2PeopleJsonPost(emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, autotagDate, options)(this.fetch, this.basePath);
+    PeopleApi.prototype.updateAPerson = function (id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options) {
+        return exports.PeopleApiFp(this.configuration).updateAPerson(id, emailAddress, secondaryEmailAddress, personalEmailAddress, firstName, lastName, phone, phoneExtension, mobilePhone, homePhone, linkedinUrl, title, city, state, country, workCity, workState, workCountry, personCompanyName, personCompanyWebsite, personCompanyIndustry, jobSeniority, doNotContact, locale, personalWebsite, twitterHandle, tags, contactRestrictions, customFields, accountId, ownerId, importId, personStageId, options)(this.fetch, this.basePath);
     };
     return PeopleApi;
 }(BaseAPI));
@@ -7292,17 +7292,50 @@ exports.PeopleApi = PeopleApi;
 exports.PersonStagesApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates a person stage.
+         * @summary Create a person stage
+         * @param {string} name The name of the new stage
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAPersonStage: function (name, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling createAPersonStage.');
+            }
+            var localVarPath = "/v2/person_stages.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (name !== undefined) {
+                localVarFormParams.set('name', name);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete an person stage
          * @param {string} id Stage ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonDelete: function (id, options) {
+        deleteAnPersonStage: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PersonStagesIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteAnPersonStage.');
             }
             var localVarPath = "/v2/person_stages/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -7326,11 +7359,11 @@ exports.PersonStagesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonGet: function (id, options) {
+        fetchAPersonStage: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PersonStagesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAPersonStage.');
             }
             var localVarPath = "/v2/person_stages/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -7348,45 +7381,6 @@ exports.PersonStagesApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Updates a person stage.
-         * @summary Update a person stage
-         * @param {string} id Stage ID
-         * @param {string} name The name of the stage.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PersonStagesIdJsonPut: function (id, name, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PersonStagesIdJsonPut.');
-            }
-            // verify required parameter 'name' is not null or undefined
-            if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2PersonStagesIdJsonPut.');
-            }
-            var localVarPath = "/v2/person_stages/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (name !== undefined) {
-                localVarFormParams.set('name', name);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
          * @summary List person stages
          * @param {Array<number>} [ids] IDs of person stages to fetch.
@@ -7398,7 +7392,7 @@ exports.PersonStagesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listPersonStages: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/person_stages.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -7433,21 +7427,27 @@ exports.PersonStagesApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Creates a person stage.
-         * @summary Create a person stage
-         * @param {string} name The name of the new stage
+         * Updates a person stage.
+         * @summary Update a person stage
+         * @param {string} id Stage ID
+         * @param {string} name The name of the stage.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonPost: function (name, options) {
+        updateAPersonStage: function (id, name, options) {
             if (options === void 0) { options = {}; }
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateAPersonStage.');
+            }
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2PersonStagesJsonPost.');
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling updateAPersonStage.');
             }
-            var localVarPath = "/v2/person_stages.json";
+            var localVarPath = "/v2/person_stages/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
             var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
             var localVarFormParams = new url.URLSearchParams();
@@ -7474,14 +7474,36 @@ exports.PersonStagesApiFetchParamCreator = function (configuration) {
 exports.PersonStagesApiFp = function (configuration) {
     return {
         /**
+         * Creates a person stage.
+         * @summary Create a person stage
+         * @param {string} name The name of the new stage
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAPersonStage: function (name, options) {
+            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).createAPersonStage(name, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete an person stage
          * @param {string} id Stage ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).v2PersonStagesIdJsonDelete(id, options);
+        deleteAnPersonStage: function (id, options) {
+            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).deleteAnPersonStage(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7502,31 +7524,8 @@ exports.PersonStagesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).v2PersonStagesIdJsonGet(id, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Updates a person stage.
-         * @summary Update a person stage
-         * @param {string} id Stage ID
-         * @param {string} name The name of the stage.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PersonStagesIdJsonPut: function (id, name, options) {
-            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).v2PersonStagesIdJsonPut(id, name, options);
+        fetchAPersonStage: function (id, options) {
+            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).fetchAPersonStage(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7552,8 +7551,8 @@ exports.PersonStagesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).v2PersonStagesJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listPersonStages: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).listPersonStages(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7568,14 +7567,15 @@ exports.PersonStagesApiFp = function (configuration) {
             };
         },
         /**
-         * Creates a person stage.
-         * @summary Create a person stage
-         * @param {string} name The name of the new stage
+         * Updates a person stage.
+         * @summary Update a person stage
+         * @param {string} id Stage ID
+         * @param {string} name The name of the stage.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonPost: function (name, options) {
-            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).v2PersonStagesJsonPost(name, options);
+        updateAPersonStage: function (id, name, options) {
+            var localVarFetchArgs = exports.PersonStagesApiFetchParamCreator(configuration).updateAPersonStage(id, name, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7598,14 +7598,24 @@ exports.PersonStagesApiFp = function (configuration) {
 exports.PersonStagesApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates a person stage.
+         * @summary Create a person stage
+         * @param {string} name The name of the new stage
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAPersonStage: function (name, options) {
+            return exports.PersonStagesApiFp(configuration).createAPersonStage(name, options)(fetch, basePath);
+        },
+        /**
          * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete an person stage
          * @param {string} id Stage ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonDelete: function (id, options) {
-            return exports.PersonStagesApiFp(configuration).v2PersonStagesIdJsonDelete(id, options)(fetch, basePath);
+        deleteAnPersonStage: function (id, options) {
+            return exports.PersonStagesApiFp(configuration).deleteAnPersonStage(id, options)(fetch, basePath);
         },
         /**
          * Fetches a person stage, by ID only.
@@ -7614,19 +7624,8 @@ exports.PersonStagesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesIdJsonGet: function (id, options) {
-            return exports.PersonStagesApiFp(configuration).v2PersonStagesIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Updates a person stage.
-         * @summary Update a person stage
-         * @param {string} id Stage ID
-         * @param {string} name The name of the stage.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2PersonStagesIdJsonPut: function (id, name, options) {
-            return exports.PersonStagesApiFp(configuration).v2PersonStagesIdJsonPut(id, name, options)(fetch, basePath);
+        fetchAPersonStage: function (id, options) {
+            return exports.PersonStagesApiFp(configuration).fetchAPersonStage(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -7640,18 +7639,19 @@ exports.PersonStagesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.PersonStagesApiFp(configuration).v2PersonStagesJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listPersonStages: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.PersonStagesApiFp(configuration).listPersonStages(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
-         * Creates a person stage.
-         * @summary Create a person stage
-         * @param {string} name The name of the new stage
+         * Updates a person stage.
+         * @summary Update a person stage
+         * @param {string} id Stage ID
+         * @param {string} name The name of the stage.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PersonStagesJsonPost: function (name, options) {
-            return exports.PersonStagesApiFp(configuration).v2PersonStagesJsonPost(name, options)(fetch, basePath);
+        updateAPersonStage: function (id, name, options) {
+            return exports.PersonStagesApiFp(configuration).updateAPersonStage(id, name, options)(fetch, basePath);
         },
     };
 };
@@ -7667,6 +7667,17 @@ var PersonStagesApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates a person stage.
+     * @summary Create a person stage
+     * @param {string} name The name of the new stage
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PersonStagesApi
+     */
+    PersonStagesApi.prototype.createAPersonStage = function (name, options) {
+        return exports.PersonStagesApiFp(this.configuration).createAPersonStage(name, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes a person stage. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete an person stage
      * @param {string} id Stage ID
@@ -7674,8 +7685,8 @@ var PersonStagesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    PersonStagesApi.prototype.v2PersonStagesIdJsonDelete = function (id, options) {
-        return exports.PersonStagesApiFp(this.configuration).v2PersonStagesIdJsonDelete(id, options)(this.fetch, this.basePath);
+    PersonStagesApi.prototype.deleteAnPersonStage = function (id, options) {
+        return exports.PersonStagesApiFp(this.configuration).deleteAnPersonStage(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a person stage, by ID only.
@@ -7685,20 +7696,8 @@ var PersonStagesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    PersonStagesApi.prototype.v2PersonStagesIdJsonGet = function (id, options) {
-        return exports.PersonStagesApiFp(this.configuration).v2PersonStagesIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Updates a person stage.
-     * @summary Update a person stage
-     * @param {string} id Stage ID
-     * @param {string} name The name of the stage.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PersonStagesApi
-     */
-    PersonStagesApi.prototype.v2PersonStagesIdJsonPut = function (id, name, options) {
-        return exports.PersonStagesApiFp(this.configuration).v2PersonStagesIdJsonPut(id, name, options)(this.fetch, this.basePath);
+    PersonStagesApi.prototype.fetchAPersonStage = function (id, options) {
+        return exports.PersonStagesApiFp(this.configuration).fetchAPersonStage(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple person stage records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -7713,19 +7712,20 @@ var PersonStagesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    PersonStagesApi.prototype.v2PersonStagesJsonGet = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.PersonStagesApiFp(this.configuration).v2PersonStagesJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    PersonStagesApi.prototype.listPersonStages = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.PersonStagesApiFp(this.configuration).listPersonStages(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
-     * Creates a person stage.
-     * @summary Create a person stage
-     * @param {string} name The name of the new stage
+     * Updates a person stage.
+     * @summary Update a person stage
+     * @param {string} id Stage ID
+     * @param {string} name The name of the stage.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PersonStagesApi
      */
-    PersonStagesApi.prototype.v2PersonStagesJsonPost = function (name, options) {
-        return exports.PersonStagesApiFp(this.configuration).v2PersonStagesJsonPost(name, options)(this.fetch, this.basePath);
+    PersonStagesApi.prototype.updateAPersonStage = function (id, name, options) {
+        return exports.PersonStagesApiFp(this.configuration).updateAPersonStage(id, name, options)(this.fetch, this.basePath);
     };
     return PersonStagesApi;
 }(BaseAPI));
@@ -7743,11 +7743,11 @@ exports.PhoneNumberAssignmentsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsIdJsonGet: function (id, options) {
+        fetchAPhoneNumberAssignment: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PhoneNumberAssignmentsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAPhoneNumberAssignment.');
             }
             var localVarPath = "/v2/phone_number_assignments/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -7776,7 +7776,7 @@ exports.PhoneNumberAssignmentsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listPhoneNumberAssignments: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/phone_number_assignments.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -7825,8 +7825,8 @@ exports.PhoneNumberAssignmentsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.PhoneNumberAssignmentsApiFetchParamCreator(configuration).v2PhoneNumberAssignmentsIdJsonGet(id, options);
+        fetchAPhoneNumberAssignment: function (id, options) {
+            var localVarFetchArgs = exports.PhoneNumberAssignmentsApiFetchParamCreator(configuration).fetchAPhoneNumberAssignment(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7852,8 +7852,8 @@ exports.PhoneNumberAssignmentsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.PhoneNumberAssignmentsApiFetchParamCreator(configuration).v2PhoneNumberAssignmentsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listPhoneNumberAssignments: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.PhoneNumberAssignmentsApiFetchParamCreator(configuration).listPhoneNumberAssignments(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -7882,8 +7882,8 @@ exports.PhoneNumberAssignmentsApiFactory = function (configuration, fetch, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsIdJsonGet: function (id, options) {
-            return exports.PhoneNumberAssignmentsApiFp(configuration).v2PhoneNumberAssignmentsIdJsonGet(id, options)(fetch, basePath);
+        fetchAPhoneNumberAssignment: function (id, options) {
+            return exports.PhoneNumberAssignmentsApiFp(configuration).fetchAPhoneNumberAssignment(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -7897,8 +7897,8 @@ exports.PhoneNumberAssignmentsApiFactory = function (configuration, fetch, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumberAssignmentsJsonGet: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.PhoneNumberAssignmentsApiFp(configuration).v2PhoneNumberAssignmentsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listPhoneNumberAssignments: function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.PhoneNumberAssignmentsApiFp(configuration).listPhoneNumberAssignments(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -7921,8 +7921,8 @@ var PhoneNumberAssignmentsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PhoneNumberAssignmentsApi
      */
-    PhoneNumberAssignmentsApi.prototype.v2PhoneNumberAssignmentsIdJsonGet = function (id, options) {
-        return exports.PhoneNumberAssignmentsApiFp(this.configuration).v2PhoneNumberAssignmentsIdJsonGet(id, options)(this.fetch, this.basePath);
+    PhoneNumberAssignmentsApi.prototype.fetchAPhoneNumberAssignment = function (id, options) {
+        return exports.PhoneNumberAssignmentsApiFp(this.configuration).fetchAPhoneNumberAssignment(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple phone number assignment records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -7937,8 +7937,8 @@ var PhoneNumberAssignmentsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof PhoneNumberAssignmentsApi
      */
-    PhoneNumberAssignmentsApi.prototype.v2PhoneNumberAssignmentsJsonGet = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.PhoneNumberAssignmentsApiFp(this.configuration).v2PhoneNumberAssignmentsJsonGet(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    PhoneNumberAssignmentsApi.prototype.listPhoneNumberAssignments = function (ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.PhoneNumberAssignmentsApiFp(this.configuration).listPhoneNumberAssignments(ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return PhoneNumberAssignmentsApi;
 }(BaseAPI));
@@ -7956,11 +7956,11 @@ exports.RecordingSettingsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersRecordingSettingsIdJsonGet: function (id, options) {
+        fetchRecordingSetting: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2PhoneNumbersRecordingSettingsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchRecordingSetting.');
             }
             var localVarPath = "/v2/phone_numbers/recording_settings/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -7992,8 +7992,8 @@ exports.RecordingSettingsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersRecordingSettingsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.RecordingSettingsApiFetchParamCreator(configuration).v2PhoneNumbersRecordingSettingsIdJsonGet(id, options);
+        fetchRecordingSetting: function (id, options) {
+            var localVarFetchArgs = exports.RecordingSettingsApiFetchParamCreator(configuration).fetchRecordingSetting(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8022,8 +8022,8 @@ exports.RecordingSettingsApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2PhoneNumbersRecordingSettingsIdJsonGet: function (id, options) {
-            return exports.RecordingSettingsApiFp(configuration).v2PhoneNumbersRecordingSettingsIdJsonGet(id, options)(fetch, basePath);
+        fetchRecordingSetting: function (id, options) {
+            return exports.RecordingSettingsApiFp(configuration).fetchRecordingSetting(id, options)(fetch, basePath);
         },
     };
 };
@@ -8046,8 +8046,8 @@ var RecordingSettingsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof RecordingSettingsApi
      */
-    RecordingSettingsApi.prototype.v2PhoneNumbersRecordingSettingsIdJsonGet = function (id, options) {
-        return exports.RecordingSettingsApiFp(this.configuration).v2PhoneNumbersRecordingSettingsIdJsonGet(id, options)(this.fetch, this.basePath);
+    RecordingSettingsApi.prototype.fetchRecordingSetting = function (id, options) {
+        return exports.RecordingSettingsApiFp(this.configuration).fetchRecordingSetting(id, options)(this.fetch, this.basePath);
     };
     return RecordingSettingsApi;
 }(BaseAPI));
@@ -8059,17 +8059,66 @@ exports.RecordingSettingsApi = RecordingSettingsApi;
 exports.SavedListViewsApiFetchParamCreator = function (configuration) {
     return {
         /**
+         * Creates a saved list view.
+         * @summary Create a saved list view
+         * @param {string} name The name of the saved list view
+         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * @param {boolean} [isDefault] Whether the saved list view is the default
+         * @param {string} [viewParams] JSON object of list view parameters
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createASavedListView: function (name, view, isDefault, viewParams, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'name' is not null or undefined
+            if (name === null || name === undefined) {
+                throw new RequiredError('name', 'Required parameter name was null or undefined when calling createASavedListView.');
+            }
+            // verify required parameter 'view' is not null or undefined
+            if (view === null || view === undefined) {
+                throw new RequiredError('view', 'Required parameter view was null or undefined when calling createASavedListView.');
+            }
+            var localVarPath = "/v2/saved_list_views.json";
+            var localVarUrlObj = url.parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            var localVarFormParams = new url.URLSearchParams();
+            if (name !== undefined) {
+                localVarFormParams.set('name', name);
+            }
+            if (view !== undefined) {
+                localVarFormParams.set('view', view);
+            }
+            if (isDefault !== undefined) {
+                localVarFormParams.set('is_default', isDefault);
+            }
+            if (viewParams !== undefined) {
+                localVarFormParams.set('view_params', viewParams);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            localVarRequestOptions.body = localVarFormParams.toString();
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a saved list view
          * @param {string} id Saved List View ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonDelete: function (id, options) {
+        deleteASavedListView: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2SavedListViewsIdJsonDelete.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling deleteASavedListView.');
             }
             var localVarPath = "/v2/saved_list_views/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -8093,11 +8142,11 @@ exports.SavedListViewsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonGet: function (id, options) {
+        fetchASavedListView: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2SavedListViewsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchASavedListView.');
             }
             var localVarPath = "/v2/saved_list_views/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -8109,49 +8158,6 @@ exports.SavedListViewsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Updates a saved list view.
-         * @summary Update a saved list view
-         * @param {string} id Saved List View ID
-         * @param {string} [name] The name of the saved list view
-         * @param {boolean} [isDefault] Whether the saved list view is the default
-         * @param {string} [viewParams] JSON object of list view parameters
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2SavedListViewsIdJsonPut: function (id, name, isDefault, viewParams, options) {
-            if (options === void 0) { options = {}; }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2SavedListViewsIdJsonPut.');
-            }
-            var localVarPath = "/v2/saved_list_views/{id}.json"
-                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
-            var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
-            var localVarHeaderParameter = {};
-            var localVarQueryParameter = {};
-            var localVarFormParams = new url.URLSearchParams();
-            if (name !== undefined) {
-                localVarFormParams.set('name', name);
-            }
-            if (isDefault !== undefined) {
-                localVarFormParams.set('is_default', isDefault);
-            }
-            if (viewParams !== undefined) {
-                localVarFormParams.set('view_params', viewParams);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams.toString();
             return {
                 url: url.format(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -8170,7 +8176,7 @@ exports.SavedListViewsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonGet: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listSavedListViews: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/saved_list_views.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -8208,36 +8214,30 @@ exports.SavedListViewsApiFetchParamCreator = function (configuration) {
             };
         },
         /**
-         * Creates a saved list view.
-         * @summary Create a saved list view
-         * @param {string} name The name of the saved list view
-         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * Updates a saved list view.
+         * @summary Update a saved list view
+         * @param {string} id Saved List View ID
+         * @param {string} [name] The name of the saved list view
          * @param {boolean} [isDefault] Whether the saved list view is the default
          * @param {string} [viewParams] JSON object of list view parameters
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonPost: function (name, view, isDefault, viewParams, options) {
+        updateASavedListView: function (id, name, isDefault, viewParams, options) {
             if (options === void 0) { options = {}; }
-            // verify required parameter 'name' is not null or undefined
-            if (name === null || name === undefined) {
-                throw new RequiredError('name', 'Required parameter name was null or undefined when calling v2SavedListViewsJsonPost.');
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateASavedListView.');
             }
-            // verify required parameter 'view' is not null or undefined
-            if (view === null || view === undefined) {
-                throw new RequiredError('view', 'Required parameter view was null or undefined when calling v2SavedListViewsJsonPost.');
-            }
-            var localVarPath = "/v2/saved_list_views.json";
+            var localVarPath = "/v2/saved_list_views/{id}.json"
+                .replace("{" + "id" + "}", encodeURIComponent(String(id)));
             var localVarUrlObj = url.parse(localVarPath, true);
-            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarRequestOptions = Object.assign({ method: 'PUT' }, options);
             var localVarHeaderParameter = {};
             var localVarQueryParameter = {};
             var localVarFormParams = new url.URLSearchParams();
             if (name !== undefined) {
                 localVarFormParams.set('name', name);
-            }
-            if (view !== undefined) {
-                localVarFormParams.set('view', view);
             }
             if (isDefault !== undefined) {
                 localVarFormParams.set('is_default', isDefault);
@@ -8265,14 +8265,39 @@ exports.SavedListViewsApiFetchParamCreator = function (configuration) {
 exports.SavedListViewsApiFp = function (configuration) {
     return {
         /**
+         * Creates a saved list view.
+         * @summary Create a saved list view
+         * @param {string} name The name of the saved list view
+         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * @param {boolean} [isDefault] Whether the saved list view is the default
+         * @param {string} [viewParams] JSON object of list view parameters
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createASavedListView: function (name, view, isDefault, viewParams, options) {
+            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).createASavedListView(name, view, isDefault, viewParams, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
          * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a saved list view
          * @param {string} id Saved List View ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonDelete: function (id, options) {
-            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).v2SavedListViewsIdJsonDelete(id, options);
+        deleteASavedListView: function (id, options) {
+            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).deleteASavedListView(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8293,33 +8318,8 @@ exports.SavedListViewsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).v2SavedListViewsIdJsonGet(id, options);
-            return function (fetch, basePath) {
-                if (fetch === void 0) { fetch = portableFetch; }
-                if (basePath === void 0) { basePath = BASE_PATH; }
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Updates a saved list view.
-         * @summary Update a saved list view
-         * @param {string} id Saved List View ID
-         * @param {string} [name] The name of the saved list view
-         * @param {boolean} [isDefault] Whether the saved list view is the default
-         * @param {string} [viewParams] JSON object of list view parameters
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2SavedListViewsIdJsonPut: function (id, name, isDefault, viewParams, options) {
-            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).v2SavedListViewsIdJsonPut(id, name, isDefault, viewParams, options);
+        fetchASavedListView: function (id, options) {
+            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).fetchASavedListView(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8346,8 +8346,8 @@ exports.SavedListViewsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonGet: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).v2SavedListViewsJsonGet(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listSavedListViews: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).listSavedListViews(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8362,17 +8362,17 @@ exports.SavedListViewsApiFp = function (configuration) {
             };
         },
         /**
-         * Creates a saved list view.
-         * @summary Create a saved list view
-         * @param {string} name The name of the saved list view
-         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * Updates a saved list view.
+         * @summary Update a saved list view
+         * @param {string} id Saved List View ID
+         * @param {string} [name] The name of the saved list view
          * @param {boolean} [isDefault] Whether the saved list view is the default
          * @param {string} [viewParams] JSON object of list view parameters
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonPost: function (name, view, isDefault, viewParams, options) {
-            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).v2SavedListViewsJsonPost(name, view, isDefault, viewParams, options);
+        updateASavedListView: function (id, name, isDefault, viewParams, options) {
+            var localVarFetchArgs = exports.SavedListViewsApiFetchParamCreator(configuration).updateASavedListView(id, name, isDefault, viewParams, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8395,14 +8395,27 @@ exports.SavedListViewsApiFp = function (configuration) {
 exports.SavedListViewsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
+         * Creates a saved list view.
+         * @summary Create a saved list view
+         * @param {string} name The name of the saved list view
+         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * @param {boolean} [isDefault] Whether the saved list view is the default
+         * @param {string} [viewParams] JSON object of list view parameters
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createASavedListView: function (name, view, isDefault, viewParams, options) {
+            return exports.SavedListViewsApiFp(configuration).createASavedListView(name, view, isDefault, viewParams, options)(fetch, basePath);
+        },
+        /**
          * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
          * @summary Delete a saved list view
          * @param {string} id Saved List View ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonDelete: function (id, options) {
-            return exports.SavedListViewsApiFp(configuration).v2SavedListViewsIdJsonDelete(id, options)(fetch, basePath);
+        deleteASavedListView: function (id, options) {
+            return exports.SavedListViewsApiFp(configuration).deleteASavedListView(id, options)(fetch, basePath);
         },
         /**
          * Fetches a saved list view, by ID only.
@@ -8411,21 +8424,8 @@ exports.SavedListViewsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsIdJsonGet: function (id, options) {
-            return exports.SavedListViewsApiFp(configuration).v2SavedListViewsIdJsonGet(id, options)(fetch, basePath);
-        },
-        /**
-         * Updates a saved list view.
-         * @summary Update a saved list view
-         * @param {string} id Saved List View ID
-         * @param {string} [name] The name of the saved list view
-         * @param {boolean} [isDefault] Whether the saved list view is the default
-         * @param {string} [viewParams] JSON object of list view parameters
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        v2SavedListViewsIdJsonPut: function (id, name, isDefault, viewParams, options) {
-            return exports.SavedListViewsApiFp(configuration).v2SavedListViewsIdJsonPut(id, name, isDefault, viewParams, options)(fetch, basePath);
+        fetchASavedListView: function (id, options) {
+            return exports.SavedListViewsApiFp(configuration).fetchASavedListView(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -8440,21 +8440,21 @@ exports.SavedListViewsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonGet: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.SavedListViewsApiFp(configuration).v2SavedListViewsJsonGet(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listSavedListViews: function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.SavedListViewsApiFp(configuration).listSavedListViews(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
         /**
-         * Creates a saved list view.
-         * @summary Create a saved list view
-         * @param {string} name The name of the saved list view
-         * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+         * Updates a saved list view.
+         * @summary Update a saved list view
+         * @param {string} id Saved List View ID
+         * @param {string} [name] The name of the saved list view
          * @param {boolean} [isDefault] Whether the saved list view is the default
          * @param {string} [viewParams] JSON object of list view parameters
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SavedListViewsJsonPost: function (name, view, isDefault, viewParams, options) {
-            return exports.SavedListViewsApiFp(configuration).v2SavedListViewsJsonPost(name, view, isDefault, viewParams, options)(fetch, basePath);
+        updateASavedListView: function (id, name, isDefault, viewParams, options) {
+            return exports.SavedListViewsApiFp(configuration).updateASavedListView(id, name, isDefault, viewParams, options)(fetch, basePath);
         },
     };
 };
@@ -8470,6 +8470,20 @@ var SavedListViewsApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Creates a saved list view.
+     * @summary Create a saved list view
+     * @param {string} name The name of the saved list view
+     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * @param {boolean} [isDefault] Whether the saved list view is the default
+     * @param {string} [viewParams] JSON object of list view parameters
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SavedListViewsApi
+     */
+    SavedListViewsApi.prototype.createASavedListView = function (name, view, isDefault, viewParams, options) {
+        return exports.SavedListViewsApiFp(this.configuration).createASavedListView(name, view, isDefault, viewParams, options)(this.fetch, this.basePath);
+    };
+    /**
      * Deletes a saved list view. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
      * @summary Delete a saved list view
      * @param {string} id Saved List View ID
@@ -8477,8 +8491,8 @@ var SavedListViewsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    SavedListViewsApi.prototype.v2SavedListViewsIdJsonDelete = function (id, options) {
-        return exports.SavedListViewsApiFp(this.configuration).v2SavedListViewsIdJsonDelete(id, options)(this.fetch, this.basePath);
+    SavedListViewsApi.prototype.deleteASavedListView = function (id, options) {
+        return exports.SavedListViewsApiFp(this.configuration).deleteASavedListView(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches a saved list view, by ID only.
@@ -8488,22 +8502,8 @@ var SavedListViewsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    SavedListViewsApi.prototype.v2SavedListViewsIdJsonGet = function (id, options) {
-        return exports.SavedListViewsApiFp(this.configuration).v2SavedListViewsIdJsonGet(id, options)(this.fetch, this.basePath);
-    };
-    /**
-     * Updates a saved list view.
-     * @summary Update a saved list view
-     * @param {string} id Saved List View ID
-     * @param {string} [name] The name of the saved list view
-     * @param {boolean} [isDefault] Whether the saved list view is the default
-     * @param {string} [viewParams] JSON object of list view parameters
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SavedListViewsApi
-     */
-    SavedListViewsApi.prototype.v2SavedListViewsIdJsonPut = function (id, name, isDefault, viewParams, options) {
-        return exports.SavedListViewsApiFp(this.configuration).v2SavedListViewsIdJsonPut(id, name, isDefault, viewParams, options)(this.fetch, this.basePath);
+    SavedListViewsApi.prototype.fetchASavedListView = function (id, options) {
+        return exports.SavedListViewsApiFp(this.configuration).fetchASavedListView(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple saved list view records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -8519,22 +8519,22 @@ var SavedListViewsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    SavedListViewsApi.prototype.v2SavedListViewsJsonGet = function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.SavedListViewsApiFp(this.configuration).v2SavedListViewsJsonGet(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    SavedListViewsApi.prototype.listSavedListViews = function (ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.SavedListViewsApiFp(this.configuration).listSavedListViews(ids, view, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     /**
-     * Creates a saved list view.
-     * @summary Create a saved list view
-     * @param {string} name The name of the saved list view
-     * @param {string} view The type of objects in the saved list view.  Value must be one of: people, companies
+     * Updates a saved list view.
+     * @summary Update a saved list view
+     * @param {string} id Saved List View ID
+     * @param {string} [name] The name of the saved list view
      * @param {boolean} [isDefault] Whether the saved list view is the default
      * @param {string} [viewParams] JSON object of list view parameters
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SavedListViewsApi
      */
-    SavedListViewsApi.prototype.v2SavedListViewsJsonPost = function (name, view, isDefault, viewParams, options) {
-        return exports.SavedListViewsApiFp(this.configuration).v2SavedListViewsJsonPost(name, view, isDefault, viewParams, options)(this.fetch, this.basePath);
+    SavedListViewsApi.prototype.updateASavedListView = function (id, name, isDefault, viewParams, options) {
+        return exports.SavedListViewsApiFp(this.configuration).updateASavedListView(id, name, isDefault, viewParams, options)(this.fetch, this.basePath);
     };
     return SavedListViewsApi;
 }(BaseAPI));
@@ -8552,11 +8552,11 @@ exports.StepsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsIdJsonGet: function (id, options) {
+        fetchAStep: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2StepsIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAStep.');
             }
             var localVarPath = "/v2/steps/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -8588,7 +8588,7 @@ exports.StepsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsJsonGet: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listSteps: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/steps.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -8646,8 +8646,8 @@ exports.StepsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.StepsApiFetchParamCreator(configuration).v2StepsIdJsonGet(id, options);
+        fetchAStep: function (id, options) {
+            var localVarFetchArgs = exports.StepsApiFetchParamCreator(configuration).fetchAStep(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8676,8 +8676,8 @@ exports.StepsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsJsonGet: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.StepsApiFetchParamCreator(configuration).v2StepsJsonGet(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listSteps: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.StepsApiFetchParamCreator(configuration).listSteps(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8706,8 +8706,8 @@ exports.StepsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsIdJsonGet: function (id, options) {
-            return exports.StepsApiFp(configuration).v2StepsIdJsonGet(id, options)(fetch, basePath);
+        fetchAStep: function (id, options) {
+            return exports.StepsApiFp(configuration).fetchAStep(id, options)(fetch, basePath);
         },
         /**
          * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -8724,8 +8724,8 @@ exports.StepsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2StepsJsonGet: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.StepsApiFp(configuration).v2StepsJsonGet(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listSteps: function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.StepsApiFp(configuration).listSteps(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -8748,8 +8748,8 @@ var StepsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof StepsApi
      */
-    StepsApi.prototype.v2StepsIdJsonGet = function (id, options) {
-        return exports.StepsApiFp(this.configuration).v2StepsIdJsonGet(id, options)(this.fetch, this.basePath);
+    StepsApi.prototype.fetchAStep = function (id, options) {
+        return exports.StepsApiFp(this.configuration).fetchAStep(id, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple step records. The records can be filtered, paged, and sorted according to the respective parameters.
@@ -8767,8 +8767,8 @@ var StepsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof StepsApi
      */
-    StepsApi.prototype.v2StepsJsonGet = function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.StepsApiFp(this.configuration).v2StepsJsonGet(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    StepsApi.prototype.listSteps = function (ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.StepsApiFp(this.configuration).listSteps(ids, cadenceId, type, hasDueActions, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return StepsApi;
 }(BaseAPI));
@@ -8793,7 +8793,7 @@ exports.SuccessesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SuccessesJsonGet: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listSuccesses: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/successes.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -8855,8 +8855,8 @@ exports.SuccessesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SuccessesJsonGet: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.SuccessesApiFetchParamCreator(configuration).v2SuccessesJsonGet(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listSuccesses: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.SuccessesApiFetchParamCreator(configuration).listSuccesses(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -8892,8 +8892,8 @@ exports.SuccessesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2SuccessesJsonGet: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.SuccessesApiFp(configuration).v2SuccessesJsonGet(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listSuccesses: function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.SuccessesApiFp(configuration).listSuccesses(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -8923,8 +8923,8 @@ var SuccessesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof SuccessesApi
      */
-    SuccessesApi.prototype.v2SuccessesJsonGet = function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.SuccessesApiFp(this.configuration).v2SuccessesJsonGet(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    SuccessesApi.prototype.listSuccesses = function (ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.SuccessesApiFp(this.configuration).listSuccesses(ids, personId, updatedAt, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return SuccessesApi;
 }(BaseAPI));
@@ -8948,7 +8948,7 @@ exports.TagsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TagsJsonGet: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listTeamTags: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/tags.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -9006,8 +9006,8 @@ exports.TagsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TagsJsonGet: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.TagsApiFetchParamCreator(configuration).v2TagsJsonGet(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listTeamTags: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.TagsApiFetchParamCreator(configuration).listTeamTags(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9042,8 +9042,8 @@ exports.TagsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TagsJsonGet: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.TagsApiFp(configuration).v2TagsJsonGet(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listTeamTags: function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.TagsApiFp(configuration).listTeamTags(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -9072,8 +9072,8 @@ var TagsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof TagsApi
      */
-    TagsApi.prototype.v2TagsJsonGet = function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.TagsApiFp(this.configuration).v2TagsJsonGet(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    TagsApi.prototype.listTeamTags = function (search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.TagsApiFp(this.configuration).listTeamTags(search, ids, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return TagsApi;
 }(BaseAPI));
@@ -9090,7 +9090,7 @@ exports.TeamApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamJsonGet: function (options) {
+        fetchCurrentTeam: function (options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/team.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -9120,8 +9120,8 @@ exports.TeamApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamJsonGet: function (options) {
-            var localVarFetchArgs = exports.TeamApiFetchParamCreator(configuration).v2TeamJsonGet(options);
+        fetchCurrentTeam: function (options) {
+            var localVarFetchArgs = exports.TeamApiFetchParamCreator(configuration).fetchCurrentTeam(options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9149,8 +9149,8 @@ exports.TeamApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamJsonGet: function (options) {
-            return exports.TeamApiFp(configuration).v2TeamJsonGet(options)(fetch, basePath);
+        fetchCurrentTeam: function (options) {
+            return exports.TeamApiFp(configuration).fetchCurrentTeam(options)(fetch, basePath);
         },
     };
 };
@@ -9172,8 +9172,8 @@ var TeamApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof TeamApi
      */
-    TeamApi.prototype.v2TeamJsonGet = function (options) {
-        return exports.TeamApiFp(this.configuration).v2TeamJsonGet(options)(this.fetch, this.basePath);
+    TeamApi.prototype.fetchCurrentTeam = function (options) {
+        return exports.TeamApiFp(this.configuration).fetchCurrentTeam(options)(this.fetch, this.basePath);
     };
     return TeamApi;
 }(BaseAPI));
@@ -9195,7 +9195,7 @@ exports.TeamTemplateAttachmentsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplateAttachmentsJsonGet: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
+        listTeamTemplateAttachments: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/team_template_attachments.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -9245,8 +9245,8 @@ exports.TeamTemplateAttachmentsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplateAttachmentsJsonGet: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.TeamTemplateAttachmentsApiFetchParamCreator(configuration).v2TeamTemplateAttachmentsJsonGet(ids, teamTemplateId, perPage, page, includePagingCounts, options);
+        listTeamTemplateAttachments: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.TeamTemplateAttachmentsApiFetchParamCreator(configuration).listTeamTemplateAttachments(ids, teamTemplateId, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9279,8 +9279,8 @@ exports.TeamTemplateAttachmentsApiFactory = function (configuration, fetch, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplateAttachmentsJsonGet: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
-            return exports.TeamTemplateAttachmentsApiFp(configuration).v2TeamTemplateAttachmentsJsonGet(ids, teamTemplateId, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listTeamTemplateAttachments: function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
+            return exports.TeamTemplateAttachmentsApiFp(configuration).listTeamTemplateAttachments(ids, teamTemplateId, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -9307,8 +9307,8 @@ var TeamTemplateAttachmentsApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof TeamTemplateAttachmentsApi
      */
-    TeamTemplateAttachmentsApi.prototype.v2TeamTemplateAttachmentsJsonGet = function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
-        return exports.TeamTemplateAttachmentsApiFp(this.configuration).v2TeamTemplateAttachmentsJsonGet(ids, teamTemplateId, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    TeamTemplateAttachmentsApi.prototype.listTeamTemplateAttachments = function (ids, teamTemplateId, perPage, page, includePagingCounts, options) {
+        return exports.TeamTemplateAttachmentsApiFp(this.configuration).listTeamTemplateAttachments(ids, teamTemplateId, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return TeamTemplateAttachmentsApi;
 }(BaseAPI));
@@ -9327,11 +9327,11 @@ exports.TeamTemplatesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesIdJsonGet: function (id, includeSignature, options) {
+        fetchATeamTemplate: function (id, includeSignature, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2TeamTemplatesIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchATeamTemplate.');
             }
             var localVarPath = "/v2/team_templates/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -9368,7 +9368,7 @@ exports.TeamTemplatesApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesJsonGet: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        listTeamTemplates: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/team_templates.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -9433,8 +9433,8 @@ exports.TeamTemplatesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesIdJsonGet: function (id, includeSignature, options) {
-            var localVarFetchArgs = exports.TeamTemplatesApiFetchParamCreator(configuration).v2TeamTemplatesIdJsonGet(id, includeSignature, options);
+        fetchATeamTemplate: function (id, includeSignature, options) {
+            var localVarFetchArgs = exports.TeamTemplatesApiFetchParamCreator(configuration).fetchATeamTemplate(id, includeSignature, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9465,8 +9465,8 @@ exports.TeamTemplatesApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesJsonGet: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            var localVarFetchArgs = exports.TeamTemplatesApiFetchParamCreator(configuration).v2TeamTemplatesJsonGet(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options);
+        listTeamTemplates: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            var localVarFetchArgs = exports.TeamTemplatesApiFetchParamCreator(configuration).listTeamTemplates(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9496,8 +9496,8 @@ exports.TeamTemplatesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesIdJsonGet: function (id, includeSignature, options) {
-            return exports.TeamTemplatesApiFp(configuration).v2TeamTemplatesIdJsonGet(id, includeSignature, options)(fetch, basePath);
+        fetchATeamTemplate: function (id, includeSignature, options) {
+            return exports.TeamTemplatesApiFp(configuration).fetchATeamTemplate(id, includeSignature, options)(fetch, basePath);
         },
         /**
          * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
@@ -9516,8 +9516,8 @@ exports.TeamTemplatesApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2TeamTemplatesJsonGet: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-            return exports.TeamTemplatesApiFp(configuration).v2TeamTemplatesJsonGet(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
+        listTeamTemplates: function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+            return exports.TeamTemplatesApiFp(configuration).listTeamTemplates(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(fetch, basePath);
         },
     };
 };
@@ -9541,8 +9541,8 @@ var TeamTemplatesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof TeamTemplatesApi
      */
-    TeamTemplatesApi.prototype.v2TeamTemplatesIdJsonGet = function (id, includeSignature, options) {
-        return exports.TeamTemplatesApiFp(this.configuration).v2TeamTemplatesIdJsonGet(id, includeSignature, options)(this.fetch, this.basePath);
+    TeamTemplatesApi.prototype.fetchATeamTemplate = function (id, includeSignature, options) {
+        return exports.TeamTemplatesApiFp(this.configuration).fetchATeamTemplate(id, includeSignature, options)(this.fetch, this.basePath);
     };
     /**
      * Fetches multiple team template records. The records can be filtered, paged, and sorted according to the respective parameters.  Team templates are templates that are available team-wide. Admins may use team templates to create original content for the entire team, monitor version control to ensure templates are always up to date, and track template performance across the entire organization. All metrics on a team template reflect usage across the team; individual metrics can be found with the email_templates API endpoint.
@@ -9562,8 +9562,8 @@ var TeamTemplatesApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof TeamTemplatesApi
      */
-    TeamTemplatesApi.prototype.v2TeamTemplatesJsonGet = function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
-        return exports.TeamTemplatesApiFp(this.configuration).v2TeamTemplatesJsonGet(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
+    TeamTemplatesApi.prototype.listTeamTemplates = function (ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options) {
+        return exports.TeamTemplatesApiFp(this.configuration).listTeamTemplates(ids, updatedAt, search, tagIds, tag, includeArchivedTemplates, sortBy, sortDirection, perPage, page, includePagingCounts, options)(this.fetch, this.basePath);
     };
     return TeamTemplatesApi;
 }(BaseAPI));
@@ -9581,11 +9581,11 @@ exports.UsersApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersIdJsonGet: function (id, options) {
+        fetchAUser: function (id, options) {
             if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id', 'Required parameter id was null or undefined when calling v2UsersIdJsonGet.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling fetchAUser.');
             }
             var localVarPath = "/v2/users/{id}.json"
                 .replace("{" + "id" + "}", encodeURIComponent(String(id)));
@@ -9610,7 +9610,7 @@ exports.UsersApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersJsonGet: function (guid, groupId, options) {
+        listUsers: function (guid, groupId, options) {
             if (options === void 0) { options = {}; }
             var localVarPath = "/v2/users.json";
             var localVarUrlObj = url.parse(localVarPath, true);
@@ -9647,8 +9647,8 @@ exports.UsersApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersIdJsonGet: function (id, options) {
-            var localVarFetchArgs = exports.UsersApiFetchParamCreator(configuration).v2UsersIdJsonGet(id, options);
+        fetchAUser: function (id, options) {
+            var localVarFetchArgs = exports.UsersApiFetchParamCreator(configuration).fetchAUser(id, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9670,8 +9670,8 @@ exports.UsersApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersJsonGet: function (guid, groupId, options) {
-            var localVarFetchArgs = exports.UsersApiFetchParamCreator(configuration).v2UsersJsonGet(guid, groupId, options);
+        listUsers: function (guid, groupId, options) {
+            var localVarFetchArgs = exports.UsersApiFetchParamCreator(configuration).listUsers(guid, groupId, options);
             return function (fetch, basePath) {
                 if (fetch === void 0) { fetch = portableFetch; }
                 if (basePath === void 0) { basePath = BASE_PATH; }
@@ -9700,8 +9700,8 @@ exports.UsersApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersIdJsonGet: function (id, options) {
-            return exports.UsersApiFp(configuration).v2UsersIdJsonGet(id, options)(fetch, basePath);
+        fetchAUser: function (id, options) {
+            return exports.UsersApiFp(configuration).fetchAUser(id, options)(fetch, basePath);
         },
         /**
          * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
@@ -9711,8 +9711,8 @@ exports.UsersApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        v2UsersJsonGet: function (guid, groupId, options) {
-            return exports.UsersApiFp(configuration).v2UsersJsonGet(guid, groupId, options)(fetch, basePath);
+        listUsers: function (guid, groupId, options) {
+            return exports.UsersApiFp(configuration).listUsers(guid, groupId, options)(fetch, basePath);
         },
     };
 };
@@ -9735,8 +9735,8 @@ var UsersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    UsersApi.prototype.v2UsersIdJsonGet = function (id, options) {
-        return exports.UsersApiFp(this.configuration).v2UsersIdJsonGet(id, options)(this.fetch, this.basePath);
+    UsersApi.prototype.fetchAUser = function (id, options) {
+        return exports.UsersApiFp(this.configuration).fetchAUser(id, options)(this.fetch, this.basePath);
     };
     /**
      * Non Admin: Lists only your user, or all on team depending on group visibility policy Team Admin: Lists users associated with your team
@@ -9747,8 +9747,8 @@ var UsersApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    UsersApi.prototype.v2UsersJsonGet = function (guid, groupId, options) {
-        return exports.UsersApiFp(this.configuration).v2UsersJsonGet(guid, groupId, options)(this.fetch, this.basePath);
+    UsersApi.prototype.listUsers = function (guid, groupId, options) {
+        return exports.UsersApiFp(this.configuration).listUsers(guid, groupId, options)(this.fetch, this.basePath);
     };
     return UsersApi;
 }(BaseAPI));
